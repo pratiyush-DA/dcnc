@@ -1,0 +1,908 @@
+{
+  "generated_at": "2026-01-20T20:07:33.923270",
+  "total_columns": 17,
+  "columns": {
+    "sp_source_id": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "clusterer": "pattern_signature",
+      "good_count": 338,
+      "bad_count": 1,
+      "fingerprint": {
+        "workflow": "identifier",
+        "method": "pattern_signature",
+        "sample_size": 338,
+        "properties": {
+          "majority_pattern": "A_N",
+          "valid_patterns": [
+            "A_N"
+          ],
+          "pattern_distribution": {
+            "A_N": 338,
+            "A": 1
+          },
+          "avg_length": 6.677514792899408
+        }
+      },
+      "correction_hints": {
+        "workflow": "identifier",
+        "subtype": "pattern_id"
+      },
+      "sample_good_values": [
+        "SPS_1",
+        "SPS_2",
+        "SPS_3",
+        "SPS_4",
+        "SPS_5",
+        "SPS_6",
+        "SPS_7",
+        "SPS_8",
+        "SPS_9",
+        "SPS_10"
+      ]
+    },
+    "sp_common_name": {
+      "workflow": "text",
+      "subtype": "generic",
+      "clusterer": "freetext",
+      "good_count": 339,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "sp_common_name",
+        "sample_size": 339,
+        "properties": {
+          "avg_length": 13.221238938053098,
+          "min_length": 5,
+          "max_length": 21,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 338,
+            "upper": 0,
+            "lower": 0,
+            "mixed": 1
+          },
+          "sample_values": [
+            "Robert Little",
+            "Alexis Webster",
+            "Keeron Bradford",
+            "Kevin Pierce",
+            "Stacie Conaway"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Robert Little",
+        "Alexis Webster",
+        "Keeron Bradford",
+        "Kevin Pierce",
+        "Stacie Conaway",
+        "John Troia",
+        "Troy Brugger",
+        "Alex Medina",
+        "Kelly Kisch",
+        "Kristofer Sanchez"
+      ]
+    },
+    "sp_given_name": {
+      "workflow": "text",
+      "subtype": "generic",
+      "clusterer": "freetext",
+      "good_count": 339,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "sp_given_name",
+        "sample_size": 336,
+        "properties": {
+          "avg_length": 5.773809523809524,
+          "min_length": 2,
+          "max_length": 11,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 336,
+            "upper": 0,
+            "lower": 0,
+            "mixed": 0
+          },
+          "sample_values": [
+            "Robert",
+            "Alexis",
+            "Keeron",
+            "Kevin",
+            "Stacie"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Robert",
+        "Alexis",
+        "Keeron",
+        "Kevin",
+        "Stacie",
+        "John",
+        "Troy",
+        "Alex",
+        "Kelly",
+        "Kristofer"
+      ]
+    },
+    "sp_sn": {
+      "workflow": "text",
+      "subtype": "generic",
+      "clusterer": "freetext",
+      "good_count": 339,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "sp_sn",
+        "sample_size": 338,
+        "properties": {
+          "avg_length": 6.488165680473373,
+          "min_length": 2,
+          "max_length": 13,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 337,
+            "upper": 0,
+            "lower": 0,
+            "mixed": 1
+          },
+          "sample_values": [
+            "Little",
+            "Webster",
+            "Bradford",
+            "Pierce",
+            "Conaway"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Little",
+        "Webster",
+        "Bradford",
+        "Pierce",
+        "Conaway",
+        "Troia",
+        "Brugger",
+        "Medina",
+        "Kisch",
+        "Sanchez"
+      ]
+    },
+    "sp_mail": {
+      "workflow": "text",
+      "subtype": "email",
+      "clusterer": "validator",
+      "good_count": 223,
+      "bad_count": 116,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "email",
+        "sample_size": 223,
+        "properties": {
+          "avg_length": 22.210762331838566,
+          "min_length": 17,
+          "max_length": 30,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "robert.little@ford.com",
+            "kevin.pierce@ford.com",
+            "john.troia@ford.com",
+            "kristofer.sanchez@ford.com",
+            "allen.vivian@ford.com"
+          ]
+        },
+        "correction_hints": {
+          "expected_case": "lowercase"
+        }
+      },
+      "correction_hints": {
+        "expected_case": "lowercase"
+      },
+      "sample_good_values": [
+        "robert.little@ford.com",
+        "kevin.pierce@ford.com",
+        "john.troia@ford.com",
+        "kristofer.sanchez@ford.com",
+        "allen.vivian@ford.com",
+        "tom.visztenvelt@ford.com",
+        "fred.curtis@ford.com",
+        "shawn.merola@ford.com",
+        "steven.alatorre@ford.com",
+        "marquita.tucker@ford.com"
+      ]
+    },
+    "sp_telephone_number": {
+      "workflow": "text",
+      "subtype": "phone",
+      "clusterer": "validator",
+      "good_count": 175,
+      "bad_count": 164,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "phone",
+        "sample_size": 174,
+        "properties": {
+          "avg_length": 10.0,
+          "min_length": 10,
+          "max_length": 10,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "9546502165",
+            "8133359012",
+            "8133686344",
+            "9547817231",
+            "9549612759"
+          ]
+        },
+        "correction_hints": {
+          "expected_format": "XXXXXXXXXX",
+          "format_distribution": {
+            "XXXXXXXXXX": 174
+          }
+        }
+      },
+      "correction_hints": {
+        "expected_format": "XXXXXXXXXX",
+        "format_distribution": {
+          "XXXXXXXXXX": 174
+        }
+      },
+      "sample_good_values": [
+        "9546502165",
+        "8133359012",
+        "8133686344",
+        "9547817231",
+        "9549612759",
+        "9544819314",
+        "9547041838",
+        "3057520713",
+        "3864237690",
+        "8133629657"
+      ]
+    },
+    "sp_country": {
+      "workflow": "text",
+      "subtype": "country",
+      "clusterer": "categorical_frequency_fuzzy",
+      "good_count": 337,
+      "bad_count": 2,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "categorical_frequency_fuzzy",
+        "column_name": "sp_country",
+        "sample_size": 339,
+        "reference_values": [
+          "USA"
+        ],
+        "reference_frequencies": {
+          "USA": 336
+        },
+        "similarity_threshold": 85,
+        "min_frequency": 2,
+        "properties": {
+          "is_categorical": true,
+          "cardinality": 0.008849557522123894,
+          "avg_length": 3.0442477876106193,
+          "length_std": 0.6152829485227858,
+          "case_style": "upper",
+          "case_consistency": 0.9941002949852508
+        },
+        "correction_hints": {
+          "expected_case": "upper",
+          "use_fuzzy_matching": true,
+          "similarity_threshold": 85
+        },
+        "rules_applied": {
+          "case_sensitivity": true,
+          "gibberish_detection": true,
+          "frequency_analysis": true
+        }
+      },
+      "correction_hints": {
+        "expected_case": "upper",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "sample_good_values": [
+        "USA",
+        "USA",
+        "USA",
+        "USA",
+        "USA",
+        "USA",
+        "USA",
+        "USA",
+        "USA",
+        "USA"
+      ]
+    },
+    "sp_city": {
+      "workflow": "text",
+      "subtype": "location",
+      "clusterer": "freetext",
+      "good_count": 339,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "sp_city",
+        "sample_size": 339,
+        "properties": {
+          "avg_length": 8.486725663716815,
+          "min_length": 2,
+          "max_length": 13,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 337,
+            "upper": 2,
+            "lower": 0,
+            "mixed": 0
+          },
+          "sample_values": [
+            "Loxahatchee",
+            "Riverview",
+            "Apollo Beach",
+            "Coconut Creek",
+            "Hollywood"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Loxahatchee",
+        "Riverview",
+        "Apollo Beach",
+        "Coconut Creek",
+        "Hollywood",
+        "Deerfield Bch",
+        "Pembroke Pnes",
+        "Miami",
+        "New Smyrna",
+        "Pembroke Pnes"
+      ]
+    },
+    "sp_state": {
+      "workflow": "text",
+      "subtype": "state",
+      "clusterer": "categorical_frequency_fuzzy",
+      "good_count": 339,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "categorical_frequency_fuzzy",
+        "column_name": "sp_state",
+        "sample_size": 339,
+        "reference_values": [
+          "NE",
+          "FL"
+        ],
+        "reference_frequencies": {
+          "NE": 51,
+          "FL": 272
+        },
+        "similarity_threshold": 85,
+        "min_frequency": 2,
+        "properties": {
+          "is_categorical": true,
+          "cardinality": 0.02654867256637168,
+          "avg_length": 2.0,
+          "length_std": 0.0,
+          "case_style": "upper",
+          "case_consistency": 1.0
+        },
+        "correction_hints": {
+          "expected_case": "upper",
+          "use_fuzzy_matching": true,
+          "similarity_threshold": 85
+        },
+        "rules_applied": {
+          "case_sensitivity": true,
+          "gibberish_detection": true,
+          "frequency_analysis": true
+        }
+      },
+      "correction_hints": {
+        "expected_case": "upper",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "sample_good_values": [
+        "FL",
+        "FL",
+        "FL",
+        "FL",
+        "FL",
+        "FL",
+        "FL",
+        "FL",
+        "FL",
+        "FL"
+      ]
+    },
+    "sp_postaladdress": {
+      "workflow": "text",
+      "subtype": "address",
+      "clusterer": "freetext",
+      "good_count": 337,
+      "bad_count": 2,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "sp_postaladdress",
+        "sample_size": 337,
+        "properties": {
+          "avg_length": 17.501483679525222,
+          "min_length": 9,
+          "max_length": 35,
+          "dominant_case": "upper",
+          "case_distribution": {
+            "title": 0,
+            "upper": 337,
+            "lower": 0,
+            "mixed": 0
+          },
+          "sample_values": [
+            "14367 73RD ST N",
+            "11010 BRAHMAN RANCH CIR",
+            "5115 BUTTERFLY SHELL DR",
+            "5152 NW 49TH AVE",
+            "6600 EVANS ST"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "upper",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "upper",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "14367 73RD ST N",
+        "11010 BRAHMAN RANCH CIR",
+        "5115 BUTTERFLY SHELL DR",
+        "5152 NW 49TH AVE",
+        "6600 EVANS ST",
+        "4216 NW 5TH DR",
+        "1530 NW 114TH AVE",
+        "10930 SW 141ST AVE",
+        "1100 WILLARD ST",
+        "1510 NW 122ND AVE"
+      ]
+    },
+    "sp_postalcode": {
+      "workflow": "text",
+      "subtype": "zipcode",
+      "clusterer": "validator",
+      "good_count": 338,
+      "bad_count": 1,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "zipcode",
+        "sample_size": 338,
+        "properties": {
+          "avg_length": 7.0,
+          "min_length": 7,
+          "max_length": 7,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "33470.0",
+            "33578.0",
+            "33572.0",
+            "33073.0",
+            "33024.0"
+          ]
+        }
+      },
+      "correction_hints": {
+        "workflow": "text",
+        "subtype": "zipcode"
+      },
+      "sample_good_values": [
+        33470.0,
+        33578.0,
+        33572.0,
+        33073.0,
+        33024.0,
+        33442.0,
+        33026.0,
+        33186.0,
+        32168.0,
+        33026.0
+      ]
+    },
+    "sp_when_created": {
+      "workflow": "datetime",
+      "subtype": "date",
+      "clusterer": "format_parser",
+      "good_count": 339,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "datetime",
+        "method": "format_parser",
+        "sample_size": 339,
+        "properties": {
+          "majority_format": "%Y%m%d%H%M%S",
+          "format_distribution": {
+            "%Y%m%d%H%M%S": 339
+          },
+          "unique_formats": 1
+        },
+        "correction_hints": {
+          "expected_format": "%Y%m%d%H%M%S",
+          "enforce_format_consistency": true
+        },
+        "rules_applied": {
+          "format_consistency": true
+        }
+      },
+      "correction_hints": {
+        "expected_format": "%Y%m%d%H%M%S",
+        "enforce_format_consistency": true
+      },
+      "sample_good_values": [
+        "20120411203253.0Z",
+        "20131001110918.0Z",
+        "20160706131123.0Z",
+        "20120623224528.0Z",
+        "20141101011719.0Z",
+        "20001005221807.0Z",
+        "20011221134420.0Z",
+        "20050920150342.0Z",
+        "20061114104226.0Z",
+        "20120713143626.0Z"
+      ]
+    },
+    "sp_fordjobrole": {
+      "workflow": "text",
+      "subtype": "job_title",
+      "clusterer": "freetext",
+      "good_count": 323,
+      "bad_count": 16,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "sp_fordjobrole",
+        "sample_size": 323,
+        "properties": {
+          "avg_length": 6.712074303405573,
+          "min_length": 5,
+          "max_length": 11,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 160,
+            "upper": 132,
+            "lower": 0,
+            "mixed": 31
+          },
+          "sample_values": [
+            "Technician",
+            "Technician",
+            "Technician",
+            "QLNTEC",
+            "Sales"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Technician",
+        "Technician",
+        "Technician",
+        "QLNTEC",
+        "Sales",
+        "Sales",
+        "Technician",
+        "FinanceRole",
+        "SVCADV",
+        "Sales"
+      ]
+    },
+    "sp_fordsitecodetype": {
+      "workflow": "text",
+      "subtype": "generic",
+      "clusterer": "freetext",
+      "good_count": 339,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "sp_fordsitecodetype",
+        "sample_size": 339,
+        "properties": {
+          "avg_length": 9.0,
+          "min_length": 9,
+          "max_length": 9,
+          "dominant_case": "lower",
+          "case_distribution": {
+            "title": 0,
+            "upper": 0,
+            "lower": 339,
+            "mixed": 0
+          },
+          "sample_values": [
+            "nadlecode",
+            "nadlecode",
+            "nadlecode",
+            "nadlecode",
+            "nadlecode"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "lower",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "lower",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "nadlecode",
+        "nadlecode",
+        "nadlecode",
+        "nadlecode",
+        "nadlecode",
+        "nadlecode",
+        "nadlecode",
+        "nadlecode",
+        "nadlecode",
+        "nadlecode"
+      ]
+    },
+    "sp_uid": {
+      "workflow": "text",
+      "subtype": "generic",
+      "clusterer": "freetext",
+      "good_count": 339,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "sp_uid",
+        "sample_size": 339,
+        "properties": {
+          "avg_length": 7.551622418879056,
+          "min_length": 4,
+          "max_length": 14,
+          "dominant_case": "lower",
+          "case_distribution": {
+            "title": 0,
+            "upper": 0,
+            "lower": 332,
+            "mixed": 7
+          },
+          "sample_values": [
+            "rlittle",
+            "awebster",
+            "kbradford",
+            "kpierce",
+            "sconaway"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "lower",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "lower",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "rlittle",
+        "awebster",
+        "kbradford",
+        "kpierce",
+        "sconaway",
+        "jtroia",
+        "tbrugger",
+        "amedina",
+        "kkisch",
+        "ksanchez"
+      ]
+    },
+    "sp_fordsitecode": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "clusterer": "pattern_signature",
+      "good_count": 229,
+      "bad_count": 110,
+      "fingerprint": {
+        "workflow": "identifier",
+        "method": "pattern_signature",
+        "sample_size": 229,
+        "properties": {
+          "majority_pattern": "AN",
+          "valid_patterns": [
+            "AN"
+          ],
+          "pattern_distribution": {
+            "N": 89,
+            "AN": 229,
+            "ANA": 21
+          },
+          "avg_length": 5.222707423580786
+        }
+      },
+      "correction_hints": {
+        "workflow": "identifier",
+        "subtype": "pattern_id"
+      },
+      "sample_good_values": [
+        "B8037",
+        "B8037",
+        "B8037",
+        "B8037",
+        "B8037",
+        "B8037",
+        "B8037",
+        "B8037",
+        "B8037",
+        "B8037"
+      ]
+    },
+    "Misc_01": {
+      "workflow": "text",
+      "subtype": "generic",
+      "clusterer": "freetext",
+      "good_count": 34,
+      "bad_count": 305,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "Misc_01",
+        "sample_size": 34,
+        "properties": {
+          "avg_length": 26.705882352941178,
+          "min_length": 6,
+          "max_length": 58,
+          "dominant_case": "mixed",
+          "case_distribution": {
+            "title": 7,
+            "upper": 3,
+            "lower": 0,
+            "mixed": 24
+          },
+          "sample_values": [
+            "Same Person Active at 2 Dealers",
+            "Same Person Active at 2 Dealers",
+            "TERMED",
+            "Duplicate full record",
+            "Duplicate full record"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "mixed",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "mixed",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Same Person Active at 2 Dealers",
+        "Same Person Active at 2 Dealers",
+        "TERMED",
+        "Duplicate full record",
+        "Duplicate full record",
+        "Duplicate Primary Key",
+        "Duplicate Primary Key",
+        "Primary key null",
+        "MCD Nick Name Match + Address Match",
+        "MCD Nick Name Match + Address Match"
+      ]
+    }
+  }
+}

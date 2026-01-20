@@ -1,0 +1,12 @@
+email,full_name,signup_date,age
+john.doe@gmail.com,John Doe,2023-01-01,30
+jane.smith@yahoo.com,Jane Smith,2023-02-15,25
+bob.wilson@hotmail.com,Bob Wilson,2023-03-10,40
+typo@@gmail.com,Typo User,2023-04-05,22
+missing.dot@yahoocom,Missing Dot,2023-05-20,35
+space in@addr.ess,Spacey Addr,2023-06-12,28
+n/a,N/A,unknown,0
+12345,Number Name,2023-99-99,-5
+valid.email+tag@gmail.com,Valid Tag,2023-07-04,32
+alice.jones@outlook.com,Alice Jones,2023-08-30,29
+john.doe@gmail.com,John Doe,2023-01-01,30

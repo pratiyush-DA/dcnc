@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-01-20T20:07:33.850330",
+  "description": "Summary of all valid/good data by column",
+  "columns": {
+    "sp_source_id": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "good_count": 338,
+      "sample_values": [],
+      "confidence": 0.9
+    },
+    "sp_common_name": {
+      "workflow": "text",
+      "subtype": "generic",
+      "good_count": 339,
+      "sample_values": [],
+      "confidence": 0.5
+    },
+    "sp_given_name": {
+      "workflow": "text",
+      "subtype": "generic",
+      "good_count": 339,
+      "sample_values": [],
+      "confidence": 0.5
+    },
+    "sp_sn": {
+      "workflow": "text",
+      "subtype": "generic",
+      "good_count": 339,
+      "sample_values": [],
+      "confidence": 0.5
+    },
+    "sp_mail": {
+      "workflow": "text",
+      "subtype": "email",
+      "good_count": 223,
+      "sample_values": [],
+      "confidence": 0.94
+    },
+    "sp_telephone_number": {
+      "workflow": "text",
+      "subtype": "phone",
+      "good_count": 175,
+      "sample_values": [],
+      "confidence": 0.95
+    },
+    "sp_country": {
+      "workflow": "text",
+      "subtype": "country",
+      "good_count": 337,
+      "sample_values": [],
+      "confidence": 0.9
+    },
+    "sp_city": {
+      "workflow": "text",
+      "subtype": "location",
+      "good_count": 339,
+      "sample_values": [],
+      "confidence": 0.9
+    },
+    "sp_state": {
+      "workflow": "text",
+      "subtype": "state",
+      "good_count": 339,
+      "sample_values": [],
+      "confidence": 0.9
+    },
+    "sp_postaladdress": {
+      "workflow": "text",
+      "subtype": "address",
+      "good_count": 337,
+      "sample_values": [],
+      "confidence": 0.9
+    },
+    "sp_postalcode": {
+      "workflow": "text",
+      "subtype": "zipcode",
+      "good_count": 338,
+      "sample_values": [],
+      "confidence": 0.9
+    },
+    "sp_when_created": {
+      "workflow": "datetime",
+      "subtype": "date",
+      "good_count": 339,
+      "sample_values": [],
+      "confidence": 0.9
+    },
+    "sp_fordjobrole": {
+      "workflow": "text",
+      "subtype": "job_title",
+      "good_count": 323,
+      "sample_values": [],
+      "confidence": 0.9
+    },
+    "sp_fordsitecodetype": {
+      "workflow": "text",
+      "subtype": "generic",
+      "good_count": 339,
+      "sample_values": [],
+      "confidence": 0.5
+    },
+    "sp_uid": {
+      "workflow": "text",
+      "subtype": "generic",
+      "good_count": 339,
+      "sample_values": [],
+      "confidence": 0.5
+    },
+    "sp_fordsitecode": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "good_count": 229,
+      "sample_values": [],
+      "confidence": 0.6
+    },
+    "Misc_01": {
+      "workflow": "text",
+      "subtype": "generic",
+      "good_count": 34,
+      "sample_values": [],
+      "confidence": 0.5
+    }
+  },
+  "total_good_values": 5046,
+  "columns_count": 17
+}

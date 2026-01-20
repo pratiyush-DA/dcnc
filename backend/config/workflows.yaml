@@ -1,0 +1,107 @@
+# Workflow Configuration
+# Defines available workflows and their subtypes
+
+workflows:
+  text:
+    description: "Text/String data workflow"
+    subtypes:
+      - email
+      - phone
+      - url
+      - ip_address
+      - uuid
+      - name
+      - company
+      - address
+      - location
+      - state
+      - country
+      - zipcode
+      - username
+      - file_path
+      - product_title
+      - generic  # Fallback
+    default_subtype: generic
+    
+  numeric:
+    description: "Numeric data workflow"
+    subtypes:
+      - age
+      - year
+      - salary
+      - amount
+      - count
+      - rating
+      - percentage
+      - temperature
+      - latitude
+      - longitude
+      - phone_numeric
+      - zipcode_numeric
+      - numeric_id
+      - generic  # Fallback
+    default_subtype: generic
+    
+  datetime:
+    description: "Date and time workflow"
+    subtypes:
+      - date
+      - datetime
+      - generic  # Fallback
+    default_subtype: generic
+    
+  identifier:
+    description: "ID and identifier workflow"
+    subtypes:
+      - pattern_id
+      - numeric_id
+      - generic  # Fallback
+    default_subtype: generic
+
+# Semantic Constraints for Numeric Types
+semantic_constraints:
+  age:
+    min: 0
+    max: 120
+    type: integer
+    
+  rating:
+    min: 0
+    max: 10
+    type: float
+    
+  year:
+    min: 1900
+    max: 2100
+    type: integer
+    
+  latitude:
+    min: -90
+    max: 90
+    type: float
+    
+  longitude:
+    min: -180
+    max: 180
+    type: float
+    
+  percentage:
+    min: 0
+    max: 100
+    type: float
+
+# Text Preservation Rules
+text_rules:
+  preserve_uppercase:
+    - IT
+    - HR
+    - PR
+    - QA
+    - CEO
+    - CFO
+    - CTO
+    - COO
+    - VP
+    - USA
+    - UK
+    - EU

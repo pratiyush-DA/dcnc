@@ -1,0 +1,23 @@
+numeric_col,grammar_col,email_col,userid_col,url_col,phone_col
+12345,hello,abc@example.com,ab12,http://example.com,+911234567890
+67890,world,GOATOURISM@gov.com,ab13,https://openai.com,+911234567891
+54321,test,malformedemail@,ab14,http://invalid-url,123456
+98765,data,good.email@mail.com,ab15,https://github,abcdefg
+11111,sample,bademail.com,user99,ftp://wrongurl,+911234567892
+22222,example,xyz@mail.com,16,example.com,9876543210
+33333,hello123,alpha123@gmail.com,xyz-001,http://site.com,+44 123 456 789
+44444,world456,not-an-email,abc-002,https://mysite.org,+1-234-567-8901
+55555,test789,user@mail.com,ABCD-1234,http://validsite.net,+919876543210
+66666,data999,bad@@mail.com,efgh-5678,https://site.io,+44-987-654-3210
+77777,sample111,correct@mail.co,0001,http://mydomain.com,+1 800 123 4567
+88888,example222,invalidemail@com,99999,https://openai.org,123-456-7890
+99999,test333,good2@mail.com,AB-XYZ,https://validsite.com,+91 98765 43210
+10101,data444,wrong.mail,@user,https://test.org,9876543210
+20202,alpha555,right@mail.org,AB-001,http://example.org,+44 1234 567890
+30303,beta666,another.good@mail.com,16-XY,https://openai.ai,+91-12345-67890
+40404,gamma777,notgood@@mail.com,ABCD-999,http://mysite.net,+1-234-567-890
+50505,delta888,valid@mail.com,xyz123,http://site.com,+44 987 654 321
+60606,epsilon999,incorrect@mail,USER-001,http://mysite.org,+91 87654 32109
+70707,zeta000,ok@mail.net,AB-XYZ,http://validsite.net,+1 234 567 890
+80808,theta111,abc123@mail.com,0002,https://site.io,+91 99999 88888
+90909,iota222,mal@mail,16-AB,https://domain.com,+44 123 987 654

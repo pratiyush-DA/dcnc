@@ -1,0 +1,155 @@
+[
+  {
+    "Column": "sp_source_id",
+    "Workflow": "identifier",
+    "Subtype": "pattern_id",
+    "SuccessRate": 99.70501474926253,
+    "Good": 338,
+    "Bad": 1,
+    "LLMPatterns": "2 patterns (Ex: ^SPS_[0-9]+$)"
+  },
+  {
+    "Column": "sp_common_name",
+    "Workflow": "text",
+    "Subtype": "generic",
+    "SuccessRate": 100.0,
+    "Good": 339,
+    "Bad": 0,
+    "LLMPatterns": "3 patterns (Ex: ^[A-Z][a-z]* [A-Z][a-z]*$)"
+  },
+  {
+    "Column": "sp_given_name",
+    "Workflow": "text",
+    "Subtype": "generic",
+    "SuccessRate": 100.0,
+    "Good": 339,
+    "Bad": 0,
+    "LLMPatterns": "3 patterns (Ex: ^([A-Z][a-z]{1,10})$)"
+  },
+  {
+    "Column": "sp_sn",
+    "Workflow": "text",
+    "Subtype": "generic",
+    "SuccessRate": 100.0,
+    "Good": 339,
+    "Bad": 0,
+    "LLMPatterns": "3 patterns (Ex: ^([A-Z][a-z]{1,10})$)"
+  },
+  {
+    "Column": "sp_mail",
+    "Workflow": "text",
+    "Subtype": "email",
+    "SuccessRate": 97.93510324483776,
+    "Good": 332,
+    "Bad": 7,
+    "LLMPatterns": "3 patterns (Ex: ^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$)"
+  },
+  {
+    "Column": "sp_telephone_number",
+    "Workflow": "text",
+    "Subtype": "phone",
+    "SuccessRate": 51.62241887905604,
+    "Good": 175,
+    "Bad": 164,
+    "LLMPatterns": "3 patterns (Ex: ^\\d{10}$)"
+  },
+  {
+    "Column": "sp_country",
+    "Workflow": "text",
+    "Subtype": "country",
+    "SuccessRate": 99.11504424778761,
+    "Good": 336,
+    "Bad": 3,
+    "LLMPatterns": "3 patterns (Ex: ^USA$)"
+  },
+  {
+    "Column": "sp_city",
+    "Workflow": "text",
+    "Subtype": "location",
+    "SuccessRate": 100.0,
+    "Good": 339,
+    "Bad": 0,
+    "LLMPatterns": "3 patterns (Ex: ^([A-Z][a-z]+ ?)+$)"
+  },
+  {
+    "Column": "sp_state",
+    "Workflow": "text",
+    "Subtype": "state",
+    "SuccessRate": 95.28023598820059,
+    "Good": 323,
+    "Bad": 16,
+    "LLMPatterns": "5 patterns (Ex: ^FL$)"
+  },
+  {
+    "Column": "sp_postaladdress",
+    "Workflow": "text",
+    "Subtype": "address",
+    "SuccessRate": 99.41002949852508,
+    "Good": 337,
+    "Bad": 2,
+    "LLMPatterns": "3 patterns (Ex: ^\\d{1,5} [A-Za-z0-9 ]+ [A-Z]{1,4}$)"
+  },
+  {
+    "Column": "sp_postalcode",
+    "Workflow": "text",
+    "Subtype": "zipcode",
+    "SuccessRate": 99.70501474926253,
+    "Good": 338,
+    "Bad": 1,
+    "LLMPatterns": "3 patterns (Ex: ^\\d{5}(?:\\.\\d+)?$)"
+  },
+  {
+    "Column": "sp_when_created",
+    "Workflow": "datetime",
+    "Subtype": "date",
+    "SuccessRate": 100.0,
+    "Good": 339,
+    "Bad": 0,
+    "LLMPatterns": "1 patterns (Ex: ^\\d{4}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])(0[0-9]|1[0-9]|2[0-3])[0-5][0-9][0-5][0-9]\\.0Z$)"
+  },
+  {
+    "Column": "sp_fordjobrole",
+    "Workflow": "text",
+    "Subtype": "job_title",
+    "SuccessRate": 95.28023598820059,
+    "Good": 323,
+    "Bad": 16,
+    "LLMPatterns": "5 patterns (Ex: ^Technician$)"
+  },
+  {
+    "Column": "sp_fordsitecodetype",
+    "Workflow": "text",
+    "Subtype": "generic",
+    "SuccessRate": 100.0,
+    "Good": 339,
+    "Bad": 0,
+    "LLMPatterns": "3 patterns (Ex: ^([A-Z][a-z]{1,10})$)"
+  },
+  {
+    "Column": "sp_uid",
+    "Workflow": "text",
+    "Subtype": "generic",
+    "SuccessRate": 100.0,
+    "Good": 339,
+    "Bad": 0,
+    "LLMPatterns": "3 patterns (Ex: ^([A-Z][a-z]{1,10})$)"
+  },
+  {
+    "Column": "sp_fordsitecode",
+    "Workflow": "identifier",
+    "Subtype": "pattern_id",
+    "SuccessRate": 67.55162241887905,
+    "Good": 229,
+    "Bad": 110,
+    "LLMPatterns": "2 patterns (Ex: ^SPS_[0-9]+$)"
+  },
+  {
+    "Column": "Misc_01",
+    "Workflow": "text",
+    "Subtype": "generic",
+    "SuccessRate": 100.0,
+    "Good": 339,
+    "Bad": 0,
+    "LLMPatterns": "4 patterns (Ex: ^.{6,58}$)"
+  }
+]

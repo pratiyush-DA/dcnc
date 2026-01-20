@@ -1,0 +1,373 @@
+# Heuristic Detection Rules
+# Priority-ordered: Lower number = Higher priority
+# RULE: Always check CONTENT PATTERNS first, then heuristics for ambiguous cases
+#
+# Detection Strategy:
+# 1. Strong content patterns (email, IP, UUID, date) override heuristics
+# 2. Heuristics guide when content is ambiguous
+# 3. Generic fallback for unknown types
+
+version: "2.1"
+
+# Content patterns take precedence - these are checked FIRST
+content_patterns:
+  # Highest priority - unmistakable patterns
+  email:
+    regex: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    workflow: text
+    subtype: email
+    min_match_ratio: 0.7
+    priority: 1
+
+  uuid:
+    regex: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+    workflow: text
+    subtype: uuid
+    min_match_ratio: 0.8
+    priority: 2
+
+  ip_address:
+    regex: "^(?:\\d{1,3}\\.){3}\\d{1,3}$"
+    workflow: text
+    subtype: ip_address
+    min_match_ratio: 0.7
+    priority: 3
+
+  datetime_iso:
+    regex: "^\\d{4}-\\d{2}-\\d{2}[T\\s]\\d{2}:\\d{2}:\\d{2}"
+    workflow: datetime
+    subtype: datetime
+    min_match_ratio: 0.6
+    priority: 4
+
+  date_iso:
+    regex: "^\\d{4}-\\d{2}-\\d{2}$"
+    workflow: datetime
+    subtype: date
+    min_match_ratio: 0.7
+    priority: 5
+
+  date_us:
+    regex: "^\\d{1,2}/\\d{1,2}/\\d{2,4}$"
+    workflow: datetime
+    subtype: date
+    min_match_ratio: 0.7
+    priority: 6
+
+  url:
+    regex: "^https?://[^\\s]+"
+    workflow: text
+    subtype: url
+    min_match_ratio: 0.6
+    priority: 7
+
+  # Coordinate patterns - BEFORE phone to prevent decimal misclassification
+  latitude:
+    regex: "^-?\\d{1,2}\\.\\d{2,8}$"
+    column_hint: ["lat", "latitude"]
+    workflow: numeric
+    subtype: latitude
+    min_match_ratio: 0.7
+    priority: 7.1
+
+  longitude:
+    regex: "^-?\\d{1,3}\\.\\d{2,8}$"
+    column_hint: ["lon", "lng", "longitude"]
+    workflow: numeric
+    subtype: longitude
+    min_match_ratio: 0.7
+    priority: 7.2
+
+  # Decimal number with column context - for amounts, temps before phone
+  decimal_amount:
+    regex: "^-?\\d+\\.\\d{2}$"
+    column_hint: ["amount", "price", "cost", "total", "order", "temp", "temperature"]
+    workflow: numeric
+    subtype: amount
+    min_match_ratio: 0.7
+    priority: 7.3
+
+  phone:
+    # More specific: requires at least one separator (dash, paren, space) or country code
+    regex: "^(\\+?\\d{1,3}[\\s\\-])?[\\(]?\\d{3}[\\)\\-\\s\\.]+\\d{3}[\\-\\s\\.]+\\d{4}$|^\\d{10}$"
+    workflow: text
+    subtype: phone
+    min_match_ratio: 0.6
+    priority: 8
+
+  zipcode:
+    regex: "^\\d{5}(-\\d{4})?$"
+    workflow: text
+    subtype: zipcode
+    min_match_ratio: 0.8
+    priority: 9
+
+  boolean:
+    regex: "^(true|false|yes|no|1|0|y|n|t|f)$"
+    workflow: text
+    subtype: boolean
+    case_insensitive: true
+    min_match_ratio: 0.8
+    priority: 10
+
+# Heuristic rules - used when content pattern doesn't match
+# or to disambiguate between similar patterns
+rules:
+  # ========== IDENTIFIERS (Priority 1-20) ==========
+  - name: id_generic
+    patterns: ["*_id", "id_*", "*identifier*", "*_key"]
+    workflow: identifier
+    subtype: pattern_id
+    priority: 1
+
+  - name: uuid_column
+    patterns: ["*uuid*", "*guid*"]
+    workflow: text
+    subtype: uuid
+    priority: 2
+
+  # ========== CONTACT INFO (Priority 21-40) ==========
+  - name: email
+    patterns: ["*email*", "*e_mail*", "*mail_address*"]
+    workflow: text
+    subtype: email
+    priority: 21
+
+  - name: phone
+    patterns: ["*phone*", "*mobile*", "*cell*", "*telephone*", "*fax*"]
+    workflow: text
+    subtype: phone
+    priority: 22
+
+  - name: url
+    patterns: ["*url*", "*website*", "*link*", "*homepage*", "*web*"]
+    workflow: text
+    subtype: url
+    priority: 23
+
+  - name: ip_address
+    # Specific patterns to avoid matching zip_code (*ip* would match z-ip-_code)
+    patterns: ["ip_address*", "*_ip_*", "*ipv4*", "*ipv6*", "*ipaddr*", "client_ip", "server_ip", "source_ip", "dest_ip"]
+    workflow: text
+    subtype: ip_address
+    priority: 24
+
+  # ========== LOCATION (Priority 41-60) ==========
+  # IMPORTANT: More specific before generic (city before address)
+  - name: city
+    patterns: ["*city*", "*town*", "*municipality*"]
+    workflow: text
+    subtype: location
+    priority: 41
+
+  - name: state
+    patterns: ["*state*", "*province*", "*region*"]
+    workflow: text
+    subtype: state
+    priority: 42
+
+  - name: zipcode
+    patterns: ["*zip*", "*postal*", "*postcode*"]
+    workflow: text
+    subtype: zipcode
+    priority: 43
+
+  - name: country
+    patterns: ["*country*", "*nation*"]
+    workflow: text
+    subtype: country
+    priority: 44
+
+  - name: address
+    patterns: ["*address*", "*street*", "*location*"]
+    workflow: text
+    subtype: address
+    priority: 50  # Lower than specific location types
+
+  - name: postal_address
+    patterns: ["*postal_address*", "*postaladdress*"]
+    workflow: text
+    subtype: address
+    priority: 40  # Higher priority than zipcode (43)
+
+  # ========== NAMES (Priority 61-80) ==========
+  - name: company
+    patterns: ["*company*", "*organization*", "*org*", "*business*", "*employer*", "*firm*"]
+    workflow: text
+    subtype: company
+    priority: 61
+
+  - name: person_name
+    patterns: ["*first_name*", "*last_name*", "*full_name*", "name"]
+    exclude_patterns: ["*user*", "*login*", "*file*"]
+    workflow: text
+    subtype: name
+    priority: 70  # Lower than company
+
+  - name: username
+    patterns: ["*username*", "*user_name*", "*login*", "*userid*", "*user_id*"]
+    workflow: text
+    subtype: username
+    priority: 65  # Before generic name
+
+  # ========== NUMERIC (Priority 81-100) ==========
+  - name: latitude
+    patterns: ["*lat*", "*latitude*"]
+    exclude_patterns: ["*platform*", "*later*"]
+    workflow: numeric
+    subtype: latitude
+    priority: 79
+
+  - name: longitude
+    patterns: ["*lon*", "*lng*", "*longitude*"]
+    exclude_patterns: ["*long_*", "*longer*"]
+    workflow: numeric
+    subtype: longitude
+    priority: 80
+
+  - name: temperature
+    patterns: ["*temp*", "*temperature*", "*celsius*", "*fahrenheit*"]
+    exclude_patterns: ["*template*", "*temporary*"]
+    workflow: numeric
+    subtype: temperature
+    priority: 80.5
+
+  - name: age
+    patterns: ["*age*", "*years_old*"]
+    exclude_patterns: ["*percentage*", "*percent*"]  # Prevent matching 'percentage'
+    workflow: numeric
+    subtype: age
+    priority: 81
+
+  - name: rating
+    patterns: ["*rating*", "*score*", "*stars*"]
+    workflow: numeric
+    subtype: rating
+    priority: 82
+
+  - name: salary
+    patterns: ["*salary*", "*wage*", "*income*", "*pay*", "*compensation*"]
+    workflow: numeric
+    subtype: salary
+    priority: 83
+
+  - name: amount
+    patterns: ["*amount*", "*price*", "*cost*", "*total*", "*sum*"]
+    workflow: numeric
+    subtype: amount
+    priority: 84
+
+  - name: percentage
+    patterns: ["*percent*", "*pct*", "*ratio*", "*rate*"]
+    workflow: numeric
+    subtype: percentage
+    priority: 85
+
+  - name: year
+    patterns: ["*year*", "*yr*"]
+    workflow: numeric
+    subtype: year
+    priority: 86
+
+  - name: count
+    patterns: ["*count*", "*quantity*", "*num_*", "*number_of*"]
+    workflow: numeric
+    subtype: count
+    priority: 87
+
+  # ========== DATETIME (Priority 101-120) ==========
+  - name: datetime
+    patterns: ["*datetime*", "*timestamp*", "*_at", "*_time"]
+    workflow: datetime
+    subtype: datetime
+    priority: 101
+
+  - name: date
+    patterns: ["*date*", "*dob*", "*created*", "*updated*", "*birth*"]
+    workflow: datetime
+    subtype: date
+    priority: 102
+
+  # Note: *login* is NOT here - we let content analysis decide
+
+  # ========== BOOLEAN (Priority 121-130) ==========
+  - name: boolean
+    patterns: ["*is_*", "*has_*", "*active*", "*enabled*", "*flag*", "*bool*"]
+    workflow: text
+    subtype: boolean
+    priority: 121
+
+  # ========== OTHER TEXT (Priority 131+) ==========
+  - name: description
+    patterns: ["*description*", "*desc*", "*notes*", "*comment*", "*remarks*"]
+    workflow: text
+    subtype: generic
+    priority: 131
+
+  - name: title
+    patterns: ["*title*", "*role*", "*position*", "*job*"]
+    workflow: text
+    subtype: job_title
+    priority: 132
+
+# Semantic constraints for numeric validation
+semantic_constraints:
+  age:
+    min: 0
+    max: 120
+    type: integer
+  
+  rating:
+    min: 0
+    max: 10
+    type: float
+  
+  year:
+    min: 1900
+    max: 2100
+    type: integer
+  
+  percentage:
+    min: 0
+    max: 100
+    type: float
+  
+  latitude:
+    min: -90
+    max: 90
+    type: float
+  
+  longitude:
+    min: -180
+    max: 180
+    type: float
+  
+  temperature:
+    min: -273.15
+    max: 1000
+    type: float
+  
+  salary:
+    min: 0
+    max: null  # No upper bound for salary
+    type: float
+  
+  amount:
+    min: 0
+    max: null  # No upper bound for amounts
+    type: float
+
+# Text preservation rules (Bug Fix #6)
+preserve_uppercase:
+  - "IT"
+  - "HR"
+  - "PR"
+  - "QA"
+  - "CEO"
+  - "CFO"
+  - "CTO"
+  - "COO"
+  - "VP"
+  - "USA"
+  - "UK"
+  - "EU"

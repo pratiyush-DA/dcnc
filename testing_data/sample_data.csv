@@ -1,0 +1,11 @@
+name,email,phone,age,state,country,ssn,url,rating,salary,date_of_birth,zip_code
+John Doe,john.doe@gmail.com,555-123-4567,28,California,United States,123-45-6789,https://johndoe.com,4.5,75000,1996-03-15,90210
+Jane Smith,jane@@yahoo.com,1234567890,thirty,Califronia,USA,987654321,www.janesmith.io,4.8,82500,1990-07-22,10001
+Bob Wilson,bobgmailcom,(555) 987-6543,250,TX,Untied States,111-22-3333,http://bobwilson.net,3.9,68000,1985-11-30,60601
+Alice Brown,alice@outlook.com,555.111.2222,-5,Flordia,uk,222-33-4444,ftp://alice.org,4.2,91000,1992-04-18,33101
+Charlie Day,charlie@hotmailcom,+1-555-333-4444,45,pennsylvania,Germay,333-44-5555,charlie.blog.com,4.7,120000,1979-08-25,19101
+David Lee,david@company.org,0000000000,abc,New York,Canada,444-55-6666,https://davidlee.dev,5.1,55000,2023-13-45,02101
+Emma White,invalid@email,12345,35,ZZ,Britian,000-00-0000,not-a-url,3.5,78000,1989-02-14,75201
+Frank Green,frank@gmai.com,555-000-1111,52,Massachutes,JAPAN,555-66-7777,https://frankgreen.co,4.0,95000,1972-06-08,98101
+Grace Kim,GRACE.KIM@YAHOO.COM,+44 20 7946 0958,41,Texsa,cananda,666-77-8888,HTTPS://GRACEKIM.COM,4.6,88000,1983-12-01,30301
+Henry Chen,test@test.com,1-800-FLOWERS,29,Calfornia,Austrlia,777-88-9999,https://henrychen.io/blog,4.3,72000,1995-09-17,85001

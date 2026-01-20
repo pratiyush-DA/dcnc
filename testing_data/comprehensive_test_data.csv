@@ -1,0 +1,105 @@
+full_name,job_title,birth_date,hire_date,phone_mobile,email_personal,website_url,address_city,address_state,address_country,address_zip,salary_amount,credit_score,ssn_id,ip_address
+Linda Martin,Analyst,19890101,20201201,5554445555,lmartin@fin.com,https://linda-fin.co.uk,Phoenix,Arizona,US,85001,95000.00,750,444-55-6666,10.1.1.5
+Christopher Rodriguez,Rep,1984-05-18,2015-07-01,1-800-HIGHER,chris.r@COMPANY.ORG,HTTPS://CHRIS.COM,Columbus,OH,usa,43215,120000.0,740,000-11-2222,10.2.2.2
+Nancy Allen,Intern,1999-99-99,2026-12-12,555-123,nancy@.com,https://.,Void,NULL,Null,0,NaN,-100,***-**-****,0.0.0.0
+Robert Johnson,Product Manager,1985-11-30,2018-06-01,555-345-6789,robert.j@outlook.com,https://prod-mgmt.net,Austin,TX,USA,73301,115000,720,345-67-8901,172.16.0.1
+Richard Thompson,Engineer,10.04.1991,01.09.2019,555 555 6666,richard.t@euro.com,rt-euro.eu,Philadelphia,PA,United States,19101,110.000,760,555667777,192.168.100.1
+Joseph Martinez,Admin,1986-10-05,2016-08-20,555-777-8888,t@hotmailcom,http:/joseph.com,San Antonio,Texsa,USA,78201,60000,710,777-88-9999,10.0.0.100
+James Anderson,Security Analyst,1987-03-12,2016-12-01,555-901-2345,james.a@outlook.com,https://sec-james.net,Washington,DC,USA,20001,140000,790,901-23-4567,192.168.0.200
+Lisa Hall,,0000-00-00,invalid,123,lisa@,ftp://lisa,Nowhere,None,,abcde,0,0,123,invalid-ip
+Jessica Taylor,Backend Developer,1994-09-18,2020-05-22,555-890-1234,jessica.t@yahoo.com,https://jt-backend.dev,Denver,CO,USA,80201,125000,770,890-12-3456,172.16.0.10
+Christopher Rodriguez,Rep,1984-05-18,2015-07-01,1-800-HIGHER,chris.r@COMPANY.ORG,HTTPS://CHRIS.COM,Columbus,OH,usa,43215,120000.0,740,000-11-2222,10.2.2.2
+Jane Smith,Data Scientist,1992-08-22,2019-03-15,555-234-5678,jane.smith@yahoo.com,https://jane-data.io,San Francisco,CA,USA,94105,135000,780,234-56-7890,10.0.0.1
+Kevin King,Temp,2100-01-01,1900-01-01,call-me,kevin@domain,www,City,State,Country,Zip,Free,A+,SSN,Localhost
+Susan Robinson,Clerk,1995-03-30,2022-11-01,5558889999,susan@@yahoo.com,www.susan.org,Detroit,MI,America,48201,"55,000",650,888990000,192.168.0.5
+Joseph Martinez,Admin,1986-10-05,2016-08-20,555-777-8888,t@hotmailcom,http:/joseph.com,San Antonio,Texsa,USA,78201,60000,710,777-88-9999,10.0.0.100
+Jane Smith,Data Scientist,1992-08-22,2019-03-15,555-234-5678,jane.smith@yahoo.com,https://jane-data.io,San Francisco,CA,USA,94105,135000,780,234-56-7890,10.0.0.1
+Charles Harris,Consultant,25/12/1982,15/06/2021,+1-555-333-4444,charris@global.com,charris.global,Houston,TX,United States of America,77001,160k,790,333445555,172.16.1.1
+Robert Johnson,Product Manager,1985-11-30,2018-06-01,555-345-6789,robert.j@outlook.com,https://prod-mgmt.net,Austin,TX,USA,73301,115000,720,345-67-8901,172.16.0.1
+Patricia White,Director,"August 15, 1975","Mar 10, 2010",555.222.3333,pat.white@corp.net,www.patwhite.org,Dallas,TX,U.S.A.,75201,180000,820,222-33-4444,10.0.0.20
+Margaret Lewis,HR,1982-11-25,2018-03-10,555.000.1111,margaret@hr.com,hr-portal.net,Boston,Massachusets,U.S.,2110,90000,730,111-22-3333,192.168.1.20
+Susan Robinson,Clerk,1995-03-30,2022-11-01,5558889999,susan@@yahoo.com,www.susan.org,Detroit,MI,America,48201,"55,000",650,888990000,192.168.0.5
+Paul Walker,Unknown,2023-13-45,2025-01-01,invalid-phone,no-email,not-a-url,Unknown,ZZ,Mars,00000,-5000,999,000-00-0000,999.999.999.999
+Richard Thompson,Engineer,10.04.1991,01.09.2019,555 555 6666,richard.t@euro.com,rt-euro.eu,Philadelphia,PA,United States,19101,110.000,760,555667777,192.168.100.1
+Lisa Hall,,0000-00-00,invalid,123,lisa@,ftp://lisa,Nowhere,None,,abcde,0,0,123,invalid-ip
+John Doe,Software Engineer,1990-05-15,2020-01-10,555-123-4567,john.doe@gmail.com,https://johndoe.com,New York,NY,USA,10001,120000,750,123-45-6789,192.168.1.1
+Lisa Hall,,0000-00-00,invalid,123,lisa@,ftp://lisa,Nowhere,None,,abcde,0,0,123,invalid-ip
+Thomas Clark,Sales,1991-09-12,2020-02-28,(555) 999-0000,tom.c@outlook.cm,sales-tom.com,Jacksonville,Flordia,USA,32099,100k,720,999-00-1111,172.16.5.5
+John Doe,Software Engineer,1990-05-15,2020-01-10,555-123-4567,john.doe@gmail.com,https://johndoe.com,New York,NY,USA,10001,120000,750,123-45-6789,192.168.1.1
+Donald Young,Tester,"February 30, 2020",2020-02-30,0000000000,donald@test,http://,Test City,XX,Testland,99999,1000000000,1000,111111111,1.1.1
+Christopher Rodriguez,Rep,1984-05-18,2015-07-01,1-800-HIGHER,chris.r@COMPANY.ORG,HTTPS://CHRIS.COM,Columbus,OH,usa,43215,120000.0,740,000-11-2222,10.2.2.2
+Linda Martin,Analyst,19890101,20201201,5554445555,lmartin@fin.com,https://linda-fin.co.uk,Phoenix,Arizona,US,85001,95000.00,750,444-55-6666,10.1.1.5
+Kevin King,Temp,2100-01-01,1900-01-01,call-me,kevin@domain,www,City,State,Country,Zip,Free,A+,SSN,Localhost
+Sarah Wilson,QA Engineer,1993-04-25,2022-02-15,555-678-9012,sarah.w@gmail.com,https://swilson-qa.com,Boston,MA,USA,02108,95000,710,678-90-1234,192.168.1.5
+Joseph Martinez,Admin,1986-10-05,2016-08-20,555-777-8888,t@hotmailcom,http:/joseph.com,San Antonio,Texsa,USA,78201,60000,710,777-88-9999,10.0.0.100
+Christopher Rodriguez,Rep,1984-05-18,2015-07-01,1-800-HIGHER,chris.r@COMPANY.ORG,HTTPS://CHRIS.COM,Columbus,OH,usa,43215,120000.0,740,000-11-2222,10.2.2.2
+Michael Brown,DevOps Engineer,1988-07-10,2017-11-05,555-567-8901,mike.brown@hotmail.com,https://devops-mike.tech,Chicago,IL,USA,60601,130000,760,567-89-0123,10.0.0.50
+Michael Brown,DevOps Engineer,1988-07-10,2017-11-05,555-567-8901,mike.brown@hotmail.com,https://devops-mike.tech,Chicago,IL,USA,60601,130000,760,567-89-0123,10.0.0.50
+Jane Smith,Data Scientist,1992-08-22,2019-03-15,555-234-5678,jane.smith@yahoo.com,https://jane-data.io,San Francisco,CA,USA,94105,135000,780,234-56-7890,10.0.0.1
+Barbara Grcia,Staff,1993-07-20,2021-04-15,555-666-7777,barbara@gmai.com,https://barbara.net,San Dieg,Califronia,Untied States,92101,85000,680,666-77-8888,192.168.1.50
+Nancy Allen,Intern,1999-99-99,2026-12-12,555-123,nancy@.com,https://.,Void,NULL,Null,0,NaN,-100,***-**-****,0.0.0.0
+Lisa Hall,,0000-00-00,invalid,123,lisa@,ftp://lisa,Nowhere,None,,abcde,0,0,123,invalid-ip
+Sarah Wilson,QA Engineer,1993-04-25,2022-02-15,555-678-9012,sarah.w@gmail.com,https://swilson-qa.com,Boston,MA,USA,02108,95000,710,678-90-1234,192.168.1.5
+Emily Davis,UX Designer,1995-02-14,2021-09-20,555-456-7890,emily.d@gmail.com,https://emilydesigns.co,Seattle,WA,USA,98101,105000,740,456-78-9012,192.168.0.100
+Jennifer Thomas,Data Analyst,1996-06-30,2023-01-05,555-012-3456,jen.t@gmail.com,https://data-jen.com,Miami,FL,USA,33101,90000,700,012-34-5678,10.0.0.2
+Susan Robinson,Clerk,1995-03-30,2022-11-01,5558889999,susan@@yahoo.com,www.susan.org,Detroit,MI,America,48201,"55,000",650,888990000,192.168.0.5
+Patricia White,Director,"August 15, 1975","Mar 10, 2010",555.222.3333,pat.white@corp.net,www.patwhite.org,Dallas,TX,U.S.A.,75201,180000,820,222-33-4444,10.0.0.20
+Barbara Grcia,Staff,1993-07-20,2021-04-15,555-666-7777,barbara@gmai.com,https://barbara.net,San Dieg,Califronia,Untied States,92101,85000,680,666-77-8888,192.168.1.50
+Emily Davis,UX Designer,1995-02-14,2021-09-20,555-456-7890,emily.d@gmail.com,https://emilydesigns.co,Seattle,WA,USA,98101,105000,740,456-78-9012,192.168.0.100
+Margaret Lewis,HR,1982-11-25,2018-03-10,555.000.1111,margaret@hr.com,hr-portal.net,Boston,Massachusets,U.S.,2110,90000,730,111-22-3333,192.168.1.20
+Linda Martin,Analyst,19890101,20201201,5554445555,lmartin@fin.com,https://linda-fin.co.uk,Phoenix,Arizona,US,85001,95000.00,750,444-55-6666,10.1.1.5
+John Doe,Software Engineer,1990-05-15,2020-01-10,555-123-4567,john.doe@gmail.com,https://johndoe.com,New York,NY,USA,10001,120000,750,123-45-6789,192.168.1.1
+Jessica Taylor,Backend Developer,1994-09-18,2020-05-22,555-890-1234,jessica.t@yahoo.com,https://jt-backend.dev,Denver,CO,USA,80201,125000,770,890-12-3456,172.16.0.10
+Jessica Taylor,Backend Developer,1994-09-18,2020-05-22,555-890-1234,jessica.t@yahoo.com,https://jt-backend.dev,Denver,CO,USA,80201,125000,770,890-12-3456,172.16.0.10
+Richard Thompson,Engineer,10.04.1991,01.09.2019,555 555 6666,richard.t@euro.com,rt-euro.eu,Philadelphia,PA,United States,19101,110.000,760,555667777,192.168.100.1
+Jennifer Thomas,Data Analyst,1996-06-30,2023-01-05,555-012-3456,jen.t@gmail.com,https://data-jen.com,Miami,FL,USA,33101,90000,700,012-34-5678,10.0.0.2
+David Lee,Frontend Developer,1990-12-05,2019-08-10,555-789-0123,david.lee@gmail.com,https://dlee-frontend.io,Los Angeles,CA,USA,90001,118000,730,789-01-2345,10.1.1.1
+Barbara Grcia,Staff,1993-07-20,2021-04-15,555-666-7777,barbara@gmai.com,https://barbara.net,San Dieg,Califronia,Untied States,92101,85000,680,666-77-8888,192.168.1.50
+Donald Young,Tester,"February 30, 2020",2020-02-30,0000000000,donald@test,http://,Test City,XX,Testland,99999,1000000000,1000,111111111,1.1.1
+Sarah Wilson,QA Engineer,1993-04-25,2022-02-15,555-678-9012,sarah.w@gmail.com,https://swilson-qa.com,Boston,MA,USA,02108,95000,710,678-90-1234,192.168.1.5
+Susan Robinson,Clerk,1995-03-30,2022-11-01,5558889999,susan@@yahoo.com,www.susan.org,Detroit,MI,America,48201,"55,000",650,888990000,192.168.0.5
+Charles Harris,Consultant,25/12/1982,15/06/2021,+1-555-333-4444,charris@global.com,charris.global,Houston,TX,United States of America,77001,160k,790,333445555,172.16.1.1
+David Lee,Frontend Developer,1990-12-05,2019-08-10,555-789-0123,david.lee@gmail.com,https://dlee-frontend.io,Los Angeles,CA,USA,90001,118000,730,789-01-2345,10.1.1.1
+David Lee,Frontend Developer,1990-12-05,2019-08-10,555-789-0123,david.lee@gmail.com,https://dlee-frontend.io,Los Angeles,CA,USA,90001,118000,730,789-01-2345,10.1.1.1
+Donald Young,Tester,"February 30, 2020",2020-02-30,0000000000,donald@test,http://,Test City,XX,Testland,99999,1000000000,1000,111111111,1.1.1
+Nancy Allen,Intern,1999-99-99,2026-12-12,555-123,nancy@.com,https://.,Void,NULL,Null,0,NaN,-100,***-**-****,0.0.0.0
+Thomas Clark,Sales,1991-09-12,2020-02-28,(555) 999-0000,tom.c@outlook.cm,sales-tom.com,Jacksonville,Flordia,USA,32099,100k,720,999-00-1111,172.16.5.5
+Paul Walker,Unknown,2023-13-45,2025-01-01,invalid-phone,no-email,not-a-url,Unknown,ZZ,Mars,00000,-5000,999,000-00-0000,999.999.999.999
+John Doe,Software Engineer,1990-05-15,2020-01-10,555-123-4567,john.doe@gmail.com,https://johndoe.com,New York,NY,USA,10001,120000,750,123-45-6789,192.168.1.1
+Jessica Taylor,Backend Developer,1994-09-18,2020-05-22,555-890-1234,jessica.t@yahoo.com,https://jt-backend.dev,Denver,CO,USA,80201,125000,770,890-12-3456,172.16.0.10
+Patricia White,Director,"August 15, 1975","Mar 10, 2010",555.222.3333,pat.white@corp.net,www.patwhite.org,Dallas,TX,U.S.A.,75201,180000,820,222-33-4444,10.0.0.20
+Paul Walker,Unknown,2023-13-45,2025-01-01,invalid-phone,no-email,not-a-url,Unknown,ZZ,Mars,00000,-5000,999,000-00-0000,999.999.999.999
+Emily Davis,UX Designer,1995-02-14,2021-09-20,555-456-7890,emily.d@gmail.com,https://emilydesigns.co,Seattle,WA,USA,98101,105000,740,456-78-9012,192.168.0.100
+Emily Davis,UX Designer,1995-02-14,2021-09-20,555-456-7890,emily.d@gmail.com,https://emilydesigns.co,Seattle,WA,USA,98101,105000,740,456-78-9012,192.168.0.100
+Patricia White,Director,"August 15, 1975","Mar 10, 2010",555.222.3333,pat.white@corp.net,www.patwhite.org,Dallas,TX,U.S.A.,75201,180000,820,222-33-4444,10.0.0.20
+James Anderson,Security Analyst,1987-03-12,2016-12-01,555-901-2345,james.a@outlook.com,https://sec-james.net,Washington,DC,USA,20001,140000,790,901-23-4567,192.168.0.200
+Jane Smith,Data Scientist,1992-08-22,2019-03-15,555-234-5678,jane.smith@yahoo.com,https://jane-data.io,San Francisco,CA,USA,94105,135000,780,234-56-7890,10.0.0.1
+William Jackson,Manager,05/20/1980,01/01/2015,(555) 111-2222,bill.jack@company.com,http://billj.com,Atlanta,Georgia,United States,30301,"150,000",800,111223333,192.168.1.10
+Richard Thompson,Engineer,10.04.1991,01.09.2019,555 555 6666,richard.t@euro.com,rt-euro.eu,Philadelphia,PA,United States,19101,110.000,760,555667777,192.168.100.1
+Barbara Grcia,Staff,1993-07-20,2021-04-15,555-666-7777,barbara@gmai.com,https://barbara.net,San Dieg,Califronia,Untied States,92101,85000,680,666-77-8888,192.168.1.50
+Robert Johnson,Product Manager,1985-11-30,2018-06-01,555-345-6789,robert.j@outlook.com,https://prod-mgmt.net,Austin,TX,USA,73301,115000,720,345-67-8901,172.16.0.1
+Sarah Wilson,QA Engineer,1993-04-25,2022-02-15,555-678-9012,sarah.w@gmail.com,https://swilson-qa.com,Boston,MA,USA,02108,95000,710,678-90-1234,192.168.1.5
+James Anderson,Security Analyst,1987-03-12,2016-12-01,555-901-2345,james.a@outlook.com,https://sec-james.net,Washington,DC,USA,20001,140000,790,901-23-4567,192.168.0.200
+William Jackson,Manager,05/20/1980,01/01/2015,(555) 111-2222,bill.jack@company.com,http://billj.com,Atlanta,Georgia,United States,30301,"150,000",800,111223333,192.168.1.10
+Michael Brown,DevOps Engineer,1988-07-10,2017-11-05,555-567-8901,mike.brown@hotmail.com,https://devops-mike.tech,Chicago,IL,USA,60601,130000,760,567-89-0123,10.0.0.50
+David Lee,Frontend Developer,1990-12-05,2019-08-10,555-789-0123,david.lee@gmail.com,https://dlee-frontend.io,Los Angeles,CA,USA,90001,118000,730,789-01-2345,10.1.1.1
+Charles Harris,Consultant,25/12/1982,15/06/2021,+1-555-333-4444,charris@global.com,charris.global,Houston,TX,United States of America,77001,160k,790,333445555,172.16.1.1
+Thomas Clark,Sales,1991-09-12,2020-02-28,(555) 999-0000,tom.c@outlook.cm,sales-tom.com,Jacksonville,Flordia,USA,32099,100k,720,999-00-1111,172.16.5.5
+Thomas Clark,Sales,1991-09-12,2020-02-28,(555) 999-0000,tom.c@outlook.cm,sales-tom.com,Jacksonville,Flordia,USA,32099,100k,720,999-00-1111,172.16.5.5
+Kevin King,Temp,2100-01-01,1900-01-01,call-me,kevin@domain,www,City,State,Country,Zip,Free,A+,SSN,Localhost
+Margaret Lewis,HR,1982-11-25,2018-03-10,555.000.1111,margaret@hr.com,hr-portal.net,Boston,Massachusets,U.S.,2110,90000,730,111-22-3333,192.168.1.20
+Nancy Allen,Intern,1999-99-99,2026-12-12,555-123,nancy@.com,https://.,Void,NULL,Null,0,NaN,-100,***-**-****,0.0.0.0
+Charles Harris,Consultant,25/12/1982,15/06/2021,+1-555-333-4444,charris@global.com,charris.global,Houston,TX,United States of America,77001,160k,790,333445555,172.16.1.1
+Michael Brown,DevOps Engineer,1988-07-10,2017-11-05,555-567-8901,mike.brown@hotmail.com,https://devops-mike.tech,Chicago,IL,USA,60601,130000,760,567-89-0123,10.0.0.50
+Linda Martin,Analyst,19890101,20201201,5554445555,lmartin@fin.com,https://linda-fin.co.uk,Phoenix,Arizona,US,85001,95000.00,750,444-55-6666,10.1.1.5
+Paul Walker,Unknown,2023-13-45,2025-01-01,invalid-phone,no-email,not-a-url,Unknown,ZZ,Mars,00000,-5000,999,000-00-0000,999.999.999.999
+Margaret Lewis,HR,1982-11-25,2018-03-10,555.000.1111,margaret@hr.com,hr-portal.net,Boston,Massachusets,U.S.,2110,90000,730,111-22-3333,192.168.1.20
+Jennifer Thomas,Data Analyst,1996-06-30,2023-01-05,555-012-3456,jen.t@gmail.com,https://data-jen.com,Miami,FL,USA,33101,90000,700,012-34-5678,10.0.0.2
+Joseph Martinez,Admin,1986-10-05,2016-08-20,555-777-8888,t@hotmailcom,http:/joseph.com,San Antonio,Texsa,USA,78201,60000,710,777-88-9999,10.0.0.100
+Donald Young,Tester,"February 30, 2020",2020-02-30,0000000000,donald@test,http://,Test City,XX,Testland,99999,1000000000,1000,111111111,1.1.1
+Kevin King,Temp,2100-01-01,1900-01-01,call-me,kevin@domain,www,City,State,Country,Zip,Free,A+,SSN,Localhost
+James Anderson,Security Analyst,1987-03-12,2016-12-01,555-901-2345,james.a@outlook.com,https://sec-james.net,Washington,DC,USA,20001,140000,790,901-23-4567,192.168.0.200
+Robert Johnson,Product Manager,1985-11-30,2018-06-01,555-345-6789,robert.j@outlook.com,https://prod-mgmt.net,Austin,TX,USA,73301,115000,720,345-67-8901,172.16.0.1
+William Jackson,Manager,05/20/1980,01/01/2015,(555) 111-2222,bill.jack@company.com,http://billj.com,Atlanta,Georgia,United States,30301,"150,000",800,111223333,192.168.1.10
+William Jackson,Manager,05/20/1980,01/01/2015,(555) 111-2222,bill.jack@company.com,http://billj.com,Atlanta,Georgia,United States,30301,"150,000",800,111223333,192.168.1.10
+Jennifer Thomas,Data Analyst,1996-06-30,2023-01-05,555-012-3456,jen.t@gmail.com,https://data-jen.com,Miami,FL,USA,33101,90000,700,012-34-5678,10.0.0.2

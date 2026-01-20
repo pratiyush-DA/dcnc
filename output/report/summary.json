@@ -1,0 +1,13 @@
+{
+  "total_columns": 17,
+  "total_good_values": 5046,
+  "total_bad_values": 717,
+  "total_corrected": 158,
+  "workflow_distribution": {
+    "identifier": 2,
+    "text": 14,
+    "datetime": 1
+  },
+  "error_columns": [],
+  "success_rate": 0.8755856324830817
+}

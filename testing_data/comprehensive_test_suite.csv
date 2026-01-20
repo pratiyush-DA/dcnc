@@ -1,0 +1,11 @@
+id_serial,id_uuid,email_work,phone_mobile,zip_home,web_url,ip_login,full_name,company_name,job_role,country_code,state_name,user_age,salary_usd,rating_score,signup_date,last_login,is_active,notes_generic
+1001,550e8400-e29b-41d4-a716-446655440000,john.doe@example.com,555-0100,90210,https://www.google.com,192.168.1.1,John Doe,Acme Inc,Manager,USA,NY,25,50000,4.5,2023-01-01,2023-01-01 09:00:00,True,First user note
+1002,550e8400-e29b-41d4-a716-446655440001,jane.smith@test.org,555-0101,10001,https://example.com,10.0.0.1,Jane Smith,Global Corp,Developer,Canada,CA,30,75000,5.0,2023-01-02,2023-01-02 10:30:00,False,Standard entry
+1003,550e8400-e29b-41d4-a716-446655440002,bob.jones@company.net,555-0102,60601,https://yahoo.com,172.16.0.1,Bob Jones,Tech Solutions,Analyst,UK,IL,45,90000,3.5,2023-01-03,2023-01-03 11:15:00,True,Another valid row
+1004,550e8400-e29b-41d4-a716-446655440003,alice.w@provider.io,555-0103,75001,https://bing.com,192.168.0.254,Alice Williams,SoftSystems,Director,Germany,TX,35,120000,4.8,2023-01-04,2023-01-04 14:00:00,Yes,Good data point
+1005,550e8400-e29b-41d4-a716-446655440004,charlie.brown@web.com,555-0104,33101,https://github.com,10.0.0.50,Charlie Brown,Data Dynamics,Engineer,France,FL,28,85000,4.2,2023-01-05,2023-01-05 16:45:00,No,Valid record here
+1006,550e8400-e29b-41d4-a716-446655440005,diana.p@service.co,555-0105,98101,https://stackoverflow.com,192.168.100.10,Diana Prince,Cloud Nine,Consultant,Australia,WA,32,95000,4.0,2023-01-06,2023-01-06 08:20:00,1,Checking boolean int
+1007,550e8400-e29b-41d4-a716-446655440006,evan.wright@mail.org,555-0106,02108,https://linkedin.com,172.16.2.2,Evan Wright,NetWorks,Admin,Japan,MA,29,65000,3.8,2023-01-07,2023-01-07 12:10:00,0,Zero as false
+1008,550e8400-e29b-41d4-a716-446655440007,fiona.green@inbox.net,555-0107,80202,https://amazon.com,10.1.1.1,Fiona Green,EcoSys,Sales,Brazil,CO,40,70000,4.7,2023-01-08,2023-01-08 17:55:00,True,Eighth good record
+1009,550e8400e29b41d4a716446655440008,greg.house@gmailcom,1-555-0108,9021,google.com,localhost,greg house,medicine inc,doctor,united states,calif,25.0,"$150,000","4,9",2023/01/09,2023-01-09T09:00:00,yes,Correctable row (typos)
+ABC,not-a-uuid,no_at_symbol,123,ABCDE,just_text,256.256.256.256,12345,Unknown,Unknown,Mars,XX,150,high,10,not-a-date,today,maybe,Rejectable row (garbage)

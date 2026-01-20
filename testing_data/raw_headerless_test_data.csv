@@ -1,0 +1,101 @@
+id,first_name,last_name,email,phone,job_title,company,city,state,zip_code,country,birth_date,hire_date,salary,credit_score,rating,ip_address,website,is_active,department
+1,Thomas,Williams,thomas.williams@outlook.com,+1-293-448-7588,Database Admin,GlobalNet,San Diego,TX,46462,United States,1999-01-30,05/12/2011,110979,740,3.a,40.157.119.250,https://www.globalnet.com,True,Engineering
+2,Patricia,Brown,patricia.brown@yahoo.com,1-800-DATA-ERR,UX Designer,GlobalNet,Dallas,IL,56914,United States,1995-05-16,11/06/2015,136406,460,2.9,49.26.205.93,https://www.globalnet.com,True,Sales
+3,James,Thomas,james.thomas@hotmail.com,+1-475-691-9692,Product Manager,SoftSolutions,San Diego,TX,70501,United States,1980-09-26,28/09/2012,,548,1.8,w95.95.184.58,https://www.softsolutions.com,False,Sales
+4,Patricia,Martin,patricia.martin@company.org,NA,Network Administrator,GlobalNet,Chicago,CA,34349,United States,NULL,05/09/2010,134252,741,2.9,999.999.999.999,https://www.gllbalnet.com,True,Finance
+5,Thomas,Gonzalez,thomas.gonzalez@gmail.com,+1-212-977-5960,Network Administrator,NetSecure,Chicago,TX,15735,United States,1962-10-05,10/09/2010,-1000,637,1.1,,https://www.netsecure.com,False,Finance
+6,Patricia,Martin,patricia.martin@outlook.com,,Database Admin,DataSystems,Houston,Ti,99134,Unitud States,1998-05-27,05/08/2016,60685,793,2.7,230.179.42.76,https://www.datasystems.com,False,Marketing
+7,William,Rodriguez,william.rodriguez@gmail.com,1-800-DATA-ERR,Product Manager,TechCorp,Phoenix,TX,15305,United States,1988-01-09,28/03/2023,61892,580,3.4,34.254.8.76,https://www.techcorp.com,False,Finance
+8,Barbara,null,barbara.moore@gmail.com,+1-858-427-6158,NA,GlobalNet,,TX,26474,United qtates,NULL,11/07/2021,65797,383,2.5,197.75.60.114,https://www.globalnet.com,True,Legal
+9,Richard,Brown,richard.brown_at_gmail.com,+1-244p433-9882,Product Manager,CloudSys,New York,IL,17412,United States,1996-08-29,22/04/2010,108861,695,null,118.208.81.66,https://www.cloudsys.com,True,Engineering
+10,Susan,Lopez,susan.lopez@yahoo.com,+1-538-673-9558,Web Developer,FutureWorks,San Jose,PA,85538,NA,1960-05-15,13/05/2022,110311,779,1.4,16.31.95.118,https://www.futureworks.com,False,Product
+11,James,Moore,james.moore_at_web.io,12345,null,WebTech,lallas,jZ,83175,United States,1965-10-13,16/06/2017,51921,352,1.2,64.9.167.12,https://www.webtech.com,False,Sales
+12,Michael,Williams,michael.williams@gmail.com,1-800-DATA-ERR,Systems Analyst,FutureWorks,Los Angeles,NY,79999,United States,1994-12-20,15/12/2010,144726,352,1.3,208.94.214.135,https://www.futureworks.com,True,Marketing
+13,Sarjh,Garcia,sarah.garcia@outlook.com,+1-836-218-3654,,FutureWorks,San Diego,NY,70190,United States,1972-04-04,21/04/2019,109i47,71r,4.0,195.234.4.10,,True,Product
+w4,null,Jackson,linda.jackson@outlook.com,+1-595-233-9766,Systems Analyst,InnovateInc,San Antonio,null,12068,United States,1979-04-29,12/10/2016,128175,819,4.1,163.18.45.56,https://www.innovateinc.com,False,Operations
+null,NA,Garcia,john.garcia@outlook.com,+1-893-694-4203,Data Scientist,TechCorp,New York,IL,abc,United States,2000-07-29,NA,52653,484,2.1,91.166.231.43,https://www.techcorp.com,True,Operations
+16,Susan,Hernandez,susan.hernandez@company.org,+1-467-g86-1252,Systems Analyst,InnovateInc,San Antonio,TX,15083,United States,2099-01-01,15/08/2015,108497,675,4.3,142.132.168.92,https://www.innovateinc.com,True,Sales
+17,Sarah,Lopez,sarah.lopez@web.io,+1-546-295-5324,,Webgech,New York,TX,26525,United States,1960-05-29,30/03/2012,76925,z57,3.2,5.51.234.189,https://www.webtech.com,False,HR
+18,Susan,Martinez,susan.martinez@tech.net,12345,Network Administrator,GlobalNet,San Jose,CA,51164,United States,null,21/08/2023,140967,539,2.6,134.28.157.85,https://www.globalnet.com,True,Finance
+abc,David,,david.martinez@outlook.com,+1-738-442-2502,UX Designer,null,San Diego,TX,45592,United States,2023-02-30,13/05/2011,102432,702,abc,Localhost,https://www.smartdata.com,True,IT
+20,Jessica,Smith,jessica.smith@web.io,+1-547-820-9858,Software Engineer,TechCorp,Phoenix,Co,33337,United States,1969-08-28,25/07/2021,90592,s04,3.7,53.77.49.109,https://www.techcorp.com,False,Marketing
+21,Elizabeth,Davis,elizabeth.davis@gmail.com,1-800-DATA-ERR,Web Developer,CloudSys,Phoenix,CA,20824,United States,1986-05-09,NULL,65074,642,2.4,17.74.253.185,https://www.cloudsys.com,True,IT
+22,Thomas,Martinez,thomas.martinez@web.io,+1-591-378-9740,Systems Analyst,FutureWorks,Chicago,AZ,81409,United States,1965-02-16,25/12/2018,65460,629,4.3,Localhost,https://www.futureworks.com,True,Sales
+23,William,NULL,william.anderson@gmail.com,+1-720-879-1893,Software Engineer,CloudSys,Houston,Cj,56559,United States,,NULL,76730,462,4.0,228.95.159.5,https://www.cloudsys.com,True,Finance
+24,Jennifer,Lopez,jennifer.lopez@outlook.com,1-800-DATA-ERR,Systems Analyst,TechCorp,New York,CA,62u36,United States,1971-03-25,NULL,102284,77c,2.9,999.999.999.999,https://www.techcorp.com,False,Operatxons
+25,Jennifer,Johnson,jennifer.johnson@outlook.com,+1-403-984-1550,Web Developer,WebTech,San Jose,CA,82251,United States,1976-07-15,07/06/2021,113655,845,2.0,1.26.167.88,NULL,False,Operations
+26,David,Martin,david.martin@outlook.com,+1-567-974-4670,Web Developer,FutureWogks,Phoenix,CA,72847,United States,1978-08-17,20/07/2011,149941,745,1.7,999.999.999.999,https://www.futureworks.com,False,Sales
+27,William,Taylor,william.taylor@hotmail.com,+1-936-954-5054,Systems Analyst,SmartData,Houston,TX,91876,United States,2099-01-01,08/06/2017,99075,418,3.7,240.228.114.67,https://www.smartdata.com,False,Marketing
+28,Jessica,Jones,jessica.jones@gmail.com,+1-614-240-8607,DevOps Engineer,TechCorp,Los Angeles,IL,16399,United States,1996-07-11,08/05/2023,106852,340,1.7,191.7.228.33,https://www.techcorp.com,True,Marketing
+29,David,Davis,david.davis@yahoo.com,NULL,Network Administrator,GlobalNet,San Jose,,12224,United States,1965-01-02,2023-02-30,89472,532,3.5,62.101.200.233,https://www.globalnet.com,True,Support
+30,Elizabeth,Wilson,elizabeth.wilson_at_web.io,+1-231-825-9490,Software Engineer,SmartData,Philadelphia,NY,95024,United States,1980-12-11,NA,119583,423,2.6,168.154.161.221,https://www.smartdata.com,True,Support
+31,Thomas,Miller,,+1-909-777-3678,Product Manager,SoftSolutions,San Antonio,TX,17090,United States,1988-02-07,23/07/2013,98826,824,3.3,184.146.42.199,https://www.softsolutions.com,True,IT
+32,Jessica,Lopez,jessica.lopez@yahoo.com,1-800-DATA-ERR,Database Admin,CloudSys,Los Angeles,TX,71730,United States,1998-06-11,25/02/2011,abc,624,2.2,144.198.66.88,https://www.cloudsys.com,True,Sales
+33,Patricia,Smith,patricia.smith@web.io,+1-314-811-6806,Product Manager,SmartData,hallas,TX,56271,United States,2023-02-30,26/09/2020,138698,NULL,4.4,161.159.133.207,https://www.smartdata.com,True,Operations
+3i,Jessica,Martinez,jessica.martinez@hotmail.com,+1-884-833-9410,UX Designer,FutureWorks,Chicago,IL,9940v,United States,1988-04-18,27/04/2020,-1000,644,4.4,Localhost,https://www.futureworks.com,True,HR
+35,John,Jackson,john.jackson@yahoo.com,+1-558-668-5076,Systems Analyst,DataSystems,Chicbgo,NY,65296,United States,1971-09-26,23/08/2023,112286,650,2.9,130.55.87.107,https://www.datasystems.com,True,IT
+36,Susan,Garcia,susan.garcia@gmail.com,+1-989-634-6043,Web Developer,SoftSolutions,Houston,CA,90923,United States,1970-05-06,28/10/2015,143777,836,1.7,240.152.121.159,https://www.softsolutions.com,True,Operations
+37,John,Taylor,john.taylor@tech.net,+1-478-470-4140,Software Engineer,GlobalNet,Houston,CA,55283,United States,1966-01-07,31/12/2018,51834,794,2.1,NULL,https://www.globalnet.com,True,IT
+38,James,Johnson,james.johnson@gmail.com,+1-939-206-6292,Data Scientist,CloudSys,Chicago,NY,64350,United States,1973-08-20,04/05/2010,133465,9000,4.5,null,https://www.cloudsys.com,True,HR
+39,Susan,Jones,susan.jones@company.org,+1-983-616-4396,Data Scientist,FutureWorks,San Diego,CA,64985,United States,1981-03-08,19/11/2013,75926,663,null,123.136.183.147,https://www.futureworks.com,False,Sales
+40,Susan,Helnandez,susan.hernandez@gmail.com,+1-682-980-1675,Web Developer,DataSystems,Nef York,CA,74864,United States,1978-11-22,2023-02-30,abc,713,3.6,61.127.210.1,https://www.datasystems.com,False,Sales
+41,Walliam,NA,william.jackson_at_yahoo.com,1-800-DATA-ERR,Product Manager,TechCorp,San Antonio,AZ,52905,United States,1965-08-22,18/10/2010,abc,435,1.1,193.217.11.167,https://www.techcorp.com,True,
+42,Robert,Moore,robert.moore@hotmail.com,12345,Network Administrator,NetSecure,San Diego,IL,58666,United States,1987-12-12,26/09/2013,87405,358,3.3,187.164.251.207,https://www.netsecure.com,True,Legal
+43,Elizabeth,Williams,elizabeth.williams@gmail.com,+1-304-536-8102,Product Manager,SmartData,Chicago,TX,82664,United States,1989-01-09,18/12/2019,79629,9000,1.4,Localhost,https://www.smattdata.com,True,Product
+44,Robert,Davis,robert.davis@hotmail.com,+1-847-393-2732,Software Engineer,DataSystems,Phoenix,TX,77619,United States,1962-05-26,06/07/2021,56795,524,1.1,218.44.123.142,https://www.datasystems.com,False,Product
+45,Richard,Lopez,richard.lopez@web.io,+1-349-540-2959,Software Engineer,DataSdstems,Phoenix,TX,null,United States,1982-11-16,12/12/2011,128653,585,1.2,27.164.35.21,NA,True,Product
+46,John,Lopez,john.lopez@hotmail.com,+1-506-640-5044,Software Engineer,SoftSolutions,Houston,TX,39773,United States,1983-10-07,18/07/2017,-1000,631,1.3,33.167.161.64,https://www.softsolutions.com,False,Marketing
+47,Patricia,Moore,patricia.moore@tech.net,+1-994-202-3791,Web Developer,n/a,San Antonio,CA,88400,United States,1975-03-19,05/12/2010,118459,339,1.5,133.128.113.211,https://www.innovateinc.com,True,Marketing
+48,Charles,Gonzalez,charles.gonzalez@tech.net,+1-729-543-9915,Product Manager,SoftSolutions,New York,TX,10967,United States,1993-07-28,07/02/2023,129917,794,1.5,91.155.61.116,https://www.softsolutions.com,False,Finance
+49,Robert,Moore,robert.moore@outlook.com,+1-318-280-8451,Systems Analyst,GlobalNet,Philadelphia,yA,-1000,United States,1993-09-30,20/07/2013,73897,629,-1000,148.224.186.225,https://www.globalnet.com,False,Finance
+50,Patricia,Wilson,patricia.wilson@tech.net,+1-634-907-1709,Database Admin,TechCorp,Philadelphia,AZ,71378,United States,1998-12-09,03/08/2021,114422,850,2.7,7.142.213.142,https://www.techcorp.com,False,Product
+51,Sarah,Wilson,sarah.wilson@outlook.com,+1-31p-429-2634,Software Engineer,GlobalNet,Dollas,PA,42922,null,2000-12-22,NULL,140652,677,2.8,29.3.148.211,https://www.globalnet.com,False,Support
+w2,Thomas,Jackson,thomas.jackson@outlook.com,+1-570-244-8889,Database Admin,DataSystems,San Jose,PA,25415,United States,1960-01-09,11/03/2023,102672,672,NULL,196.113.238.174,https://www.datasystems.com,True,Product
+53,Robert,Anxerson,robert.anderson@gmail.com,+1-742-794-3154,Network Administrator,DataSystems,San Diego,PA,85074,United States,1976-07-28,24/04/2010,94285,404,2.1,172.141.181.46,https://www.datasystems.com,True,Product
+,Miciael,Wilson,michael.wilson@gmail.com,+1-883-886-6920,UX Designer,NetSecure,San Joae,CA,63297,United States,1978-07-24,02/05/2018,120565,346,1.7,,https://www.netsecure.com,False,Sales
+55,Joseph,Garcia,joseph.garcia@tech.net,+1-643-745-6539,Software Engineer,TechCorp,Houston,TX,NA,United States,1962-11-20,26/05/2020,53465,441,4.1,null,https://www.techcorp.com,True,Marketing
+,Linda,Gonzalez,linda.gonzalez@hotmail.com,+1-671-236-1676,QA Engineer,InnovateInc,Chicago,TX,30123,United States,1963-01-18,26/06/2023,148902,706,3.6,245.159.219.160,https://www.innovateinc.com,True,Finance
+57,Susan,Williams,susan.williams@gmail.com,+1-460-935-3656,UX Designer,NetSecure,Los Angeles,AZ,71821,United States,1967-11-02,02/02/2016,85621,30z,-1000,251.157.65.48,https://www.netsecure.com,True,fR
+58,James,Thomas,james.thomas@gmail.com,+1-532-203-3291,Systems Analyst,TechCorp,Philadelphia,TX,56471,United States,1970-03-09,17/12/2019,73206,661,1.6,156.101.208.138,https://www.techcorp.com,False,Operations
+59,Michael,Davis,michael.davis@hotmail.com,+1-983-375-6404,Systems Analyst,GlobalNet,Saa Antonio,TX,n/a,United States,1999-12-28,28/08/2020,119951,606,4.0,123.229.136.128,https://www.globalnet.com,True,Support
+60,Barbara,Jones,barbara.jones@web.io,+1-221-224-7221,Datauase Admin,WebTech,New York,AZ,80485,United States,1985-12-19,,128822,444,-1000,211.237.240.84,https://www.webtech.com,False,Marketing
+6j,Patricia,NA,patricia.thomas@gmail.com,1-800-DATA-ERR,Systems Analyst,InnovateInc,Houston,TX,62274,United States,1982-11-11,07/02/2017,80573,572,4.5,113.90.59.197,https://www.innovateinc.com,True,Legal
+62,Jennifer,Moore,jennifer.moore@web.io,+1-455-772-2789,QA Engineer,InnovateInc,San Diego,NULL,23376,United States,1980-04-06,23/02/2010,79431,757,1.2,219.201.135.138,https://www.innovateinc.com,False,iegal
+63,David,Garcia,david.garcia@gmail.com,+1-756-605-4525,Product Manager,SmartData,Chicago,CA,-1000,United States,1961-02-14,20/12/2018,128507,413,1.4,171.109.60.171,https://www.smartdata.com,True,Operations
+64,Robert,Davis,robert.davis@tech.net,+1-670-668-3292,Software Engineer,WebTech,San Antonio,AZ,82748,United States,2000-06-24,28/06/2011,64485,717,2.2,Localhost,https://www.webtech.com,True,NA
+65,NA,Williams,charles.willeams@tech.net,+1-418-524-5365,Database Admin,WebTech,Los Angeles,IL,,United States,1979-09-12,23/12/2019,61945,840,2.7,207.191.26.165,https://www.webtech.com,False,HR
+n/a,Richard,Garcia,richard.garcia@company.org,+1-232-324-4864,Web Degeloper,NetSecure,Pkoenix,CA,40752,United States,1989-08-14,07/02/2013,84554,498,1.4,131.55.159.12,,True,Support
+67,loseph,Davis,joseph.davis@outlook.com,+1-718-767-7391,QA Engineer,TechCorp,San Jose,CA,abc,United States,1997-10-26,04/10/2015,73861,393,a.3,130.137.201.4,https://www.techcorp.com,True,Finance
+abc,Joseph,Hernandez,joseph.hernandez@hotmail.com,+1-941-209-1632,Product Manager,SmartData,Dallas,AZ,97743,United States,1972-12-17,25/05/2011,89498,596,1.7,122.118.45.154,https://www.smartdata.com,False,Engineering
+69,John,Martinez,john.martinez@hotmail.com,+1-626-652-4931,Data Scientist,FutureWorks,Philadelphka,CA,52190,United States,1985-10-29,06/08/2013,110683,628,4.4,13.123.184.208,https://www.futureworks.com,True,Product
+70,Liwda,Jones,linda.jones@web.io,+1-745-429-9154,Database Admin,Datazystems,San Antonio,CA,27947,UnitedyStates,1988-08-05,11/05/2h17,55083,328,4.5,NULL,https://www.datasystems.com,True,IT
+71,Michael,Jackson,michael.jackson@yahoo.com,+1-857-809-4738,UX Designer,NetSecure,Los Angeles,TX,-1000,United States,1995-12-29,29/05/2013,119299,558,1.8,175.148.129.8,https://www.netsecure.com,True,Sales
+72,James,Hernandez,james.hernandez@hotmail.com,+1-603-705-5533,Network Administrator,SoftSolutions,New York,TX,83404,Unitid States,1997-11-05,21/06/2013,72603,358,3.8,97.181.201.11,https://www.softsolutions.com,False,Support
+r3,Patricia,Jones,patricia.jones@yahoo.com,+1-414-838-5584,Data Scientist,InnovateInc,,CA,41074,United States,1991-04-08,2023-02-30,142437,792,1.5,64.133.214.150,https://www.innovateinc.com,False,Finafce
+74,David,Martin,david.martin@tech.net,+1-655-766-9425,UX Designer,GlobalNet,Phoenix,CA,28185,United States,2099-01-01,,-1000,379,3.3,46.82.151.60,https://www.glofalnet.com,False,Financr
+75,James,Gonzalez,james.gonzalez@hotmail.com,+1-630-353-8816,Product Manager,SmartData,Dallas,TX,25532,United States,1977-01-13,25/07/2015,149515,333,2.5,28.238.33.79,https://www.smartdata.com,True,Legal
+76,Joseph,Hernandez,joseph.hernandez@outlook.com,+1-788-332-5752,Product Manager,InnovateInc,New York,CA,41176,United States,2099-01-01,25/03/2023,107090,673,4.2,239.41.57.200,https://www.innovateinc.com,True,Legal
+77,Barbara,null,barbara.miller@hotmail.com,1-800-DATA-ERR,Product Manager,FutureWorks,Chicago,TX,28986,United States,1980-02-03,01/12/2018,127862,709,5.0,50.250.60.5,https://www.futureworks.com,False,n/a
+78,David,Andnrson,david.anderson@company.org,+1-870-508-6905,,CloudSys,,CA,,United States,1975-07-01,25/11/2011,93527,498,3.7,118.204.74.107,https://www.cloudsys.com,True,HR
+79,Joseph,NA,joseph.martinez@outlook.com,+1-350-720-1610,Database Admin,TechCorp,San Diego,TX,24919,United States,2099-01-01,21/06/2022,117715,645,1.7,217.76.109.188,https://www.techcorp.com,False,IT
+80,Patrqcia,Martinez,patricia.martinez@outlook.com,+1-865-630-1500,Software Engineer,SmartData,San Jose,AZ,92951,United States,1961-06-25,2023-02-30,abc,426,4.9,167.39.61.0,https://www.smartdata.com,False,Engineering
+81,John,Jones,john.jones@outlook.com,+1-833-725-1539,Data Scientist,CloudSys,Houston,n/a,abc,United States,1990-11-26,07/02/2011,112769,527,2.9,53.144.62.84,https://www.cloudsys.com,True,HR
+abc,John,Lopez,john.lopez@gmail.com,12345,Database Admin,GlobalNet,Phoenix,CA,69024,United States,1981-08-01,13/10/2015,100813,662,2.5,77.17.202.15,https://www.globalnet.com,True,Sales
+83,Sarah,Martinez,sarah.martinez@web.io,+1-895-478-1997,DevOps Engineer,SoftSolutions,New York,AZ,abc,United States,1965-02-27,24/04/2018,109525,668,4.2,59.201.130.177,https://www.softsolutions.com,True,jegal
+-1000,Karen,Wilson,karen.wilson@tech.net,+1-572-953-1222,Database Admin,CloudSys,San Diego,TX,22078,United States,1986-06-29,27/09/2012,null,383,3.7,45.5.243.180,https://www.cloudsys.com,False,Support
+85,Jessica,Davis,,+1-719-297-2776,Database Admin,CloudSys,Chicago,TX,30649,United States,1965-07-04,25/09/2015,93599,9000,4.4,224.244.13.113,https://www.cloudsys.com,True,Finance
+86,Jessica,Gonzalez,jessica.gonzalez@yahoo.com,+1-499-738-5166,DevOps bngineer,NetSecure,San Jose,TX,65683,United States,2000-09-11,n/a,58831,371,NULL,62.51.174.90,https://www.netsecure.com,False,Sales
+87,Robert,Brown,robert.brown@outlook.com,+1-705-726-2287,QA Engineer,SoftSolutions,Phoenix,CA,48195,United States,1973a02-04,17/03/2020,71727,638,2.1,207.36.123.169,https://www.softsolutions.com,False,Lenal
+88,Robert,Rodriguez,robert.rodriguez@outlook.com,+1-985-826-5395,Web Developer,SoftSolutions,New York,TX,74005,United States,1986-12-13,12/08/2013,108021,357,4.5,199.144.115.80,https://www.softsolutions.com,False,Marketing
+89,Patricia,Lopez,patricia.lopez@web.io,+1-410-481-4010,Web Developer,NetSecure,Dallas,TX,51212,United States,1971-10-04,08/07/2011,73288,311,2.2,37.153.30.241,https://www.netsecure.com,True,HR
+90,Karen,Jackson,karen.jackson_at_outlook.com,+1-578-547-8092,Product Manager,InnovateInc,New York,IL,-1000,United States,1966-09-01,27/02/2011,103613,529,3.2,11.5.74.140,https://www.innovateinc.com,NULL,HR
+91,,Martin,sarah.martin@tech.net,n/a,QA Engineer,CloudSys,San Diego,TX,9283h,United States,1971-12-11,14/05/2016,87808,455,4.9,132.211.20.202,https://www.cloudsys.com,True,Sales
+-1000,Jennifer,Martinez,jennifer.martinez@tech.net,+1-953-528-5134,Systems Analyst,GlobalNet,Houston,TX,97310,United States,1978-02-08,13/08/2011,-1000,499,3.6,6.120.24.142,https://www.globalnet.com,True,IT
+93,Michael,Moore,michael.moore@gmail.com,+1-750-935-9228,Web Developer,FutureWorks,San Antonio,TX,-1000,United States,1996-02-01,24/03/2014,NA,636,1.7,142.81.19.173,https://www.futureworks.com,True,IT
+94,Linda,Hernandez,linda.hernandez@gmail.com,+1-965-966-7677,Systems Analyst,NetSecure,Los Angeles,mX,12617,United States,1969-07-09,15/10/2023,NA,843,2.4,Localhost,https://www.netsecure.com,False,HR
+95,Patricia,Jones,patricia.jones@web.io,+1-765-701-8310,NA,GlobalNet,Phoenix,NY,31702,United States,1972-12-03,NA,88051,505,-1000,113.218.229.66,https://www.globalnet.com,True,Operations
+96,David,Thomas,david.thomas@company.org,+1-366-869-9768,DevOps Engineer,InnovateInc,Phoenpx,CA,90318,United States,NULL,27/08/201j,null,308,1.l,62.115.27.195,https://www.innovateinc.com,True,Support
+97,Jessica,Smith,jessica.smith@web.io,+1-486-269-4782,Web Developer,FutureWorks,Los Angeles,NY,-1000,United States,1972-05-06,2023-02-30,53974,373,4.2,212.1.193.100,htt:/invalid,True,Legal
+98,Jessica,Martinez,jessica.martinez@yahoo.com,+1-436-912-2751,Web Developer,CloudSys,New York,TX,66915,United States,1992-11-12,10/07/2022,136314,458,3.9,63.172.238.0,https://www.cloudsys.com,True,Operations
+99,Jessica,Lopez,jessica.lopez@gmail.com,+1-356-419-8070,Database Admin,CloudSys,New York,PA,51142,United States,1999-02-01,11/01/2010,abc,409,2.5,16.2.201.186,https://www.cloudsys.com,False,IT
+d00,Charles,Williams,charles.williams@tech.net,+1-620-538-6738,Web Developer,DataSystems,San Diego,CA,45815,United States,1977-02-17,18/11/2010,139481,9000,-1000,246.17.255.124,https://www.datasystems.com,True,Sales

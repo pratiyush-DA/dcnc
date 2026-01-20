@@ -1,0 +1,244 @@
+# Clustering Rules Configuration
+# Per-workflow rules for anomaly detection and clustering
+# These can be overridden per client via database
+
+# Global defaults applied to all workflows
+defaults:
+  string:
+    # Case sensitivity enforcement
+    case_sensitivity:
+      enabled: true
+      strategy: "majority"  # majority, lowercase, uppercase, title, preserve
+      
+    # Format consistency for structured data
+    format_consistency:
+      enabled: true
+      strategy: "majority"  # majority, first, preserve
+      
+    # Gibberish and placeholder detection
+    gibberish_detection:
+      enabled: true
+      min_alpha_ratio: 0.7
+      min_length: 2
+      reserved_words:
+        - "invalid"
+        - "unknown"
+        - "test"
+        - "null"
+        - "n/a"
+        - "na"
+        - "none"
+        - "tbd"
+        - "undefined"
+        - "blank"
+        - "empty"
+        - "xxx"
+    
+    # Frequency-based reference building
+    frequency_analysis:
+      enabled: true
+      min_frequency_absolute: 2
+      min_frequency_ratio: 0.1
+      similarity_threshold: 85
+      min_similarity_for_good: 60
+  
+  numeric:
+    outlier_detection:
+      enabled: true
+      method: "iqr"  # iqr, zscore, semantic
+      iqr_factor: 1.5
+      zscore_threshold: 3.0
+  
+  datetime:
+    format_consistency:
+      enabled: true
+      strategy: "majority"
+
+# Per-workflow/subtype specific rules
+workflows:
+  text:
+    email:
+      case_sensitivity:
+        enabled: true
+        strategy: "lowercase"  # Emails should be normalized to lowercase
+      invalid_patterns:
+        - "^invalid@"
+        - "^test@test$"
+        - "@@"  # Double @
+        - "@$"  # @ at end with no domain
+      
+    phone:
+      format_consistency:
+        enabled: true
+        strategy: "majority"
+      invalid_patterns:
+        - "^0{7,}$"      # All zeros (7+ digits)
+        - "^1{7,}$"      # All ones
+        - "^12345$"      # Too short sequential
+        - "^1234567890$" # Sequential
+      reserved_numbers:
+        - "0000000000"
+        - "1111111111"
+        - "1234567890"
+      min_digit_count: 7
+      max_digit_count: 15
+      
+    name:
+      gibberish_detection:
+        enabled: true
+        min_alpha_ratio: 0.85
+        reserved_words:
+          - "invalid"
+          - "unknown"
+          - "test"
+          - "null"
+          - "n/a"
+          - "na"
+          - "none"
+          - "tbd"
+          - "user"
+          - "admin"
+          - "guest"
+        reject_with_digits: true
+        min_length: 2
+      case_sensitivity:
+        enabled: true
+        strategy: "title"  # Names should be title case
+      
+    zipcode:
+      valid_patterns:
+        us_5digit: "^\\d{5}$"
+        us_zip_plus4: "^\\d{5}-\\d{4}$"
+        uk_postal: "^[A-Z]{1,2}\\d[A-Z\\d]? ?\\d[A-Z]{2}$"
+        canada_postal: "^[A-Z]\\d[A-Z] ?\\d[A-Z]\\d$"
+      invalid_patterns:
+        - "^0{5}$"   # All zeros
+        - "^0{4}$"   # 4 zeros (incomplete)
+      min_length: 4
+      max_length: 10
+      
+    ssn:
+      # SSN-specific rules already in engine
+      format_required: true
+      
+    url:
+      allow_without_protocol: true
+      prepend_https_if_missing: true
+      
+    state:
+      case_sensitivity:
+        enabled: true
+        strategy: "title"
+      frequency_analysis:
+        enabled: true
+        min_frequency_absolute: 2
+        
+    country:
+      case_sensitivity:
+        enabled: true  
+        strategy: "title"
+      frequency_analysis:
+        enabled: true
+        min_frequency_absolute: 2
+        
+    generic:
+      # For unknown/generic string columns
+      categorical_detection:
+        enabled: true
+        cardinality_threshold: 0.3  # If < 30% unique, treat as categorical
+        max_unique_values: 1000
+      frequency_analysis:
+        enabled: true
+        min_frequency_absolute: 2
+        similarity_threshold: 85
+  
+  numeric:
+    age:
+      semantic_bounds:
+        min: 0
+        max: 120
+      outlier_detection:
+        enabled: true
+        method: "semantic"
+        
+    rating:
+      semantic_bounds:
+        auto_detect: true
+        default_max: 5
+        fallback_max: 10
+        min: 0
+      outlier_detection:
+        enabled: true
+        method: "semantic"
+        
+    salary:
+      semantic_bounds:
+        min: 0
+      outlier_detection:
+        enabled: true
+        method: "iqr"
+        iqr_factor: 2.0  # More lenient for salaries
+        
+    amount:
+      semantic_bounds:
+        min: 0
+      outlier_detection:
+        enabled: true
+        method: "iqr"
+        
+    generic:
+      outlier_detection:
+        enabled: true
+        method: "ensemble"  # Uses combination of methods
+        
+  datetime:
+    date:
+      format_consistency:
+        enabled: true
+        strategy: "majority"
+        allowed_formats:
+          - "%Y-%m-%d"
+          - "%d/%m/%Y"
+          - "%m/%d/%Y"
+          - "%Y/%m/%d"
+      validate_components: true
+      
+    datetime:
+      format_consistency:
+        enabled: true
+        strategy: "majority"
+      validate_components: true
+      
+    time:
+      format_consistency:
+        enabled: true
+        strategy: "majority"
+        allowed_formats:
+          - "%H:%M:%S"
+          - "%H:%M"
+          - "%I:%M %p"
+          
+    generic:
+      fuzzy_parsing: true
+      format_consistency:
+        enabled: true
+        strategy: "majority"
+  
+  identifier:
+    pattern_id:
+      enforce_pattern: true
+    generic:
+      uniqueness_check: true
+      entropy_check: true
+
+# Fingerprint configuration
+fingerprint:
+  include_correction_hints: true
+  include_rules_applied: true
+  include_statistics: true
+  
+# Logging and audit
+audit:
+  log_all_classifications: false
+  log_rejections: true
+  keep_history: true

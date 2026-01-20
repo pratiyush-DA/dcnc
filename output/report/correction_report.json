@@ -1,0 +1,5272 @@
+{
+  "generated_at": "2026-01-20T20:07:33.820187",
+  "version": "2.0.0",
+  "sp_source_id": {
+    "column_name": "sp_source_id",
+    "workflow": "identifier",
+    "subtype": "pattern_id",
+    "detection_confidence": 0.9,
+    "detection_source": "heuristic",
+    "good_count": 338,
+    "bad_count": 1,
+    "fingerprint": {
+      "workflow": "identifier",
+      "method": "pattern_signature",
+      "sample_size": 338,
+      "properties": {
+        "majority_pattern": "A_N",
+        "valid_patterns": [
+          "A_N"
+        ],
+        "pattern_distribution": {
+          "A_N": 338,
+          "A": 1
+        },
+        "avg_length": 6.677514792899408
+      }
+    },
+    "corrections": [
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      }
+    ],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 2,
+      "from_cache": false,
+      "tokens_used": 179
+    }
+  },
+  "sp_common_name": {
+    "column_name": "sp_common_name",
+    "workflow": "text",
+    "subtype": "generic",
+    "detection_confidence": 0.5,
+    "detection_source": "default",
+    "good_count": 339,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "sp_common_name",
+      "sample_size": 339,
+      "properties": {
+        "avg_length": 13.221238938053098,
+        "min_length": 5,
+        "max_length": 21,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 338,
+          "upper": 0,
+          "lower": 0,
+          "mixed": 1
+        },
+        "sample_values": [
+          "Robert Little",
+          "Alexis Webster",
+          "Keeron Bradford",
+          "Kevin Pierce",
+          "Stacie Conaway"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 5,
+      "from_cache": false,
+      "tokens_used": 222
+    }
+  },
+  "sp_given_name": {
+    "column_name": "sp_given_name",
+    "workflow": "text",
+    "subtype": "generic",
+    "detection_confidence": 0.5,
+    "detection_source": "default",
+    "good_count": 339,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "sp_given_name",
+      "sample_size": 336,
+      "properties": {
+        "avg_length": 5.773809523809524,
+        "min_length": 2,
+        "max_length": 11,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 336,
+          "upper": 0,
+          "lower": 0,
+          "mixed": 0
+        },
+        "sample_values": [
+          "Robert",
+          "Alexis",
+          "Keeron",
+          "Kevin",
+          "Stacie"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 3,
+      "patterns_used": 4,
+      "from_cache": false,
+      "tokens_used": 195
+    }
+  },
+  "sp_sn": {
+    "column_name": "sp_sn",
+    "workflow": "text",
+    "subtype": "generic",
+    "detection_confidence": 0.5,
+    "detection_source": "default",
+    "good_count": 339,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "sp_sn",
+      "sample_size": 338,
+      "properties": {
+        "avg_length": 6.488165680473373,
+        "min_length": 2,
+        "max_length": 13,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 337,
+          "upper": 0,
+          "lower": 0,
+          "mixed": 1
+        },
+        "sample_values": [
+          "Little",
+          "Webster",
+          "Bradford",
+          "Pierce",
+          "Conaway"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 1,
+      "patterns_used": 4,
+      "from_cache": true,
+      "tokens_used": 0
+    }
+  },
+  "sp_mail": {
+    "column_name": "sp_mail",
+    "workflow": "text",
+    "subtype": "email",
+    "detection_confidence": 0.94,
+    "detection_source": "pattern",
+    "good_count": 223,
+    "bad_count": 116,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "email",
+      "sample_size": 223,
+      "properties": {
+        "avg_length": 22.210762331838566,
+        "min_length": 17,
+        "max_length": 30,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "robert.little@ford.com",
+          "kevin.pierce@ford.com",
+          "john.troia@ford.com",
+          "kristofer.sanchez@ford.com",
+          "allen.vivian@ford.com"
+        ]
+      },
+      "correction_hints": {
+        "expected_case": "lowercase"
+      }
+    },
+    "corrections": [
+      {
+        "original": "a'lissa.pecoraino@ford.com",
+        "corrected": "a'lissa.pecoraino@ford.com",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": "patrick.o'sullivan@ford.com",
+        "corrected": "patrick.o'sullivan@ford.com",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "jrsangram@newyear.c0m",
+        "corrected": "jrsangram@newyear.c0m",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ALEXIS.WEBSTER33@GMAIL.COM",
+        "corrected": "ALEXIS.WEBSTER33@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "KEERON33@GMAIL.COM",
+        "corrected": "KEERON33@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "SS32@BELLSOUTH.NET",
+        "corrected": "SS32@BELLSOUTH.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "TLBRUGGER@MSN.COM",
+        "corrected": "TLBRUGGER@MSN.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "AMEDINA@ORTEGACC.COM",
+        "corrected": "AMEDINA@ORTEGACC.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "KELLYKISCH@MULLINAXFORDMOBILE.COM",
+        "corrected": "KELLYKISCH@MULLINAXFORDMOBILE.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "NREZANKA@GMAIL.COM",
+        "corrected": "NREZANKA@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ROMAZZI@JUNO.COM",
+        "corrected": "ROMAZZI@JUNO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "COWGIRL21765@COMCAST.NET",
+        "corrected": "COWGIRL21765@COMCAST.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ANISSATROIA@GMAIL.COM",
+        "corrected": "ANISSATROIA@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "DIGGLER0817@AOL.COM",
+        "corrected": "DIGGLER0817@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "LEE.BRIAN0812@GMAIL.COM",
+        "corrected": "LEE.BRIAN0812@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "TCHILDS@CHARTERSCHOOLSUSA.COM",
+        "corrected": "TCHILDS@CHARTERSCHOOLSUSA.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JOHN.BORGATTI@OUTLOOK.COM",
+        "corrected": "JOHN.BORGATTI@OUTLOOK.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "LHENNING@BELLSOUTH.NET",
+        "corrected": "LHENNING@BELLSOUTH.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "AMBERLY.MANN@GMAIL.COM",
+        "corrected": "AMBERLY.MANN@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "RURBAN@BAXTERAUTO.COM",
+        "corrected": "RURBAN@BAXTERAUTO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "AGUSTOSEDANO@YAHOO.COM",
+        "corrected": "AGUSTOSEDANO@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "MORT270@YAHOO.COM",
+        "corrected": "MORT270@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "GOGODA68@YAHOO.COM",
+        "corrected": "GOGODA68@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "DHARRIGAN2@VERIZON.NET",
+        "corrected": "DHARRIGAN2@VERIZON.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "KLINGPHROG@HOTMAIL.COM",
+        "corrected": "KLINGPHROG@HOTMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JAMIE.M.PLETKA@GMAIL.COM",
+        "corrected": "JAMIE.M.PLETKA@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ENKOGAN_BORIS71@HOTMAIL.COM",
+        "corrected": "ENKOGAN_BORIS71@HOTMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JFBMORTON26@YAHOO.COM",
+        "corrected": "JFBMORTON26@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "SHANNONSTRATTON7@GMAIL.COM",
+        "corrected": "SHANNONSTRATTON7@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "CHESTNUTTY05@HOTMAIL.COM",
+        "corrected": "CHESTNUTTY05@HOTMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "XAVIER_NERYS@YAHOO.COM",
+        "corrected": "XAVIER_NERYS@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ROSINAM@SAWGRASSFORD.COM",
+        "corrected": "ROSINAM@SAWGRASSFORD.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JOYOUSLIFE89@ICLOUD.COM",
+        "corrected": "JOYOUSLIFE89@ICLOUD.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "CRUZ@LCREAL.COM",
+        "corrected": "CRUZ@LCREAL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JMEDINA2677@GMAIL.COM",
+        "corrected": "JMEDINA2677@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "DKASSMEIER@OUTLOOKNE.ORG",
+        "corrected": "DKASSMEIER@OUTLOOKNE.ORG",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ACOSTANZA77@AOL.COM",
+        "corrected": "ACOSTANZA77@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "CSYCAPPS@GMAIL.COM",
+        "corrected": "CSYCAPPS@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "MARS81@NYCAP.RR.COM",
+        "corrected": "MARS81@NYCAP.RR.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "NEVA.MANN@YAHOO.COM",
+        "corrected": "NEVA.MANN@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "TE721JZ@YAHOO.COM",
+        "corrected": "TE721JZ@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "TERRYS@DIERSFORD.COM",
+        "corrected": "TERRYS@DIERSFORD.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "FPOWERGROUP@VERIZON.NET",
+        "corrected": "FPOWERGROUP@VERIZON.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "H.SHIELDS.ATCHLEYFORD@CONTACTDEALER.COM",
+        "corrected": "H.SHIELDS.ATCHLEYFORD@CONTACTDEALER.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "LEONARDO@EVANSAUTOSALES.NET",
+        "corrected": "LEONARDO@EVANSAUTOSALES.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "WESLEYMODLIN@BHHS.COM",
+        "corrected": "WESLEYMODLIN@BHHS.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "TEBANKS@FOXRENTACAR.COM",
+        "corrected": "TEBANKS@FOXRENTACAR.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ROCK247@BELLSOUTH.NET",
+        "corrected": "ROCK247@BELLSOUTH.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "SAMGIGI17@GMAIL.COM",
+        "corrected": "SAMGIGI17@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "EARLMAN@AOL.COM",
+        "corrected": "EARLMAN@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "MLSHANNO@WOODHOUSE.COM",
+        "corrected": "MLSHANNO@WOODHOUSE.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JDENNIS@LAZYDAYS.COM",
+        "corrected": "JDENNIS@LAZYDAYS.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "NEWACCT1263982@AOL.COM",
+        "corrected": "NEWACCT1263982@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JOSHUA@SAWGRASSFORD.COM",
+        "corrected": "JOSHUA@SAWGRASSFORD.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "MCH1019@GMAIL.COM",
+        "corrected": "MCH1019@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JQDLDJAK49@YAHOO.COM",
+        "corrected": "JQDLDJAK49@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "KYLERVINES07@GMAIL.COM",
+        "corrected": "KYLERVINES07@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "CHRISTINA.OLOFINTUYI@GMAIL.COM",
+        "corrected": "CHRISTINA.OLOFINTUYI@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "GONETRIALING@YAHOO.COM",
+        "corrected": "GONETRIALING@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ELLISONBRENDA@EARTHLINK.NET",
+        "corrected": "ELLISONBRENDA@EARTHLINK.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "LUCYCALIMAX3@HOTMAIL.COM",
+        "corrected": "LUCYCALIMAX3@HOTMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "KYLEVOGT@BELLSOUTH.NET",
+        "corrected": "KYLEVOGT@BELLSOUTH.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "LAGRONIE@GMAIL.COM",
+        "corrected": "LAGRONIE@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ALLENWRIGHT159@GMAIL.COM",
+        "corrected": "ALLENWRIGHT159@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "DAVE_MENTON@YAHOO.COM",
+        "corrected": "DAVE_MENTON@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "CHUCK@DIERSFORD.COM",
+        "corrected": "CHUCK@DIERSFORD.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "DMILLER1@GTE.NET",
+        "corrected": "DMILLER1@GTE.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "AUSTINBOWMAN98@GMAIL.COM",
+        "corrected": "AUSTINBOWMAN98@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "KHAN.ADRION@YAHOO.COM",
+        "corrected": "KHAN.ADRION@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "OMAR.APONTE@MT.COM",
+        "corrected": "OMAR.APONTE@MT.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "BUDDYWISHAM@GMAIL.COM",
+        "corrected": "BUDDYWISHAM@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "RSCHREIBER2@TAMPABAY.RR.COM",
+        "corrected": "RSCHREIBER2@TAMPABAY.RR.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "CORNPOPS101492@AOL.COM",
+        "corrected": "CORNPOPS101492@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "KELLIGAGELS007@YAHOO.COM",
+        "corrected": "KELLIGAGELS007@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "PAYAM9987@YAHOO.COM",
+        "corrected": "PAYAM9987@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "MSALLING56@GMAIL.COM",
+        "corrected": "MSALLING56@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "RLOPEZ@BRANDONFORD.COM",
+        "corrected": "RLOPEZ@BRANDONFORD.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "HUGOVEZA@GMAIL.COM",
+        "corrected": "HUGOVEZA@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ERNIE@SAWGRASSFORD.COM",
+        "corrected": "ERNIE@SAWGRASSFORD.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JFAUX318@AOL.COM",
+        "corrected": "JFAUX318@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "BRUNOIII@ICLOUD.COM",
+        "corrected": "BRUNOIII@ICLOUD.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "BRAXTONSONJA@GMAIL.COM",
+        "corrected": "BRAXTONSONJA@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "GENNYMELISSA@YAHOO.COM",
+        "corrected": "GENNYMELISSA@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "TONIZAMORANO@YMAIL.COM",
+        "corrected": "TONIZAMORANO@YMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "STERTRUCKS@YAHOO.COM",
+        "corrected": "STERTRUCKS@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ANITAJBLANCHETTE@GMAIL.COM",
+        "corrected": "ANITAJBLANCHETTE@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "FLEISCHERDAN@YAHOO.COM",
+        "corrected": "FLEISCHERDAN@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "LGEARING@COMCAST.NET",
+        "corrected": "LGEARING@COMCAST.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "BC61861@AOL.COM",
+        "corrected": "BC61861@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "DANA.SLATTON@MOFFITT.ORG",
+        "corrected": "DANA.SLATTON@MOFFITT.ORG",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "RPH091277@YAHOO.COM",
+        "corrected": "RPH091277@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "DANNYMCWILLIAMS19@GMAIL.COM",
+        "corrected": "DANNYMCWILLIAMS19@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "PAOLARUSS10@GMAIL.COM",
+        "corrected": "PAOLARUSS10@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JUSTINMORA027@GMAIL.COM",
+        "corrected": "JUSTINMORA027@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JUSTINWOLF@GO-AFS.COM",
+        "corrected": "JUSTINWOLF@GO-AFS.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "CORYBLANCHARD1990@GMAIL.COM",
+        "corrected": "CORYBLANCHARD1990@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "GATORHAPS@YAHOO.COM",
+        "corrected": "GATORHAPS@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "RBC0788@AOL.COM",
+        "corrected": "RBC0788@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "NORDICMONK@BELLSOUTH.NET",
+        "corrected": "NORDICMONK@BELLSOUTH.NET",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "RICKYLOPEZ123@YAHOO.COM",
+        "corrected": "RICKYLOPEZ123@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "UTHANWILLIAMS1@GMAIL.COM",
+        "corrected": "UTHANWILLIAMS1@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "OABREU@MSN.COM",
+        "corrected": "OABREU@MSN.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "ELISABETHHUDSON@MULLINAXFORDMOBILE.COM",
+        "corrected": "ELISABETHHUDSON@MULLINAXFORDMOBILE.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "THOULIS@ALAFIACOVEHOA.COM",
+        "corrected": "THOULIS@ALAFIACOVEHOA.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "EVERLYJIM@YAHOO.COM",
+        "corrected": "EVERLYJIM@YAHOO.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "TLEEP@IPDMAIL.COM",
+        "corrected": "TLEEP@IPDMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "CONARTIST9@AOL.COM",
+        "corrected": "CONARTIST9@AOL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "JIMADAMSZ28@HOTMAIL.COM",
+        "corrected": "JIMADAMSZ28@HOTMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "DDL1979@HOTMAIL.COM",
+        "corrected": "DDL1979@HOTMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "1.WILLIAM.NAVARRO@GMAIL.COM",
+        "corrected": "1.WILLIAM.NAVARRO@GMAIL.COM",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "FLOERKE.E@OUTLOOK.COM",
+        "corrected": "FLOERKE.E@OUTLOOK.COM",
+        "status": "unchanged",
+        "changes": []
+      }
+    ],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 4,
+      "from_cache": false,
+      "tokens_used": 186
+    }
+  },
+  "sp_telephone_number": {
+    "column_name": "sp_telephone_number",
+    "workflow": "text",
+    "subtype": "phone",
+    "detection_confidence": 0.95,
+    "detection_source": "pattern",
+    "good_count": 175,
+    "bad_count": 164,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "phone",
+      "sample_size": 174,
+      "properties": {
+        "avg_length": 10.0,
+        "min_length": 10,
+        "max_length": 10,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "9546502165",
+          "8133359012",
+          "8133686344",
+          "9547817231",
+          "9549612759"
+        ]
+      },
+      "correction_hints": {
+        "expected_format": "XXXXXXXXXX",
+        "format_distribution": {
+          "XXXXXXXXXX": 174
+        }
+      }
+    },
+    "corrections": [
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "rejected",
+        "changes": []
+      },
+      {
+        "original": "1.11112E+11",
+        "corrected": "1.11112E+11",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "(952) 555-4248",
+        "corrected": "952-555-4248",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(600) 555-8218",
+        "corrected": "600-555-8218",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(657) 555-0805",
+        "corrected": "657-555-0805",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(692) 555-5298",
+        "corrected": "692-555-5298",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(720) 555-7874",
+        "corrected": "720-555-7874",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(698) 555-6527",
+        "corrected": "698-555-6527",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(504) 555-6577",
+        "corrected": "504-555-6577",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(815) 555-6776",
+        "corrected": "815-555-6776",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(829) 555-2013",
+        "corrected": "829-555-2013",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(252) 555-4017",
+        "corrected": "252-555-4017",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(305) 555-2961",
+        "corrected": "305-555-2961",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(564) 555-5434",
+        "corrected": "564-555-5434",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(281) 555-0298",
+        "corrected": "281-555-0298",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(231) 555-2906",
+        "corrected": "231-555-2906",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(533) 555-4339",
+        "corrected": "533-555-4339",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(533) 555-4339",
+        "corrected": "533-555-4339",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(334) 555-8345",
+        "corrected": "334-555-8345",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(228) 555-0684",
+        "corrected": "228-555-0684",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(638) 555-2644",
+        "corrected": "638-555-2644",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(319) 555-1941",
+        "corrected": "319-555-1941",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(496) 555-3786",
+        "corrected": "496-555-3786",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(528) 555-7771",
+        "corrected": "528-555-7771",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(808) 555-0217",
+        "corrected": "808-555-0217",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(808) 555-0217",
+        "corrected": "808-555-0217",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(987) 555-5605",
+        "corrected": "987-555-5605",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(313) 555-8012",
+        "corrected": "313-555-8012",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(793) 555-8528",
+        "corrected": "793-555-8528",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(476) 555-5498",
+        "corrected": "476-555-5498",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(506) 555-3321",
+        "corrected": "506-555-3321",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(569) 555-0968",
+        "corrected": "569-555-0968",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(283) 555-9781",
+        "corrected": "283-555-9781",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(238) 555-2678",
+        "corrected": "238-555-2678",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(346) 555-2439",
+        "corrected": "346-555-2439",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(557) 555-6234",
+        "corrected": "557-555-6234",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(975) 555-5644",
+        "corrected": "975-555-5644",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(898) 555-1704",
+        "corrected": "898-555-1704",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(635) 555-3735",
+        "corrected": "635-555-3735",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(519) 555-1483",
+        "corrected": "519-555-1483",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(550) 555-8512",
+        "corrected": "550-555-8512",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(332) 555-9568",
+        "corrected": "332-555-9568",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(815) 555-8662",
+        "corrected": "815-555-8662",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(390) 555-9560",
+        "corrected": "390-555-9560",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(231) 555-2904",
+        "corrected": "231-555-2904",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(468) 555-1971",
+        "corrected": "468-555-1971",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(910) 555-5927",
+        "corrected": "910-555-5927",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(686) 555-2076",
+        "corrected": "686-555-2076",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(938) 555-2038",
+        "corrected": "938-555-2038",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(238) 555-1527",
+        "corrected": "238-555-1527",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(321) 555-0872",
+        "corrected": "321-555-0872",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(621) 555-4928",
+        "corrected": "621-555-4928",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(661) 555-5810",
+        "corrected": "661-555-5810",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(608) 555-7563",
+        "corrected": "608-555-7563",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(373) 555-6462",
+        "corrected": "373-555-6462",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(882) 555-1066",
+        "corrected": "882-555-1066",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(959) 555-2343",
+        "corrected": "959-555-2343",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(935) 555-3155",
+        "corrected": "935-555-3155",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(521) 555-7475",
+        "corrected": "521-555-7475",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(587) 555-9879",
+        "corrected": "587-555-9879",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(961) 555-5930",
+        "corrected": "961-555-5930",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(726) 555-1106",
+        "corrected": "726-555-1106",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(796) 555-6005",
+        "corrected": "796-555-6005",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(920) 555-7081",
+        "corrected": "920-555-7081",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(552) 555-6104",
+        "corrected": "552-555-6104",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(572) 555-1638",
+        "corrected": "572-555-1638",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(372) 555-3590",
+        "corrected": "372-555-3590",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(413) 555-5142",
+        "corrected": "413-555-5142",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(764) 555-9461",
+        "corrected": "764-555-9461",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(491) 555-8805",
+        "corrected": "491-555-8805",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(785) 555-3781",
+        "corrected": "785-555-3781",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(887) 555-6468",
+        "corrected": "887-555-6468",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(764) 555-6745",
+        "corrected": "764-555-6745",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(261) 555-4513",
+        "corrected": "261-555-4513",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(695) 555-4400",
+        "corrected": "695-555-4400",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(378) 555-8343",
+        "corrected": "378-555-8343",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(551) 555-8996",
+        "corrected": "551-555-8996",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(955) 555-2310",
+        "corrected": "955-555-2310",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(257) 555-5646",
+        "corrected": "257-555-5646",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(317) 555-1695",
+        "corrected": "317-555-1695",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(491) 555-7474",
+        "corrected": "491-555-7474",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(629) 555-0405",
+        "corrected": "629-555-0405",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(496) 555-4082",
+        "corrected": "496-555-4082",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(253) 555-8870",
+        "corrected": "253-555-8870",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(371) 555-6761",
+        "corrected": "371-555-6761",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(402) 555-6348",
+        "corrected": "402-555-6348",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(348) 555-5480",
+        "corrected": "348-555-5480",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(468) 555-5895",
+        "corrected": "468-555-5895",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(732) 555-4889",
+        "corrected": "732-555-4889",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(687) 555-5787",
+        "corrected": "687-555-5787",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(659) 555-6649",
+        "corrected": "659-555-6649",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(314) 555-3252",
+        "corrected": "314-555-3252",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(962) 555-2877",
+        "corrected": "962-555-2877",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(506) 555-6818",
+        "corrected": "506-555-6818",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(827) 555-8395",
+        "corrected": "827-555-8395",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(896) 555-7581",
+        "corrected": "896-555-7581",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(537) 555-7097",
+        "corrected": "537-555-7097",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(467) 555-0144",
+        "corrected": "467-555-0144",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(322) 555-6062",
+        "corrected": "322-555-6062",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(674) 555-2736",
+        "corrected": "674-555-2736",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(844) 555-8209",
+        "corrected": "844-555-8209",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(209) 555-3498",
+        "corrected": "209-555-3498",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(396) 555-5730",
+        "corrected": "396-555-5730",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(818) 555-8059",
+        "corrected": "818-555-8059",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(972) 555-3375",
+        "corrected": "972-555-3375",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(449) 555-3469",
+        "corrected": "449-555-3469",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(210) 555-9855",
+        "corrected": "210-555-9855",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(345) 555-5840",
+        "corrected": "345-555-5840",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(270) 555-9972",
+        "corrected": "270-555-9972",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(881) 555-7283",
+        "corrected": "881-555-7283",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(777) 555-8728",
+        "corrected": "777-555-8728",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(458) 555-2550",
+        "corrected": "458-555-2550",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(912) 555-3525",
+        "corrected": "912-555-3525",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(400) 555-3321",
+        "corrected": "400-555-3321",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(761) 555-5346",
+        "corrected": "761-555-5346",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(937) 555-7321",
+        "corrected": "937-555-7321",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(395) 555-6344",
+        "corrected": "395-555-6344",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(517) 555-1925",
+        "corrected": "517-555-1925",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(935) 555-3768",
+        "corrected": "935-555-3768",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(474) 555-5584",
+        "corrected": "474-555-5584",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(487) 555-0867",
+        "corrected": "487-555-0867",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(870) 555-0961",
+        "corrected": "870-555-0961",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(683) 555-2714",
+        "corrected": "683-555-2714",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(275) 555-0313",
+        "corrected": "275-555-0313",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(201) 555-6200",
+        "corrected": "201-555-6200",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(731) 555-6837",
+        "corrected": "731-555-6837",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(754) 555-1727",
+        "corrected": "754-555-1727",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(400) 555-3679",
+        "corrected": "400-555-3679",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(332) 555-2061",
+        "corrected": "332-555-2061",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(769) 555-6108",
+        "corrected": "769-555-6108",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(889) 555-5777",
+        "corrected": "889-555-5777",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(603) 555-4880",
+        "corrected": "603-555-4880",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(774) 555-3759",
+        "corrected": "774-555-3759",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(756) 555-6886",
+        "corrected": "756-555-6886",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(402) 555-5226",
+        "corrected": "402-555-5226",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(490) 555-3414",
+        "corrected": "490-555-3414",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(212) 555-3412",
+        "corrected": "212-555-3412",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(458) 555-3635",
+        "corrected": "458-555-3635",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(966) 555-9242",
+        "corrected": "966-555-9242",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(505) 555-3620",
+        "corrected": "505-555-3620",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(800) 555-1535",
+        "corrected": "800-555-1535",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(737) 555-0518",
+        "corrected": "737-555-0518",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(587) 555-8947",
+        "corrected": "587-555-8947",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(653) 555-7572",
+        "corrected": "653-555-7572",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(672) 555-3745",
+        "corrected": "672-555-3745",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(517) 555-3612",
+        "corrected": "517-555-3612",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(619) 555-7778",
+        "corrected": "619-555-7778",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(879) 555-7137",
+        "corrected": "879-555-7137",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(563) 555-2227",
+        "corrected": "563-555-2227",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(727) 555-1927",
+        "corrected": "727-555-1927",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(236) 555-9858",
+        "corrected": "236-555-9858",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(547) 555-1622",
+        "corrected": "547-555-1622",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(960) 555-3838",
+        "corrected": "960-555-3838",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(234) 555-7475",
+        "corrected": "234-555-7475",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(221) 555-5663",
+        "corrected": "221-555-5663",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(643) 555-8895",
+        "corrected": "643-555-8895",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(850) 555-5803",
+        "corrected": "850-555-5803",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(618) 555-2202",
+        "corrected": "618-555-2202",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(764) 555-5319",
+        "corrected": "764-555-5319",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      },
+      {
+        "original": "(944) 555-0801",
+        "corrected": "944-555-0801",
+        "status": "corrected",
+        "changes": [
+          "formatted_standard"
+        ]
+      }
+    ],
+    "llm_verification": {
+      "promoted_count": 1,
+      "patterns_used": 3,
+      "from_cache": false,
+      "tokens_used": 184
+    }
+  },
+  "sp_country": {
+    "column_name": "sp_country",
+    "workflow": "text",
+    "subtype": "country",
+    "detection_confidence": 0.9,
+    "detection_source": "heuristic",
+    "good_count": 337,
+    "bad_count": 2,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "categorical_frequency_fuzzy",
+      "column_name": "sp_country",
+      "sample_size": 339,
+      "reference_values": [
+        "USA"
+      ],
+      "reference_frequencies": {
+        "USA": 336
+      },
+      "similarity_threshold": 85,
+      "min_frequency": 2,
+      "properties": {
+        "is_categorical": true,
+        "cardinality": 0.008849557522123894,
+        "avg_length": 3.0442477876106193,
+        "length_std": 0.6152829485227858,
+        "case_style": "upper",
+        "case_consistency": 0.9941002949852508
+      },
+      "correction_hints": {
+        "expected_case": "upper",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "rules_applied": {
+        "case_sensitivity": true,
+        "gibberish_detection": true,
+        "frequency_analysis": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 1,
+      "patterns_used": 5,
+      "from_cache": false,
+      "tokens_used": 188
+    }
+  },
+  "sp_city": {
+    "column_name": "sp_city",
+    "workflow": "text",
+    "subtype": "location",
+    "detection_confidence": 0.9,
+    "detection_source": "heuristic",
+    "good_count": 339,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "sp_city",
+      "sample_size": 339,
+      "properties": {
+        "avg_length": 8.486725663716815,
+        "min_length": 2,
+        "max_length": 13,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 337,
+          "upper": 2,
+          "lower": 0,
+          "mixed": 0
+        },
+        "sample_values": [
+          "Loxahatchee",
+          "Riverview",
+          "Apollo Beach",
+          "Coconut Creek",
+          "Hollywood"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 3,
+      "from_cache": false,
+      "tokens_used": 211
+    }
+  },
+  "sp_state": {
+    "column_name": "sp_state",
+    "workflow": "text",
+    "subtype": "state",
+    "detection_confidence": 0.9,
+    "detection_source": "heuristic",
+    "good_count": 339,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "categorical_frequency_fuzzy",
+      "column_name": "sp_state",
+      "sample_size": 339,
+      "reference_values": [
+        "NE",
+        "FL"
+      ],
+      "reference_frequencies": {
+        "NE": 51,
+        "FL": 272
+      },
+      "similarity_threshold": 85,
+      "min_frequency": 2,
+      "properties": {
+        "is_categorical": true,
+        "cardinality": 0.02654867256637168,
+        "avg_length": 2.0,
+        "length_std": 0.0,
+        "case_style": "upper",
+        "case_consistency": 1.0
+      },
+      "correction_hints": {
+        "expected_case": "upper",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "rules_applied": {
+        "case_sensitivity": true,
+        "gibberish_detection": true,
+        "frequency_analysis": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 16,
+      "patterns_used": 3,
+      "from_cache": false,
+      "tokens_used": 182
+    }
+  },
+  "sp_postaladdress": {
+    "column_name": "sp_postaladdress",
+    "workflow": "text",
+    "subtype": "address",
+    "detection_confidence": 0.9,
+    "detection_source": "heuristic",
+    "good_count": 337,
+    "bad_count": 2,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "sp_postaladdress",
+      "sample_size": 337,
+      "properties": {
+        "avg_length": 17.501483679525222,
+        "min_length": 9,
+        "max_length": 35,
+        "dominant_case": "upper",
+        "case_distribution": {
+          "title": 0,
+          "upper": 337,
+          "lower": 0,
+          "mixed": 0
+        },
+        "sample_values": [
+          "14367 73RD ST N",
+          "11010 BRAHMAN RANCH CIR",
+          "5115 BUTTERFLY SHELL DR",
+          "5152 NW 49TH AVE",
+          "6600 EVANS ST"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "upper",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 3,
+      "from_cache": false,
+      "tokens_used": 255
+    }
+  },
+  "sp_postalcode": {
+    "column_name": "sp_postalcode",
+    "workflow": "text",
+    "subtype": "zipcode",
+    "detection_confidence": 0.9,
+    "detection_source": "heuristic",
+    "good_count": 338,
+    "bad_count": 1,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "zipcode",
+      "sample_size": 338,
+      "properties": {
+        "avg_length": 7.0,
+        "min_length": 7,
+        "max_length": 7,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "33470.0",
+          "33578.0",
+          "33572.0",
+          "33073.0",
+          "33024.0"
+        ]
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 2,
+      "from_cache": false,
+      "tokens_used": 182
+    }
+  },
+  "sp_when_created": {
+    "column_name": "sp_when_created",
+    "workflow": "datetime",
+    "subtype": "date",
+    "detection_confidence": 0.9,
+    "detection_source": "heuristic",
+    "good_count": 339,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "datetime",
+      "method": "format_parser",
+      "sample_size": 339,
+      "properties": {
+        "majority_format": "%Y%m%d%H%M%S",
+        "format_distribution": {
+          "%Y%m%d%H%M%S": 339
+        },
+        "unique_formats": 1
+      },
+      "correction_hints": {
+        "expected_format": "%Y%m%d%H%M%S",
+        "enforce_format_consistency": true
+      },
+      "rules_applied": {
+        "format_consistency": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 5,
+      "from_cache": false,
+      "tokens_used": 181
+    }
+  },
+  "sp_fordjobrole": {
+    "column_name": "sp_fordjobrole",
+    "workflow": "text",
+    "subtype": "job_title",
+    "detection_confidence": 0.9,
+    "detection_source": "heuristic",
+    "good_count": 323,
+    "bad_count": 16,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "sp_fordjobrole",
+      "sample_size": 323,
+      "properties": {
+        "avg_length": 6.712074303405573,
+        "min_length": 5,
+        "max_length": 11,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 160,
+          "upper": 132,
+          "lower": 0,
+          "mixed": 31
+        },
+        "sample_values": [
+          "Technician",
+          "Technician",
+          "Technician",
+          "QLNTEC",
+          "Sales"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 3,
+      "from_cache": false,
+      "tokens_used": 193
+    }
+  },
+  "sp_fordsitecodetype": {
+    "column_name": "sp_fordsitecodetype",
+    "workflow": "text",
+    "subtype": "generic",
+    "detection_confidence": 0.5,
+    "detection_source": "default",
+    "good_count": 339,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "sp_fordsitecodetype",
+      "sample_size": 339,
+      "properties": {
+        "avg_length": 9.0,
+        "min_length": 9,
+        "max_length": 9,
+        "dominant_case": "lower",
+        "case_distribution": {
+          "title": 0,
+          "upper": 0,
+          "lower": 339,
+          "mixed": 0
+        },
+        "sample_values": [
+          "nadlecode",
+          "nadlecode",
+          "nadlecode",
+          "nadlecode",
+          "nadlecode"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "lower",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 4,
+      "from_cache": true,
+      "tokens_used": 0
+    }
+  },
+  "sp_uid": {
+    "column_name": "sp_uid",
+    "workflow": "text",
+    "subtype": "generic",
+    "detection_confidence": 0.5,
+    "detection_source": "default",
+    "good_count": 339,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "sp_uid",
+      "sample_size": 339,
+      "properties": {
+        "avg_length": 7.551622418879056,
+        "min_length": 4,
+        "max_length": 14,
+        "dominant_case": "lower",
+        "case_distribution": {
+          "title": 0,
+          "upper": 0,
+          "lower": 332,
+          "mixed": 7
+        },
+        "sample_values": [
+          "rlittle",
+          "awebster",
+          "kbradford",
+          "kpierce",
+          "sconaway"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "lower",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 4,
+      "from_cache": true,
+      "tokens_used": 0
+    }
+  },
+  "sp_fordsitecode": {
+    "column_name": "sp_fordsitecode",
+    "workflow": "identifier",
+    "subtype": "pattern_id",
+    "detection_confidence": 0.6,
+    "detection_source": "default",
+    "good_count": 229,
+    "bad_count": 110,
+    "fingerprint": {
+      "workflow": "identifier",
+      "method": "pattern_signature",
+      "sample_size": 229,
+      "properties": {
+        "majority_pattern": "AN",
+        "valid_patterns": [
+          "AN"
+        ],
+        "pattern_distribution": {
+          "N": 89,
+          "AN": 229,
+          "ANA": 21
+        },
+        "avg_length": 5.222707423580786
+      }
+    },
+    "corrections": [
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "USA785FL",
+        "corrected": "USA785FL",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": "05431",
+        "corrected": "05431",
+        "status": "unchanged",
+        "changes": []
+      }
+    ],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 2,
+      "from_cache": true,
+      "tokens_used": 0
+    }
+  },
+  "Misc_01": {
+    "column_name": "Misc_01",
+    "workflow": "text",
+    "subtype": "generic",
+    "detection_confidence": 0.5,
+    "detection_source": "default",
+    "good_count": 34,
+    "bad_count": 305,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "Misc_01",
+      "sample_size": 34,
+      "properties": {
+        "avg_length": 26.705882352941178,
+        "min_length": 6,
+        "max_length": 58,
+        "dominant_case": "mixed",
+        "case_distribution": {
+          "title": 7,
+          "upper": 3,
+          "lower": 0,
+          "mixed": 24
+        },
+        "sample_values": [
+          "Same Person Active at 2 Dealers",
+          "Same Person Active at 2 Dealers",
+          "TERMED",
+          "Duplicate full record",
+          "Duplicate full record"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "mixed",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    },
+    "corrections": [
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      },
+      {
+        "original": NaN,
+        "corrected": NaN,
+        "status": "unchanged",
+        "changes": []
+      }
+    ],
+    "llm_verification": {
+      "promoted_count": 0,
+      "patterns_used": 0,
+      "from_cache": false,
+      "tokens_used": 0
+    }
+  }
+}

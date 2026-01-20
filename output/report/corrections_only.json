@@ -1,0 +1,1587 @@
+{
+  "generated_at": "2026-01-20T20:07:33.871607",
+  "description": "All successful corrections made by the pipeline",
+  "corrections": [
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(952) 555-4248",
+      "corrected": "952-555-4248",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(600) 555-8218",
+      "corrected": "600-555-8218",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(657) 555-0805",
+      "corrected": "657-555-0805",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(692) 555-5298",
+      "corrected": "692-555-5298",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(720) 555-7874",
+      "corrected": "720-555-7874",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(698) 555-6527",
+      "corrected": "698-555-6527",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(504) 555-6577",
+      "corrected": "504-555-6577",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(815) 555-6776",
+      "corrected": "815-555-6776",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(829) 555-2013",
+      "corrected": "829-555-2013",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(252) 555-4017",
+      "corrected": "252-555-4017",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(305) 555-2961",
+      "corrected": "305-555-2961",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(564) 555-5434",
+      "corrected": "564-555-5434",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(281) 555-0298",
+      "corrected": "281-555-0298",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(231) 555-2906",
+      "corrected": "231-555-2906",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(533) 555-4339",
+      "corrected": "533-555-4339",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(533) 555-4339",
+      "corrected": "533-555-4339",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(334) 555-8345",
+      "corrected": "334-555-8345",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(228) 555-0684",
+      "corrected": "228-555-0684",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(638) 555-2644",
+      "corrected": "638-555-2644",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(319) 555-1941",
+      "corrected": "319-555-1941",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(496) 555-3786",
+      "corrected": "496-555-3786",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(528) 555-7771",
+      "corrected": "528-555-7771",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(808) 555-0217",
+      "corrected": "808-555-0217",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(808) 555-0217",
+      "corrected": "808-555-0217",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(987) 555-5605",
+      "corrected": "987-555-5605",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(313) 555-8012",
+      "corrected": "313-555-8012",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(793) 555-8528",
+      "corrected": "793-555-8528",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(476) 555-5498",
+      "corrected": "476-555-5498",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(506) 555-3321",
+      "corrected": "506-555-3321",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(569) 555-0968",
+      "corrected": "569-555-0968",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(283) 555-9781",
+      "corrected": "283-555-9781",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(238) 555-2678",
+      "corrected": "238-555-2678",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(346) 555-2439",
+      "corrected": "346-555-2439",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(557) 555-6234",
+      "corrected": "557-555-6234",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(975) 555-5644",
+      "corrected": "975-555-5644",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(898) 555-1704",
+      "corrected": "898-555-1704",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(635) 555-3735",
+      "corrected": "635-555-3735",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(519) 555-1483",
+      "corrected": "519-555-1483",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(550) 555-8512",
+      "corrected": "550-555-8512",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(332) 555-9568",
+      "corrected": "332-555-9568",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(815) 555-8662",
+      "corrected": "815-555-8662",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(390) 555-9560",
+      "corrected": "390-555-9560",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(231) 555-2904",
+      "corrected": "231-555-2904",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(468) 555-1971",
+      "corrected": "468-555-1971",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(910) 555-5927",
+      "corrected": "910-555-5927",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(686) 555-2076",
+      "corrected": "686-555-2076",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(938) 555-2038",
+      "corrected": "938-555-2038",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(238) 555-1527",
+      "corrected": "238-555-1527",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(321) 555-0872",
+      "corrected": "321-555-0872",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(621) 555-4928",
+      "corrected": "621-555-4928",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(661) 555-5810",
+      "corrected": "661-555-5810",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(608) 555-7563",
+      "corrected": "608-555-7563",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(373) 555-6462",
+      "corrected": "373-555-6462",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(882) 555-1066",
+      "corrected": "882-555-1066",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(959) 555-2343",
+      "corrected": "959-555-2343",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(935) 555-3155",
+      "corrected": "935-555-3155",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(521) 555-7475",
+      "corrected": "521-555-7475",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(587) 555-9879",
+      "corrected": "587-555-9879",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(961) 555-5930",
+      "corrected": "961-555-5930",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(726) 555-1106",
+      "corrected": "726-555-1106",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(796) 555-6005",
+      "corrected": "796-555-6005",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(920) 555-7081",
+      "corrected": "920-555-7081",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(552) 555-6104",
+      "corrected": "552-555-6104",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(572) 555-1638",
+      "corrected": "572-555-1638",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(372) 555-3590",
+      "corrected": "372-555-3590",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(413) 555-5142",
+      "corrected": "413-555-5142",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(764) 555-9461",
+      "corrected": "764-555-9461",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(491) 555-8805",
+      "corrected": "491-555-8805",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(785) 555-3781",
+      "corrected": "785-555-3781",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(887) 555-6468",
+      "corrected": "887-555-6468",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(764) 555-6745",
+      "corrected": "764-555-6745",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(261) 555-4513",
+      "corrected": "261-555-4513",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(695) 555-4400",
+      "corrected": "695-555-4400",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(378) 555-8343",
+      "corrected": "378-555-8343",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(551) 555-8996",
+      "corrected": "551-555-8996",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(955) 555-2310",
+      "corrected": "955-555-2310",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(257) 555-5646",
+      "corrected": "257-555-5646",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(317) 555-1695",
+      "corrected": "317-555-1695",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(491) 555-7474",
+      "corrected": "491-555-7474",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(629) 555-0405",
+      "corrected": "629-555-0405",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(496) 555-4082",
+      "corrected": "496-555-4082",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(253) 555-8870",
+      "corrected": "253-555-8870",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(371) 555-6761",
+      "corrected": "371-555-6761",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(402) 555-6348",
+      "corrected": "402-555-6348",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(348) 555-5480",
+      "corrected": "348-555-5480",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(468) 555-5895",
+      "corrected": "468-555-5895",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(732) 555-4889",
+      "corrected": "732-555-4889",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(687) 555-5787",
+      "corrected": "687-555-5787",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(659) 555-6649",
+      "corrected": "659-555-6649",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(314) 555-3252",
+      "corrected": "314-555-3252",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(962) 555-2877",
+      "corrected": "962-555-2877",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(506) 555-6818",
+      "corrected": "506-555-6818",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(827) 555-8395",
+      "corrected": "827-555-8395",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(896) 555-7581",
+      "corrected": "896-555-7581",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(537) 555-7097",
+      "corrected": "537-555-7097",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(467) 555-0144",
+      "corrected": "467-555-0144",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(322) 555-6062",
+      "corrected": "322-555-6062",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(674) 555-2736",
+      "corrected": "674-555-2736",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(844) 555-8209",
+      "corrected": "844-555-8209",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(209) 555-3498",
+      "corrected": "209-555-3498",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(396) 555-5730",
+      "corrected": "396-555-5730",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(818) 555-8059",
+      "corrected": "818-555-8059",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(972) 555-3375",
+      "corrected": "972-555-3375",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(449) 555-3469",
+      "corrected": "449-555-3469",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(210) 555-9855",
+      "corrected": "210-555-9855",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(345) 555-5840",
+      "corrected": "345-555-5840",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(270) 555-9972",
+      "corrected": "270-555-9972",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(881) 555-7283",
+      "corrected": "881-555-7283",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(777) 555-8728",
+      "corrected": "777-555-8728",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(458) 555-2550",
+      "corrected": "458-555-2550",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(912) 555-3525",
+      "corrected": "912-555-3525",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(400) 555-3321",
+      "corrected": "400-555-3321",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(761) 555-5346",
+      "corrected": "761-555-5346",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(937) 555-7321",
+      "corrected": "937-555-7321",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(395) 555-6344",
+      "corrected": "395-555-6344",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(517) 555-1925",
+      "corrected": "517-555-1925",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(935) 555-3768",
+      "corrected": "935-555-3768",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(474) 555-5584",
+      "corrected": "474-555-5584",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(487) 555-0867",
+      "corrected": "487-555-0867",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(870) 555-0961",
+      "corrected": "870-555-0961",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(683) 555-2714",
+      "corrected": "683-555-2714",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(275) 555-0313",
+      "corrected": "275-555-0313",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(201) 555-6200",
+      "corrected": "201-555-6200",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(731) 555-6837",
+      "corrected": "731-555-6837",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(754) 555-1727",
+      "corrected": "754-555-1727",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(400) 555-3679",
+      "corrected": "400-555-3679",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(332) 555-2061",
+      "corrected": "332-555-2061",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(769) 555-6108",
+      "corrected": "769-555-6108",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(889) 555-5777",
+      "corrected": "889-555-5777",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(603) 555-4880",
+      "corrected": "603-555-4880",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(774) 555-3759",
+      "corrected": "774-555-3759",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(756) 555-6886",
+      "corrected": "756-555-6886",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(402) 555-5226",
+      "corrected": "402-555-5226",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(490) 555-3414",
+      "corrected": "490-555-3414",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(212) 555-3412",
+      "corrected": "212-555-3412",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(458) 555-3635",
+      "corrected": "458-555-3635",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(966) 555-9242",
+      "corrected": "966-555-9242",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(505) 555-3620",
+      "corrected": "505-555-3620",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(800) 555-1535",
+      "corrected": "800-555-1535",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(737) 555-0518",
+      "corrected": "737-555-0518",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(587) 555-8947",
+      "corrected": "587-555-8947",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(653) 555-7572",
+      "corrected": "653-555-7572",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(672) 555-3745",
+      "corrected": "672-555-3745",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(517) 555-3612",
+      "corrected": "517-555-3612",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(619) 555-7778",
+      "corrected": "619-555-7778",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(879) 555-7137",
+      "corrected": "879-555-7137",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(563) 555-2227",
+      "corrected": "563-555-2227",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(727) 555-1927",
+      "corrected": "727-555-1927",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(236) 555-9858",
+      "corrected": "236-555-9858",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(547) 555-1622",
+      "corrected": "547-555-1622",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(960) 555-3838",
+      "corrected": "960-555-3838",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(234) 555-7475",
+      "corrected": "234-555-7475",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(221) 555-5663",
+      "corrected": "221-555-5663",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(643) 555-8895",
+      "corrected": "643-555-8895",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(850) 555-5803",
+      "corrected": "850-555-5803",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(618) 555-2202",
+      "corrected": "618-555-2202",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(764) 555-5319",
+      "corrected": "764-555-5319",
+      "changes": [
+        "formatted_standard"
+      ]
+    },
+    {
+      "column": "sp_telephone_number",
+      "workflow": "text",
+      "subtype": "phone",
+      "original": "(944) 555-0801",
+      "corrected": "944-555-0801",
+      "changes": [
+        "formatted_standard"
+      ]
+    }
+  ],
+  "total_corrections": 158
+}

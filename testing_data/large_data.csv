@@ -1,0 +1,62 @@
+name,email,phone,address,age
+John,abc@gmail.com,9876543210,NY USA,28
+Alpha,alpha123@gmail.com,9876500000,CA USA,32
+Orku,orkuey@hotmail.com,9876511111,TX USA,41
+GOAT,GOATOURISM@gov.com,9876522222,FL USA,36
+Michael,michael1987@gmail.com,9876533333,WA USA,29
+Sarah,sarah.jones@yahoo.com,9876544444,AZ USA,34
+David,david_k@gmail.com,9876555555,IL USA,45
+Rachel,rachel1990@hotmail.com,9876566666,CO USA,31
+Chris,chris.w@gmail.com,9876577777,GA USA,38
+Amit,amit.patel@gmail.com,9876588888,NJ USA,27
+Neha,neha1992@yahoo.com,9876599999,NY USA,33
+Rohit,rohit1985@gmail.com,9876600000,CA USA,40
+Sneha,sneha@hotmail.com,9876611111,TX USA,35
+Vikas,vikas123@gmail.com,9876622222,FL USA,37
+Pooja,pooja@gmail.com,9876633333,WA USA,29
+Ankit,ankit@gmail.com,9876644444,AZ USA,42
+Sonal,sonal1988@yahoo.com,9876655555,IL USA,31
+Priya,priya@gmail.com,9876666666,CO USA,34
+Rahul,rahul.k@gmail.com,9876677777,GA USA,28
+Karan,karan@gmail.com,9876688888,NJ USA,39
+Arjun,arjun@gmail.com,9876699999,NY USA,30
+Riya,riya@yahoo.com,9876700000,CA USA,26
+Manish,manish123@gmail.com,9876711111,TX USA,44
+Suman,suman@hotmail.com,9876722222,FL USA,36
+Nitin,nitin@gmail.com,9876733333,WA USA,41
+Divya,divya1993@yahoo.com,9876744444,AZ USA,27
+Ajay,ajay@gmail.com,9876755555,IL USA,35
+Smita,smita@hotmail.com,9876766666,CO USA,33
+Vivek,vivek.k@gmail.com,9876777777,GA USA,29
+Megha,megha@gmail.com,9876788888,NJ USA,37
+Raj,raj@gmail.com,9876799999,NY USA,31
+Deepak,deepak@gmail.com,9876800000,CA USA,45
+Anjali,anjali@yahoo.com,9876811111,TX USA,34
+Tarun,tarun@gmail.com,9876822222,FL USA,28
+Sakshi,sakshi@hotmail.com,9876833333,WA USA,32
+Suresh,suresh@gmail.com,9876844444,AZ USA,38
+Isha,isha@yahoo.com,9876855555,IL USA,29
+Mohan,mohan@gmail.com,9876866666,CO USA,43
+Kriti,kriti@gmail.com,9876877777,GA USA,27
+Harsh,harsh@gmail.com,9876888888,NJ USA,36
+Aakash,aakash@gmail.com,9876899999,NY USA,34
+Sameer,sameer@yahoo.com,9876900000,CA USA,41
+Ravi,ravi@gmail.com,9876911111,TX USA,39
+Sunita,sunita@hotmail.com,9876922222,FL USA,33
+Prakash,prakash@gmail.com,9876933333,WA USA,46
+Rekha,rekha@gmail.com,9876944444,AZ USA,28
+Yash,yash@gmail.com,9876955555,IL USA,30
+Apoorva,apoorva@yahoo.com,9876966666,CO USA,35
+Mahesh,mahesh@gmail.com,9876977777,GA USA,42
+Pankaj,pankaj@gmail.com,9876988888,NJ USA,37
+Nisha,nisha@yahoo.com,9876999999,NY USA,29
+INVALID1,mal,98ABCD3210,NY,200
+INVALID2,1234mal@mail.com,abcd,CA,-5
+INVALID3,noatsymbol.com,98765432,TX USA,500
+INVALID4,john@@gmail.com,12345,FL,abc
+INVALID5,jane@gmail,phone,WA USA,999
+INVALID6,@@@,9876abcd,IL,NaN
+INVALID7,jack@.com,9876,CO USA,3.5
+INVALID8,jill@gmail..com,----,GA USA,-10
+INVALID9,123john,123456789,TX,150
+INVALID10,john#mail.com,abc123,NY USA,twenty

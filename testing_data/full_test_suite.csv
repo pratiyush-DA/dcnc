@@ -1,0 +1,31 @@
+serial_number,full_name,email,phone,address,city,state,zip_code,country,join_date,salary,product_code,ip_address,department,source_record_id,ticket_id
+1,John Doe,john.doe@example.com,555-123-4567,123 Main St,New York,NY,10001,USA,2023-01-15,75000,PROD-001,192.168.1.1,Engineering,SRC-01,TKT-1000
+2,Jane Smith,jane.smith@test.org,(555) 987-6543,456 Oak Ave,Los Angeles,CA,90001,USA,2023-02-20,82000,PROD-002,10.0.0.5,Sales,SRC-02,TKT-1001
+3,Michael Brown,m.brown@company.net,555.555.5555,789 Pine Rd,Chicago,IL,60601,USA,2023-03-10,68000,PROD-003,172.16.0.1,Marketing,SRC-03,TKT-1002
+4,Emily Davis,emily.d@provider.com,1-800-555-0199,321 Elm Blvd,Houston,TX,77001,USA,2023-04-05,91000,PROD-004,192.168.0.10,Engineering,SRC-04,TKT-1003
+5,David Wilson,david.w@gmail.com,5551234567,654 Maple Dr,Phoenix,AZ,85001,USA,2023-05-12,72000,PROD-005,10.0.0.25,HR,SRC-05,TKT-1004
+6,Sarah Johnson,s.johnson@yahoo.com,555-000-1111,987 Cedar Ln,Philadelphia,PA,19101,USA,2023-06-18,65000,PROD-006,172.16.254.1,Sales,SRC-06,TKT-1005
+7,Robert Miller,robert.m@hotmail.com,(555) 111-2222,159 Birch Ct,San Antonio,TX,78201,USA,2023-07-22,88000,PROD-007,192.168.100.5,Marketing,SRC-07,TKT-1006
+8,Jessica Taylor,jessica.t@outlook.com,555-333-4444,753 Willow Way,San Diego,CA,92101,United States,2023-08-30,95000,PROD-008,10.1.1.1,Engineering,SRC-08,TKT-1007
+9,William Anderson,william.a@live.com,555-444-5555,147 Cherry Pl,Dallas,TX,75201,USA,2023-09-09,70000,PROD-009,172.20.0.1,HR,SRC-09,TKT-1008
+10,Ashley Thomas,ashley.t@aol.com,555-666-7777,258 Spring St,San Jose,CA,95101,USA,2023-10-14,80000,PROD-010,192.168.1.100,Sales,SRC-10,TKT-1009
+11,Brian Jackson,brian.j@icloud.com,555-888-9999,369 Summer Ave,Austin,TX,73301,United Kingdom,2023-11-25,85000,PROD-011,10.2.2.2,Marketing,SRC-11,TKT-1010
+12,Megan White,megan.w@me.com,555-121-2121,951 Autumn Blvd,Jacksonville,FL,32099,USA,2023-12-01,60000,PROD-012,172.16.10.10,Engineering,SRC-12,TKT-1011
+13,Matthew Harris,matthew.h@msn.com,555-343-4343,753 Winter Rd,Fort Worth,TX,76101,USA,2024-01-05,92000,PROD-013,192.168.50.50,HR,SRC-13,TKT-1012
+14,Jennifer Martin,jennifer.m@comcast.net,555-565-6565,159 Broadway,Columbus,OH,43215,USA,2024-02-14,78000,PROD-014,10.0.10.1,Sales,SRC-14,TKT-1013
+15,Daniel Thompson,daniel.t@verizon.net,555-787-8787,357 Park Ave,San Francisco,CA,94101,USA,2024-03-20,98000,PROD-015,172.16.1.1,Marketing,SRC-15,TKT-1014
+16,Linda Garcia,linda.g@att.net,555-909-0909,852 Fifth Ave,Charlotte,NC,28201,USA,2024-04-10,74000,PROD-016,192.168.2.2,Engineering,SRC-16,TKT-1015
+17,Joseph Martinez,joseph.m@sbcglobal.net,555-123-0000,963 Madison St,Indianapolis,IN,46201,USA,2024-05-15,67000,PROD-017,10.5.5.5,HR,SRC-17,TKT-1016
+18,Karen Robinson,karen.r@bellsouth.net,555-321-1111,741 Lexington Ave,Seattle,WA,98101,USA,2024-06-25,89000,PROD-018,172.16.20.20,Sales,SRC-18,TKT-1017
+19,Kevin Clark,kevin.c@cox.net,555-654-2222,369 Sunset Blvd,Denver,CO,80201,USA,2024-07-30,76000,PROD-019,192.168.8.8,Marketing,SRC-19,TKT-1018
+20,Nancy Rodriguez,nancy.r@charter.net,555-987-3333,258 Sunrise Hwy,Washington,DC,20001,USA,2024-08-12,93000,PROD-020,10.10.10.10,Engineering,SRC-20,TKT-1019
+21,no_name,bad.email.com,12345,Not An Address,new york,ny,00000,usa,2024/13/45,low salary,prod-021,256.0.0.1,Technie,SRC-21,TKT-1020
+22,123456,missing_at_symbol,phone text,123,los angeles,california,ABCDE,US,not-a-date,100k,prod-022,192.168.1,Selling,SRC-22,TKT-1021
+23,,@empty.com,,Unknown St,chicago,illinois,123,United_States,2025-02-30,-5000,PROD_023,1.1.1.1.1,Market,SRC-23,TKT-1022
+24,john doe,john@@gmail.com,555-123,PO Box,houston,tx,7700,America,00-00-0000,100.5,prod 024,abc.def.ghi.jkl,Enginear,SRC-24,TKT-1023
+25,jane_smith,jane@.com,call-me,Suite 100,phoenix,arizona,85001-9,U.S.A.,Today,1000000,product-25,999.999.999.999,Human Resources,SRC-25,TKT-1024
+26,TEST USER,test@test,123-456-78901,123 Main,philadelphia,pennsylvania,1910,United Kingdom,2023-02-31,Ten Thousand,prod-026,1.2.3,Sales Team,SRC-26,TKT-ABC
+BAD-07,,,,,,,,,,,prod-027,,,SRC-27,99999
+BAD-08,User Name,user@domain,555-121,123 Street Name,san antonio,texas,7820,USA,24-10-2023,50000.00,prod_028,10.0.0,Admin,SRC-28,TKT-
+BAD-09,Bot 001,bot@bot@bot.com,0000000000,Nowhere,san diego,cali,99999,States,9999-99-99,0,prod~029,0.0.0.0,Unknown,SRC-29,ticket-01
+BAD-10,Hacker,hack@hack,911,Attn: Someone,dallas,tex,111,Russia,12/34/5678,MILLION,prod-030,::1,Operations,SRC-SRC,TKT-1029
