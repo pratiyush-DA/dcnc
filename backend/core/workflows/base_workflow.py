@@ -126,6 +126,9 @@ class BaseWorkflow(IWorkflow):
         total = len(good_data) + len(bad_data)
         confidence = len(good_data) / total if total > 0 else 0.0
         
+        # Determine method based on subtype and validation approach
+        method = self._determine_method(subtype, validator)
+        
         result = ClusterResult(
             good_data=good_data,
             bad_data=bad_data,
@@ -138,8 +141,13 @@ class BaseWorkflow(IWorkflow):
             metadata={
                 "column_name": column_name,
                 "total_records": total,
+                "method": method,  # Track method used
             }
         )
+        
+        # Also store method in fingerprint if available
+        if fingerprint_dict:
+            fingerprint_dict["method"] = method
         
         logger.debug(
             f"Clustered {column_name}: {len(good_data)} good, "
@@ -180,6 +188,38 @@ class BaseWorkflow(IWorkflow):
             self._fingerprint_generator = registry.get(self.workflow_type.value)
         
         return self._fingerprint_generator
+    
+    def _determine_method(self, subtype: str, validator) -> str:
+        """Determine clustering method based on subtype and validator."""
+        # Map subtypes to methods
+        method_map = {
+            # Text validators
+            "email": "validator_email",
+            "phone": "validator_phone",
+            "url": "validator_url",
+            "ip_address": "validator_ip_address",
+            "uuid": "validator_uuid",
+            "zipcode": "validator_zipcode",
+            "boolean": "validator_boolean",
+            "ssn": "validator_ssn",
+            # Text freetext
+            "name": "freetext_lenient",
+            "company": "freetext_lenient",
+            "address": "freetext_lenient",
+            "job_title": "freetext_lenient",
+            "generic": "freetext_lenient",
+            # Text categorical
+            "state": "categorical_frequency_fuzzy",
+            "country": "categorical_frequency_fuzzy",
+        }
+        
+        if subtype in method_map:
+            return method_map[subtype]
+        
+        # Default based on validator presence
+        if validator:
+            return f"validator_{subtype}"
+        return "freetext_lenient"
     
     def _create_basic_fingerprint(
         self,

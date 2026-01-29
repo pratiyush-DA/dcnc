@@ -123,7 +123,7 @@ class ValidatorStringClusterer(BaseClusterer):
             good_indices = new_good_indices
         
         # Phase 3: Phone format consistency
-        # Detect majority format and flag non-conforming for correction
+        # Detect LARGEST good data cluster format and flag non-conforming for correction
         majority_format = None
         if self.engine_name == "phone":
             format_counts = {}
@@ -132,7 +132,13 @@ class ValidatorStringClusterer(BaseClusterer):
                 format_counts[fmt] = format_counts.get(fmt, 0) + 1
             
             if format_counts:
+                # Get format with highest count (largest cluster)
                 majority_format = max(format_counts, key=format_counts.get)
+                majority_count = format_counts[majority_format]
+                logger.debug(
+                    f"Phone majority format for {column_name}: {majority_format} "
+                    f"({majority_count} values, {len(format_counts)} unique formats)"
+                )
                 
                 # Re-process to move non-majority format to bad
                 new_good_data, new_good_indices, new_conf = [], [], []

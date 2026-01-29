@@ -71,13 +71,17 @@ class SemanticNumericClusterer(BaseClusterer):
                     logger.debug(f"Auto-detected 0-5 rating scale for {column_name} ({pct_under_5:.0%} values <= 5)")
         
         # Calculate IQR bounds for additional outlier detection
+        # Filter out NaN values before creating numpy array
         iqr_lower, iqr_upper = float("-inf"), float("inf")
         if parsed_values:
-            arr = np.array(parsed_values)
-            q1, q3 = np.percentile(arr, [25, 75])
-            iqr = q3 - q1
-            iqr_lower = q1 - 1.5 * iqr
-            iqr_upper = q3 + 1.5 * iqr
+            # Filter out any NaN values that might have slipped through
+            valid_parsed = [v for v in parsed_values if not np.isnan(v)]
+            if valid_parsed:
+                arr = np.array(valid_parsed)
+                q1, q3 = np.percentile(arr, [25, 75])
+                iqr = q3 - q1
+                iqr_lower = q1 - 1.5 * iqr
+                iqr_upper = q3 + 1.5 * iqr
         
         # Classify each value
         good_data, bad_data = [], []
@@ -145,11 +149,16 @@ class SemanticNumericClusterer(BaseClusterer):
     
     def _parse_numeric(self, value: Any) -> Optional[float]:
         """Parse value as numeric, handling various formats."""
+        # Handle NaN values early
         if value is None:
             return None
         
+        # Check for float NaN
+        if isinstance(value, float) and np.isnan(value):
+            return None
+        
         str_val = str(value).strip()
-        if not str_val:
+        if not str_val or str_val.lower() in ["nan", "null", "none", "na", "n/a", "invalid", "undefined"]:
             return None
         
         # Strip currency symbols
@@ -185,7 +194,16 @@ class SemanticNumericClusterer(BaseClusterer):
                 "properties": {},
             }
         
-        arr = np.array(values)
+        # Filter out NaN values before creating numpy array
+        valid_values = [v for v in values if not np.isnan(v)]
+        if not valid_values:
+            return {
+                "workflow": "numeric",
+                "method": "semantic",
+                "properties": {},
+            }
+        
+        arr = np.array(valid_values)
         q1, q3 = np.percentile(arr, [25, 75])
         iqr = q3 - q1
         
@@ -204,7 +222,7 @@ class SemanticNumericClusterer(BaseClusterer):
                 "iqr": float(iqr),
                 "lower_bound": float(q1 - 1.5 * iqr),
                 "upper_bound": float(q3 + 1.5 * iqr),
-                "is_integer": all(v == int(v) for v in values),
+                "is_integer": all(v == int(v) for v in valid_values) if valid_values else False,
             },
             "constraints": {
                 "min": self.min_val,

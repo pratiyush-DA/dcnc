@@ -95,7 +95,20 @@ class GenericNumericClusterer(BaseClusterer):
                 confidence=0.0,
             )
         
-        arr = np.array(parsed_values)
+        # Filter out NaN values before creating numpy array
+        valid_parsed = [v for v in parsed_values if not np.isnan(v)]
+        if not valid_parsed:
+            return ClusteringResult(
+                good_data=[],
+                bad_data=list(data),
+                good_indices=[],
+                bad_indices=list(indices),
+                fingerprint={"method": "generic_numeric", "error": "all_values_nan"},
+                method="generic_numeric_nan",
+                confidence=0.0,
+            )
+        
+        arr = np.array(valid_parsed)
         
         # Get bounds for this column
         bounds = self._get_column_bounds(column_name, arr[:5].tolist())
@@ -357,7 +370,12 @@ class GenericNumericClusterer(BaseClusterer):
     
     def _parse_numeric(self, value: Any) -> Optional[float]:
         """Parse value as numeric, handling various formats."""
+        # Handle NaN values early
         if value is None:
+            return None
+        
+        # Check for float NaN
+        if isinstance(value, float) and np.isnan(value):
             return None
         
         str_val = str(value).strip()
@@ -402,14 +420,16 @@ class GenericNumericClusterer(BaseClusterer):
         bounds: Optional[Dict[str, Any]]
     ) -> Dict[str, Any]:
         """Generate fingerprint from good values."""
-        if not values:
+        # Filter out NaN values
+        valid_values = [v for v in values if not np.isnan(v)]
+        if not valid_values:
             return {
                 "workflow": "numeric",
                 "method": "generic_ensemble",
                 "properties": {},
             }
         
-        arr = np.array(values)
+        arr = np.array(valid_values)
         q1, q3 = np.percentile(arr, [25, 75])
         
         fingerprint = {
@@ -424,7 +444,7 @@ class GenericNumericClusterer(BaseClusterer):
                 "std": float(np.std(arr)),
                 "q1": float(q1),
                 "q3": float(q3),
-                "is_integer": all(v == int(v) for v in values),
+                "is_integer": all(v == int(v) for v in valid_values) if valid_values else False,
             },
         }
         

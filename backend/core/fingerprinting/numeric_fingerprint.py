@@ -56,8 +56,10 @@ class NumericFingerprint(BaseFingerprint):
         min_val = min(numeric_data)
         max_val = max(numeric_data)
         
-        # Integer detection
-        is_integer = all(v == int(v) for v in numeric_data)
+        # Integer detection (filter out NaN values)
+        import math
+        valid_numeric = [v for v in numeric_data if not math.isnan(v)]
+        is_integer = all(v == int(v) for v in valid_numeric) if valid_numeric else False
         
         # Decimal places
         max_decimals = 0
@@ -211,10 +213,14 @@ class NumericFingerprint(BaseFingerprint):
         if not numeric_data:
             return None
         
-        # Create range-based signature
-        min_val = min(numeric_data)
-        max_val = max(numeric_data)
-        is_int = all(v == int(v) for v in numeric_data)
+        # Create range-based signature (filter out NaN values)
+        import math
+        valid_numeric = [v for v in numeric_data if not math.isnan(v)]
+        if not valid_numeric:
+            return None
+        min_val = min(valid_numeric)
+        max_val = max(valid_numeric)
+        is_int = all(v == int(v) for v in valid_numeric)
         
         type_str = "INT" if is_int else "FLOAT"
         range_str = f"[{min_val:.0f},{max_val:.0f}]"

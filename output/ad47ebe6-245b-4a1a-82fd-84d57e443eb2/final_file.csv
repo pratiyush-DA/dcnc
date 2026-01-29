@@ -1,0 +1,6 @@
+name,email,phone,age,state,country,ssn,url,rating,salary,date_of_birth,zip_code
+John Doe,john.doe@gmail.com,555-123-4567,28,California,United States,123-45-6789,https://johndoe.com,4.5,75000,1996-03-15,90210
+Bob Wilson,bobgmailcom,(555) 987-6543,250,TX,Untied States,111-22-3333,http://bobwilson.net,3.9,68000,1985-11-30,60601
+Alice Brown,alice@outlook.com,555.111.2222,-5,Flordia,uk,222-33-4444,ftp://alice.org,4.2,91000,1992-04-18,33101
+Frank Green,frank@gmai.com,555-000-1111,52,Massachutes,JAPAN,555-66-7777,https://frankgreen.co,4.0,95000,1972-06-08,98101
+Henry Chen,test@test.com,1-800-FLOWERS,29,Calfornia,Austrlia,777-88-9999,https://henrychen.io/blog,4.3,72000,1995-09-17,85001

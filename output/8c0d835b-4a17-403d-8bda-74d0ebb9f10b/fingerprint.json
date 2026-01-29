@@ -1,0 +1,248 @@
+{
+  "name": {
+    "workflow": "text",
+    "subtype": "name",
+    "method": "freetext",
+    "detection_confidence": 0.027000000000000003,
+    "clustering_confidence": 0.09000000000000001,
+    "good_count": 10,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "name",
+      "sample_size": 10,
+      "properties": {
+        "avg_length": 9.9,
+        "min_length": 8,
+        "max_length": 11,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 10,
+          "upper": 0,
+          "lower": 0,
+          "mixed": 0
+        },
+        "sample_values": [
+          "John Doe",
+          "Jane Smith",
+          "Bob Wilson",
+          "Alice Brown",
+          "Charlie Day"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    }
+  },
+  "state": {
+    "workflow": "text",
+    "subtype": "state",
+    "method": "categorical_frequency_fuzzy",
+    "detection_confidence": 0.027000000000000003,
+    "clustering_confidence": 0.09000000000000001,
+    "good_count": 10,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "categorical_frequency_fuzzy",
+      "column_name": "state",
+      "sample_size": 10,
+      "reference_values": [
+        "ZZ",
+        "New York",
+        "Calfornia",
+        "Texsa",
+        "Flordia",
+        "Massachutes",
+        "California",
+        "TX",
+        "pennsylvania",
+        "Califronia"
+      ],
+      "reference_frequencies": {
+        "ZZ": 1,
+        "New York": 1,
+        "Calfornia": 1,
+        "Texsa": 1,
+        "Flordia": 1,
+        "Massachutes": 1,
+        "California": 1,
+        "TX": 1,
+        "pennsylvania": 1,
+        "Califronia": 1
+      },
+      "similarity_threshold": 85,
+      "min_frequency": 2,
+      "properties": {
+        "is_categorical": false,
+        "cardinality": 1.0,
+        "avg_length": 7.6,
+        "length_std": 3.3823069050575527,
+        "case_style": "title",
+        "case_consistency": 0.7
+      },
+      "correction_hints": {
+        "expected_case": "title",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "rules_applied": {
+        "case_sensitivity": true,
+        "gibberish_detection": true,
+        "frequency_analysis": true
+      }
+    }
+  },
+  "country": {
+    "workflow": "text",
+    "subtype": "country",
+    "method": "categorical_frequency_fuzzy",
+    "detection_confidence": 0.027000000000000003,
+    "clustering_confidence": 0.09000000000000001,
+    "good_count": 10,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "categorical_frequency_fuzzy",
+      "column_name": "country",
+      "sample_size": 10,
+      "reference_values": [
+        "uk",
+        "Germay",
+        "cananda",
+        "Untied States",
+        "Britian",
+        "United States",
+        "Canada",
+        "JAPAN",
+        "USA",
+        "Austrlia"
+      ],
+      "reference_frequencies": {
+        "uk": 1,
+        "Germay": 1,
+        "cananda": 1,
+        "Untied States": 1,
+        "Britian": 1,
+        "United States": 1,
+        "Canada": 1,
+        "JAPAN": 1,
+        "USA": 1,
+        "Austrlia": 1
+      },
+      "similarity_threshold": 85,
+      "min_frequency": 2,
+      "properties": {
+        "is_categorical": false,
+        "cardinality": 1.0,
+        "avg_length": 7.0,
+        "length_std": 3.4641016151377544,
+        "case_style": "title",
+        "case_consistency": 0.6
+      },
+      "correction_hints": {
+        "expected_case": "title",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "rules_applied": {
+        "case_sensitivity": true,
+        "gibberish_detection": true,
+        "frequency_analysis": true
+      }
+    }
+  },
+  "ssn": {
+    "workflow": "text",
+    "subtype": "ssn",
+    "method": "validator",
+    "detection_confidence": 0.036000000000000004,
+    "clustering_confidence": 0.06999999999999999,
+    "good_count": 7,
+    "bad_count": 3,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "ssn",
+      "sample_size": 7,
+      "properties": {
+        "avg_length": 11.0,
+        "min_length": 11,
+        "max_length": 11,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "123-45-6789",
+          "111-22-3333",
+          "222-33-4444",
+          "333-44-5555",
+          "444-55-6666"
+        ]
+      }
+    }
+  },
+  "salary": {
+    "workflow": "text",
+    "subtype": "zipcode",
+    "method": "validator",
+    "detection_confidence": 0.036000000000000004,
+    "clustering_confidence": 0.09000000000000001,
+    "good_count": 9,
+    "bad_count": 1,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "zipcode",
+      "sample_size": 9,
+      "properties": {
+        "avg_length": 5.0,
+        "min_length": 5,
+        "max_length": 5,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "75000",
+          "82500",
+          "68000",
+          "91000",
+          "55000"
+        ]
+      }
+    }
+  },
+  "zip_code": {
+    "workflow": "text",
+    "subtype": "zipcode",
+    "method": "validator",
+    "detection_confidence": 0.06300000000000001,
+    "clustering_confidence": 0.09000000000000001,
+    "good_count": 9,
+    "bad_count": 1,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "zipcode",
+      "sample_size": 9,
+      "properties": {
+        "avg_length": 5.0,
+        "min_length": 5,
+        "max_length": 5,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "90210",
+          "10001",
+          "60601",
+          "33101",
+          "19101"
+        ]
+      }
+    }
+  }
+}

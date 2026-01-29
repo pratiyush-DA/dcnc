@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-20T20:07:33.923270",
-  "total_columns": 17,
+  "generated_at": "2026-01-28T20:57:26.368849",
+  "total_columns": 53,
   "columns": {
     "sp_source_id": {
       "workflow": "identifier",
@@ -902,6 +902,1791 @@
         "Primary key null",
         "MCD Nick Name Match + Address Match",
         "MCD Nick Name Match + Address Match"
+      ]
+    },
+    "full_name": {
+      "workflow": "text",
+      "subtype": "name",
+      "clusterer": "freetext",
+      "good_count": 64,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "full_name",
+        "sample_size": 57,
+        "properties": {
+          "avg_length": 12.333333333333334,
+          "min_length": 8,
+          "max_length": 20,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 57,
+            "upper": 0,
+            "lower": 0,
+            "mixed": 0
+          },
+          "sample_values": [
+            "John Doe",
+            "Jane Smith",
+            "Bob Johnson",
+            "Mary Williams",
+            "Sarah Brown"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "John Doe",
+        "Jane Smith",
+        "Bob Johnson",
+        "Mary Williams",
+        "Sarah Brown",
+        "Michael Davis",
+        "Emily Wilson",
+        "David Lee",
+        "Lisa Garcia",
+        "Robert Taylor"
+      ]
+    },
+    "email_address": {
+      "workflow": "text",
+      "subtype": "email",
+      "clusterer": "validator",
+      "good_count": 48,
+      "bad_count": 16,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "email",
+        "sample_size": 48,
+        "properties": {
+          "avg_length": 19.270833333333332,
+          "min_length": 15,
+          "max_length": 23,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "john.doe@gmail.com",
+            "jane.smith@yahoo.com",
+            "bob@outlook.com",
+            "mary@company.com",
+            "sarah.brown@gmail.com"
+          ]
+        },
+        "correction_hints": {
+          "expected_case": "lowercase"
+        }
+      },
+      "correction_hints": {
+        "expected_case": "lowercase"
+      },
+      "sample_good_values": [
+        "john.doe@gmail.com",
+        "jane.smith@yahoo.com",
+        "bob@outlook.com",
+        "mary@company.com",
+        "sarah.brown@gmail.com",
+        "mike.davis@hotmail.com",
+        "emily.w@gmail.com",
+        "david.lee@yahoo.com",
+        "lisa.g@outlook.com",
+        "robert.t@gmail.com"
+      ]
+    },
+    "phone_number": {
+      "workflow": "text",
+      "subtype": "phone",
+      "clusterer": "validator",
+      "good_count": 13,
+      "bad_count": 51,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "phone",
+        "sample_size": 13,
+        "properties": {
+          "avg_length": 12.0,
+          "min_length": 12,
+          "max_length": 12,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "555-123-4567",
+            "555-567-8901",
+            "555-012-3456",
+            "555-234-5678",
+            "555-012-3456"
+          ]
+        },
+        "correction_hints": {
+          "expected_format": "XXX-XXX-XXXX",
+          "format_distribution": {
+            "XXX-XXX-XXXX": 13
+          }
+        }
+      },
+      "correction_hints": {
+        "expected_format": "XXX-XXX-XXXX",
+        "format_distribution": {
+          "XXX-XXX-XXXX": 13
+        }
+      },
+      "sample_good_values": [
+        "555-123-4567",
+        "555-567-8901",
+        "555-012-3456",
+        "555-234-5678",
+        "555-012-3456",
+        "555-123-4567",
+        "555-901-2345",
+        "555-012-3456",
+        "555-789-0123",
+        "555-901-2345"
+      ]
+    },
+    "website_url": {
+      "workflow": "text",
+      "subtype": "url",
+      "clusterer": "validator",
+      "good_count": 35,
+      "bad_count": 29,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "url",
+        "sample_size": 35,
+        "properties": {
+          "avg_length": 18.142857142857142,
+          "min_length": 15,
+          "max_length": 23,
+          "avg_confidence": 0.9857142857142855,
+          "sample_values": [
+            "https://johndoe.com",
+            "https://jane-data.io",
+            "https://mary.com",
+            "https://sarah.io",
+            "https://emilydesigns.co"
+          ]
+        }
+      },
+      "correction_hints": {
+        "workflow": "text",
+        "subtype": "url"
+      },
+      "sample_good_values": [
+        "https://johndoe.com",
+        "https://jane-data.io",
+        "https://mary.com",
+        "https://sarah.io",
+        "https://emilydesigns.co",
+        "http://david.net",
+        "https://lisa.com",
+        "https://jennifer.net",
+        "http://chris.com",
+        "https://amanda.org"
+      ]
+    },
+    "ip_address": {
+      "workflow": "text",
+      "subtype": "ip_address",
+      "clusterer": "validator",
+      "good_count": 54,
+      "bad_count": 10,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "ip_address",
+        "sample_size": 43,
+        "properties": {
+          "avg_length": 10.488372093023257,
+          "min_length": 7,
+          "max_length": 13,
+          "avg_confidence": 0.904651162790697,
+          "sample_values": [
+            "192.168.1.1",
+            "10.0.0.1",
+            "172.16.0.1",
+            "192.168.0.100",
+            "10.0.0.50"
+          ]
+        }
+      },
+      "correction_hints": {
+        "workflow": "text",
+        "subtype": "ip_address"
+      },
+      "sample_good_values": [
+        "192.168.1.1",
+        "10.0.0.1",
+        "172.16.0.1",
+        "192.168.0.100",
+        "10.0.0.50",
+        "192.168.1.5",
+        "192.168.0.200",
+        "172.16.1.1",
+        "10.0.0.2",
+        "192.168.1.20"
+      ]
+    },
+    "uuid_value": {
+      "workflow": "text",
+      "subtype": "uuid",
+      "clusterer": "validator",
+      "good_count": 48,
+      "bad_count": 16,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "uuid",
+        "sample_size": 48,
+        "properties": {
+          "avg_length": 36.0,
+          "min_length": 36,
+          "max_length": 36,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "550e8400-e29b-41d4-a716-446655440000",
+            "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+            "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+            "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+            "6ba7b813-9dad-11d1-80b4-00c04fd430c8"
+          ]
+        }
+      },
+      "correction_hints": {
+        "workflow": "text",
+        "subtype": "uuid"
+      },
+      "sample_good_values": [
+        "550e8400-e29b-41d4-a716-446655440000",
+        "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+        "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+        "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+        "6ba7b813-9dad-11d1-80b4-00c04fd430c8",
+        "6ba7b814-9dad-11d1-80b4-00c04fd430c8",
+        "6ba7b815-9dad-11d1-80b4-00c04fd430c8",
+        "6ba7b816-9dad-11d1-80b4-00c04fd430c8",
+        "6ba7b817-9dad-11d1-80b4-00c04fd430c8",
+        "6ba7b818-9dad-11d1-80b4-00c04fd430c8"
+      ]
+    },
+    "ssn_id": {
+      "workflow": "text",
+      "subtype": "ssn",
+      "clusterer": "validator",
+      "good_count": 50,
+      "bad_count": 14,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "ssn",
+        "sample_size": 43,
+        "properties": {
+          "avg_length": 11.0,
+          "min_length": 11,
+          "max_length": 11,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "123-45-6789",
+            "234-56-7890",
+            "345-67-8901",
+            "456-78-9012",
+            "567-89-0123"
+          ]
+        }
+      },
+      "correction_hints": {
+        "workflow": "text",
+        "subtype": "ssn"
+      },
+      "sample_good_values": [
+        "123-45-6789",
+        "234-56-7890",
+        "345-67-8901",
+        "456-78-9012",
+        "567-89-0123",
+        "678-90-1234",
+        "789-01-2345",
+        "890-12-3456",
+        "012-34-5678",
+        "123-45-6789"
+      ]
+    },
+    "zipcode": {
+      "workflow": "text",
+      "subtype": "zipcode",
+      "clusterer": "validator",
+      "good_count": 50,
+      "bad_count": 14,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "zipcode",
+        "sample_size": 50,
+        "properties": {
+          "avg_length": 5.0,
+          "min_length": 5,
+          "max_length": 5,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "10001",
+            "94105",
+            "73301",
+            "98101",
+            "60601"
+          ]
+        }
+      },
+      "correction_hints": {
+        "workflow": "text",
+        "subtype": "zipcode"
+      },
+      "sample_good_values": [
+        "10001",
+        "94105",
+        "73301",
+        "98101",
+        "60601",
+        "02108",
+        "33101",
+        "77001",
+        "75201",
+        "02110"
+      ]
+    },
+    "boolean_flag": {
+      "workflow": "text",
+      "subtype": "boolean",
+      "clusterer": "validator",
+      "good_count": 46,
+      "bad_count": 18,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "boolean",
+        "sample_size": 46,
+        "properties": {
+          "avg_length": 3.8260869565217392,
+          "min_length": 2,
+          "max_length": 5,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "True",
+            "False",
+            "TRUE",
+            "Yes",
+            "True"
+          ]
+        }
+      },
+      "correction_hints": {
+        "workflow": "text",
+        "subtype": "boolean"
+      },
+      "sample_good_values": [
+        "True",
+        "False",
+        "TRUE",
+        "Yes",
+        "True",
+        "false",
+        "TRUE",
+        "Yes",
+        "false",
+        "true"
+      ]
+    },
+    "company_name": {
+      "workflow": "text",
+      "subtype": "company",
+      "clusterer": "freetext",
+      "good_count": 64,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "company_name",
+        "sample_size": 56,
+        "properties": {
+          "avg_length": 12.089285714285714,
+          "min_length": 7,
+          "max_length": 17,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 49,
+            "upper": 0,
+            "lower": 0,
+            "mixed": 7
+          },
+          "sample_values": [
+            "Acme Corp",
+            "DataTech Inc",
+            "Global Systems",
+            "Enterprise LLC",
+            "CloudTech"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Acme Corp",
+        "DataTech Inc",
+        "Global Systems",
+        "Enterprise LLC",
+        "CloudTech",
+        "BioMed Corp",
+        "Design Studio",
+        "Finance Group",
+        "Retail Corp",
+        "HR Solutions"
+      ]
+    },
+    "address_street": {
+      "workflow": "text",
+      "subtype": "address",
+      "clusterer": "freetext",
+      "good_count": 56,
+      "bad_count": 8,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "address_street",
+        "sample_size": 56,
+        "properties": {
+          "avg_length": 12.660714285714286,
+          "min_length": 8,
+          "max_length": 17,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 56,
+            "upper": 0,
+            "lower": 0,
+            "mixed": 0
+          },
+          "sample_values": [
+            "123 Main St",
+            "456 Oak Ave",
+            "789 Pine Rd",
+            "321 Elm St",
+            "654 Maple Dr"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "123 Main St",
+        "456 Oak Ave",
+        "789 Pine Rd",
+        "321 Elm St",
+        "654 Maple Dr",
+        "987 Cedar Ln",
+        "147 Birch Way",
+        "258 Spruce Ct",
+        "369 Willow St",
+        "741 Ash Ave"
+      ]
+    },
+    "job_title": {
+      "workflow": "text",
+      "subtype": "job_title",
+      "clusterer": "freetext",
+      "good_count": 56,
+      "bad_count": 8,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "job_title",
+        "sample_size": 56,
+        "properties": {
+          "avg_length": 9.982142857142858,
+          "min_length": 4,
+          "max_length": 18,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 51,
+            "upper": 0,
+            "lower": 0,
+            "mixed": 5
+          },
+          "sample_values": [
+            "Software Engineer",
+            "Data Scientist",
+            "Product Manager",
+            "UX Designer",
+            "DevOps Engineer"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Software Engineer",
+        "Data Scientist",
+        "Product Manager",
+        "UX Designer",
+        "DevOps Engineer",
+        "QA Engineer",
+        "UX Designer",
+        "Data Analyst",
+        "Director",
+        "HR Manager"
+      ]
+    },
+    "notes_text": {
+      "workflow": "text",
+      "subtype": "generic",
+      "clusterer": "freetext",
+      "good_count": 56,
+      "bad_count": 8,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "notes_text",
+        "sample_size": 56,
+        "properties": {
+          "avg_length": 13.875,
+          "min_length": 3,
+          "max_length": 22,
+          "dominant_case": "mixed",
+          "case_distribution": {
+            "title": 0,
+            "upper": 0,
+            "lower": 9,
+            "mixed": 47
+          },
+          "sample_values": [
+            "Regular employee",
+            "Senior analyst",
+            "Team lead",
+            "Creative professional",
+            "Infrastructure lead"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "mixed",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "mixed",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Regular employee",
+        "Senior analyst",
+        "Team lead",
+        "Creative professional",
+        "Infrastructure lead",
+        "Quality assurance",
+        "User experience",
+        "Financial analysis",
+        "Executive level",
+        "Human resources"
+      ]
+    },
+    "state_name": {
+      "workflow": "text",
+      "subtype": "state",
+      "clusterer": "categorical_frequency_fuzzy",
+      "good_count": 64,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "categorical_frequency_fuzzy",
+        "column_name": "state_name",
+        "sample_size": 64,
+        "reference_values": [
+          "INV",
+          "Texas",
+          "District of Columbia",
+          "Colorado",
+          "Florida",
+          "California",
+          "BAD",
+          "Massachusetts",
+          "Illinois"
+        ],
+        "reference_frequencies": {
+          "INV": 3,
+          "Texas": 12,
+          "District of Columbia": 3,
+          "Colorado": 3,
+          "Florida": 5,
+          "California": 5,
+          "BAD": 3,
+          "Massachusetts": 5,
+          "Illinois": 3
+        },
+        "similarity_threshold": 85,
+        "min_frequency": 2,
+        "properties": {
+          "is_categorical": false,
+          "cardinality": 0.390625,
+          "avg_length": 7.1875,
+          "length_std": 4.227421643271463,
+          "case_style": "title",
+          "case_consistency": 0.6875
+        },
+        "correction_hints": {
+          "expected_case": "title",
+          "use_fuzzy_matching": true,
+          "similarity_threshold": 85
+        },
+        "rules_applied": {
+          "case_sensitivity": true,
+          "gibberish_detection": true,
+          "frequency_analysis": true
+        }
+      },
+      "correction_hints": {
+        "expected_case": "title",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "sample_good_values": [
+        "California",
+        "Texas",
+        "Illinois",
+        "Massachusetts",
+        "Florida",
+        "Texas",
+        "Texas",
+        "Massachusetts",
+        "Florida",
+        "California"
+      ]
+    },
+    "country_name": {
+      "workflow": "text",
+      "subtype": "country",
+      "clusterer": "categorical_frequency_fuzzy",
+      "good_count": 53,
+      "bad_count": 11,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "categorical_frequency_fuzzy",
+        "column_name": "country_name",
+        "sample_size": 64,
+        "reference_values": [
+          "INVALID",
+          "United States",
+          "ERROR",
+          "BAD",
+          "USA"
+        ],
+        "reference_frequencies": {
+          "INVALID": 3,
+          "United States": 43,
+          "ERROR": 3,
+          "BAD": 3,
+          "USA": 4
+        },
+        "similarity_threshold": 85,
+        "min_frequency": 2,
+        "properties": {
+          "is_categorical": true,
+          "cardinality": 0.171875,
+          "avg_length": 10.34375,
+          "length_std": 4.00085440093738,
+          "case_style": "title",
+          "case_consistency": 0.703125
+        },
+        "correction_hints": {
+          "expected_case": "title",
+          "use_fuzzy_matching": true,
+          "similarity_threshold": 85
+        },
+        "rules_applied": {
+          "case_sensitivity": true,
+          "gibberish_detection": true,
+          "frequency_analysis": true
+        }
+      },
+      "correction_hints": {
+        "expected_case": "title",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "sample_good_values": [
+        "United States",
+        "USA",
+        "United States",
+        "USA",
+        "United States",
+        "USA",
+        "United States",
+        "United States",
+        "United States",
+        "United States"
+      ]
+    },
+    "city_name": {
+      "workflow": "text",
+      "subtype": "location",
+      "clusterer": "freetext",
+      "good_count": 64,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "city_name",
+        "sample_size": 56,
+        "properties": {
+          "avg_length": 7.339285714285714,
+          "min_length": 3,
+          "max_length": 13,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 46,
+            "upper": 10,
+            "lower": 0,
+            "mixed": 0
+          },
+          "sample_values": [
+            "New York",
+            "San Francisco",
+            "Austin",
+            "Seattle",
+            "Chicago"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "New York",
+        "San Francisco",
+        "Austin",
+        "Seattle",
+        "Chicago",
+        "Boston",
+        "Miami",
+        "Houston",
+        "Dallas",
+        "Boston"
+      ]
+    },
+    "username": {
+      "workflow": "text",
+      "subtype": "username",
+      "clusterer": "freetext",
+      "good_count": 64,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "username",
+        "sample_size": 64,
+        "properties": {
+          "avg_length": 7.4375,
+          "min_length": 5,
+          "max_length": 10,
+          "dominant_case": "lower",
+          "case_distribution": {
+            "title": 0,
+            "upper": 0,
+            "lower": 64,
+            "mixed": 0
+          },
+          "sample_values": [
+            "johndoe",
+            "janesmith",
+            "bobjohnson",
+            "maryw",
+            "sarahb"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "lower",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "lower",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "johndoe",
+        "janesmith",
+        "bobjohnson",
+        "maryw",
+        "sarahb",
+        "miked",
+        "emilyw",
+        "davidl",
+        "lisag",
+        "robertt"
+      ]
+    },
+    "file_path": {
+      "workflow": "text",
+      "subtype": "generic",
+      "clusterer": "freetext",
+      "good_count": 64,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "file_path",
+        "sample_size": 64,
+        "properties": {
+          "avg_length": 17.0625,
+          "min_length": 7,
+          "max_length": 28,
+          "dominant_case": "lower",
+          "case_distribution": {
+            "title": 0,
+            "upper": 0,
+            "lower": 52,
+            "mixed": 12
+          },
+          "sample_values": [
+            "/home/user/file.txt",
+            "/var/log/app.log",
+            "C:\\Users\\Bob\\doc.pdf",
+            "/tmp/data.csv",
+            "./config.yaml"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "lower",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "lower",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "/home/user/file.txt",
+        "/var/log/app.log",
+        "C:\\Users\\Bob\\doc.pdf",
+        "/tmp/data.csv",
+        "./config.yaml",
+        "/usr/local/bin/app",
+        "~/projects/design.png",
+        "/data/reports.xlsx",
+        "C:\\Data\\inventory.csv",
+        "/home/robert/hr_data.json"
+      ]
+    },
+    "product_title": {
+      "workflow": "text",
+      "subtype": "job_title",
+      "clusterer": "freetext",
+      "good_count": 64,
+      "bad_count": 0,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "freetext",
+        "column_name": "product_title",
+        "sample_size": 55,
+        "properties": {
+          "avg_length": 12.054545454545455,
+          "min_length": 8,
+          "max_length": 17,
+          "dominant_case": "title",
+          "case_distribution": {
+            "title": 54,
+            "upper": 0,
+            "lower": 0,
+            "mixed": 1
+          },
+          "sample_values": [
+            "Widget Pro",
+            "Data Analyzer",
+            "Product X",
+            "Design Tool",
+            "Cloud Platform"
+          ]
+        },
+        "correction_hints": {
+          "mode": "lenient",
+          "expected_case": "title",
+          "allow_mixed_case": true
+        },
+        "validation_rules": {
+          "min_length": 2,
+          "min_alpha_ratio": 0.3,
+          "reserved_words_checked": true
+        }
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "sample_good_values": [
+        "Widget Pro",
+        "Data Analyzer",
+        "Product X",
+        "Design Tool",
+        "Cloud Platform",
+        "Design System",
+        "Analytics Tool",
+        "Retail System",
+        "HR Platform",
+        "Sales Tool"
+      ]
+    },
+    "employee_age": {
+      "workflow": "numeric",
+      "subtype": "age",
+      "clusterer": "semantic",
+      "good_count": 54,
+      "bad_count": 10,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "semantic",
+        "sample_size": 46,
+        "properties": {
+          "min": 28.0,
+          "max": 48.0,
+          "mean": 36.65217391304348,
+          "median": 36.5,
+          "std": 4.564596231033249,
+          "q1": 33.0,
+          "q3": 40.0,
+          "iqr": 7.0,
+          "lower_bound": 22.5,
+          "upper_bound": 50.5,
+          "is_integer": true
+        },
+        "constraints": {
+          "min": 0,
+          "max": 120,
+          "type": "integer"
+        }
+      },
+      "correction_hints": {
+        "workflow": "numeric",
+        "subtype": "age"
+      },
+      "sample_good_values": [
+        "35",
+        "32",
+        "38",
+        "30",
+        "36",
+        "31",
+        "29",
+        "41",
+        "48",
+        "42"
+      ]
+    },
+    "birth_year": {
+      "workflow": "numeric",
+      "subtype": "year",
+      "clusterer": "semantic",
+      "good_count": 46,
+      "bad_count": 18,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "semantic",
+        "sample_size": 46,
+        "properties": {
+          "min": 1975.0,
+          "max": 1997.0,
+          "mean": 1987.0434782608695,
+          "median": 1987.5,
+          "std": 5.153962265299982,
+          "q1": 1983.0,
+          "q3": 1991.0,
+          "iqr": 8.0,
+          "lower_bound": 1971.0,
+          "upper_bound": 2003.0,
+          "is_integer": true
+        },
+        "constraints": {
+          "min": 1900,
+          "max": 2100,
+          "type": "integer"
+        }
+      },
+      "correction_hints": {
+        "workflow": "numeric",
+        "subtype": "year"
+      },
+      "sample_good_values": [
+        "1990",
+        "1992",
+        "1985",
+        "1995",
+        "1988",
+        "1993",
+        "1996",
+        "1982",
+        "1975",
+        "1981"
+      ]
+    },
+    "salary_amount": {
+      "workflow": "numeric",
+      "subtype": "salary",
+      "clusterer": "generic_bounds_ensemble",
+      "good_count": 46,
+      "bad_count": 18,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "generic_bounds_ensemble",
+        "sample_size": 46,
+        "properties": {
+          "min": 60000.0,
+          "max": 180000.0,
+          "mean": 100434.78260869565,
+          "median": 95000.0,
+          "std": 26515.501761203635,
+          "q1": 80000.0,
+          "q3": 118750.0,
+          "is_integer": true
+        },
+        "bounds": {
+          "has_bounds": true,
+          "min": 60000.0,
+          "max": 180000.0,
+          "source": "llm",
+          "skip_statistical": true
+        },
+        "correction_hints": {
+          "min": 60000.0,
+          "max": 180000.0
+        }
+      },
+      "correction_hints": {
+        "min": 60000.0,
+        "max": 180000.0
+      },
+      "sample_good_values": [
+        "120000",
+        "135000",
+        "115000",
+        "105000",
+        "130000",
+        "95000",
+        "90000",
+        "110000",
+        "180000",
+        "90000"
+      ]
+    },
+    "transaction_amount": {
+      "workflow": "numeric",
+      "subtype": "amount",
+      "clusterer": "generic_bounds_ensemble",
+      "good_count": 53,
+      "bad_count": 11,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "generic_bounds_ensemble",
+        "sample_size": 46,
+        "properties": {
+          "min": 900.75,
+          "max": 12000.0,
+          "mean": 4415.565217391304,
+          "median": 3800.0,
+          "std": 2795.159888109179,
+          "q1": 2025.75,
+          "q3": 6025.25,
+          "is_integer": false
+        },
+        "bounds": {
+          "has_bounds": true,
+          "min": 0.01,
+          "max": 12000.0,
+          "source": "llm",
+          "skip_statistical": true
+        },
+        "correction_hints": {
+          "min": 0.01,
+          "max": 12000.0
+        }
+      },
+      "correction_hints": {
+        "min": 0.01,
+        "max": 12000.0
+      },
+      "sample_good_values": [
+        "5000.50",
+        "7500.75",
+        "3200.25",
+        "1500.00",
+        "8500.00",
+        "4200.50",
+        "2100.75",
+        "5500.25",
+        "12000.00",
+        "3800.00"
+      ]
+    },
+    "item_count": {
+      "workflow": "numeric",
+      "subtype": "count",
+      "clusterer": "generic_bounds_ensemble",
+      "good_count": 54,
+      "bad_count": 10,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "generic_bounds_ensemble",
+        "sample_size": 47,
+        "properties": {
+          "min": 0.0,
+          "max": 100.0,
+          "mean": 36.638297872340424,
+          "median": 32.0,
+          "std": 24.592357861495667,
+          "q1": 15.5,
+          "q3": 50.0,
+          "is_integer": true
+        },
+        "bounds": {
+          "has_bounds": true,
+          "min": 0.0,
+          "max": 100.0,
+          "source": "llm",
+          "skip_statistical": true
+        },
+        "correction_hints": {
+          "min": 0.0,
+          "max": 100.0
+        }
+      },
+      "correction_hints": {
+        "min": 0.0,
+        "max": 100.0
+      },
+      "sample_good_values": [
+        "25",
+        "50",
+        "15",
+        "10",
+        "75",
+        "30",
+        "20",
+        "40",
+        "100",
+        "35"
+      ]
+    },
+    "rating_score": {
+      "workflow": "numeric",
+      "subtype": "rating",
+      "clusterer": "semantic",
+      "good_count": 46,
+      "bad_count": 18,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "semantic",
+        "sample_size": 46,
+        "properties": {
+          "min": 3.6,
+          "max": 4.9,
+          "mean": 4.306521739130434,
+          "median": 4.3,
+          "std": 0.3266444509761297,
+          "q1": 4.1,
+          "q3": 4.574999999999999,
+          "iqr": 0.47499999999999964,
+          "lower_bound": 3.3875,
+          "upper_bound": 5.287499999999999,
+          "is_integer": false
+        },
+        "constraints": {
+          "min": 0,
+          "max": 10,
+          "type": "float"
+        }
+      },
+      "correction_hints": {
+        "workflow": "numeric",
+        "subtype": "rating"
+      },
+      "sample_good_values": [
+        "4.5",
+        "4.8",
+        "4.2",
+        "4.7",
+        "4.9",
+        "4.3",
+        "4.6",
+        "4.4",
+        "4.1",
+        "4.0"
+      ]
+    },
+    "percentage_value": {
+      "workflow": "numeric",
+      "subtype": "percentage",
+      "clusterer": "semantic",
+      "good_count": 46,
+      "bad_count": 18,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "semantic",
+        "sample_size": 46,
+        "properties": {
+          "min": 69.2,
+          "max": 95.5,
+          "mean": 81.32608695652173,
+          "median": 81.05000000000001,
+          "std": 6.5248166651774735,
+          "q1": 76.55,
+          "q3": 85.475,
+          "iqr": 8.924999999999997,
+          "lower_bound": 63.1625,
+          "upper_bound": 98.86249999999998,
+          "is_integer": false
+        },
+        "constraints": {
+          "min": 0,
+          "max": 100,
+          "type": "float"
+        }
+      },
+      "correction_hints": {
+        "workflow": "numeric",
+        "subtype": "percentage"
+      },
+      "sample_good_values": [
+        "85.5",
+        "92.3",
+        "78.9",
+        "88.0",
+        "95.5",
+        "82.1",
+        "87.2",
+        "79.8",
+        "76.5",
+        "75.0"
+      ]
+    },
+    "temperature_celsius": {
+      "workflow": "numeric",
+      "subtype": "temperature",
+      "clusterer": "semantic",
+      "good_count": 54,
+      "bad_count": 10,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "semantic",
+        "sample_size": 46,
+        "properties": {
+          "min": 17.5,
+          "max": 28.1,
+          "mean": 22.480434782608693,
+          "median": 22.4,
+          "std": 2.764732832852216,
+          "q1": 20.275,
+          "q3": 24.5,
+          "iqr": 4.225000000000001,
+          "lower_bound": 13.937499999999996,
+          "upper_bound": 30.837500000000002,
+          "is_integer": false
+        },
+        "constraints": {
+          "min": -273.15,
+          "max": 1000,
+          "type": "float"
+        }
+      },
+      "correction_hints": {
+        "workflow": "numeric",
+        "subtype": "temperature"
+      },
+      "sample_good_values": [
+        "22.5",
+        "25.0",
+        "20.5",
+        "18.2",
+        "21.0",
+        "19.5",
+        "23.8",
+        "24.1",
+        "26.3",
+        "17.9"
+      ]
+    },
+    "latitude_coord": {
+      "workflow": "numeric",
+      "subtype": "latitude",
+      "clusterer": "semantic",
+      "good_count": 54,
+      "bad_count": 10,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "semantic",
+        "sample_size": 46,
+        "properties": {
+          "min": 25.7617,
+          "max": 47.6062,
+          "mean": 36.010239130434776,
+          "median": 37.7749,
+          "std": 5.656801919254925,
+          "q1": 30.28345,
+          "q3": 40.5249,
+          "iqr": 10.241450000000004,
+          "lower_bound": 14.921274999999993,
+          "upper_bound": 55.88707500000001,
+          "is_integer": false
+        },
+        "constraints": {
+          "min": -90,
+          "max": 90,
+          "type": "float"
+        }
+      },
+      "correction_hints": {
+        "workflow": "numeric",
+        "subtype": "latitude"
+      },
+      "sample_good_values": [
+        "40.7128",
+        "37.7749",
+        "30.2672",
+        "47.6062",
+        "41.8781",
+        "42.3601",
+        "25.7617",
+        "29.7604",
+        "32.7767",
+        "42.3601"
+      ]
+    },
+    "longitude_coord": {
+      "workflow": "numeric",
+      "subtype": "longitude",
+      "clusterer": "semantic",
+      "good_count": 46,
+      "bad_count": 18,
+      "fingerprint": {
+        "workflow": "numeric",
+        "method": "semantic",
+        "sample_size": 46,
+        "properties": {
+          "min": -122.4194,
+          "max": -71.0589,
+          "mean": -92.12715,
+          "median": -91.4998,
+          "std": 15.721171040929242,
+          "q1": -98.4936,
+          "q3": -80.1918,
+          "iqr": 18.3018,
+          "lower_bound": -125.94630000000001,
+          "upper_bound": -52.7391,
+          "is_integer": false
+        },
+        "constraints": {
+          "min": -180,
+          "max": 180,
+          "type": "float"
+        }
+      },
+      "correction_hints": {
+        "workflow": "numeric",
+        "subtype": "longitude"
+      },
+      "sample_good_values": [
+        "-74.0060",
+        "-122.4194",
+        "-97.7431",
+        "-122.3321",
+        "-87.6298",
+        "-71.0589",
+        "-80.1918",
+        "-95.3698",
+        "-96.7970",
+        "-71.0589"
+      ]
+    },
+    "phone_numeric": {
+      "workflow": "text",
+      "subtype": "phone",
+      "clusterer": "validator",
+      "good_count": 52,
+      "bad_count": 12,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "phone",
+        "sample_size": 46,
+        "properties": {
+          "avg_length": 10.0,
+          "min_length": 10,
+          "max_length": 10,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "5551234567",
+            "5552345678",
+            "5553456789",
+            "5554567890",
+            "5555678901"
+          ]
+        },
+        "correction_hints": {
+          "expected_format": "XXXXXXXXXX",
+          "format_distribution": {
+            "XXXXXXXXXX": 46
+          }
+        }
+      },
+      "correction_hints": {
+        "expected_format": "XXXXXXXXXX",
+        "format_distribution": {
+          "XXXXXXXXXX": 46
+        }
+      },
+      "sample_good_values": [
+        "5551234567",
+        "5552345678",
+        "5553456789",
+        "5554567890",
+        "5555678901",
+        "5556789012",
+        "5557890123",
+        "5558901234",
+        "5559012345",
+        "5550123456"
+      ]
+    },
+    "zipcode_numeric": {
+      "workflow": "text",
+      "subtype": "zipcode",
+      "clusterer": "validator",
+      "good_count": 54,
+      "bad_count": 10,
+      "fingerprint": {
+        "workflow": "string",
+        "method": "validator",
+        "engine": "zipcode",
+        "sample_size": 54,
+        "properties": {
+          "avg_length": 5.0,
+          "min_length": 5,
+          "max_length": 5,
+          "avg_confidence": 1.0,
+          "sample_values": [
+            "10001",
+            "94105",
+            "73301",
+            "98101",
+            "60601"
+          ]
+        }
+      },
+      "correction_hints": {
+        "workflow": "text",
+        "subtype": "zipcode"
+      },
+      "sample_good_values": [
+        "10001",
+        "94105",
+        "73301",
+        "98101",
+        "60601",
+        "02108",
+        "33101",
+        "77001",
+        "75201",
+        "02110"
+      ]
+    },
+    "numeric_id": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "clusterer": "pattern_signature",
+      "good_count": 54,
+      "bad_count": 10,
+      "fingerprint": {
+        "workflow": "identifier",
+        "method": "pattern_signature",
+        "sample_size": 54,
+        "properties": {
+          "majority_pattern": "N",
+          "valid_patterns": [
+            "N"
+          ],
+          "pattern_distribution": {
+            "N": 54,
+            "A": 7,
+            "A-A": 2,
+            "A-A-A": 1
+          },
+          "avg_length": 4.925925925925926
+        }
+      },
+      "correction_hints": {
+        "workflow": "identifier",
+        "subtype": "pattern_id"
+      },
+      "sample_good_values": [
+        "12345",
+        "23456",
+        "34567",
+        "45678",
+        "56789",
+        "67890",
+        "78901",
+        "89012",
+        "90123",
+        "1234"
+      ]
+    },
+    "date_only": {
+      "workflow": "datetime",
+      "subtype": "date",
+      "clusterer": "format_parser",
+      "good_count": 31,
+      "bad_count": 33,
+      "fingerprint": {
+        "workflow": "datetime",
+        "method": "format_parser",
+        "sample_size": 31,
+        "properties": {
+          "majority_format": "%Y-%m-%d",
+          "format_distribution": {
+            "%Y-%m-%d": 31,
+            "%m/%d/%Y": 7,
+            "%d/%m/%Y": 7,
+            "%Y%m%d": 1
+          },
+          "unique_formats": 4
+        },
+        "correction_hints": {
+          "expected_format": "%Y-%m-%d",
+          "enforce_format_consistency": true
+        },
+        "rules_applied": {
+          "format_consistency": true
+        }
+      },
+      "correction_hints": {
+        "expected_format": "%Y-%m-%d",
+        "enforce_format_consistency": true
+      },
+      "sample_good_values": [
+        "2023-12-25",
+        "2023-12-26",
+        "25-12-2023",
+        "2023-12-27",
+        "30.12.2023",
+        "2024-01-02",
+        "02.01.2024",
+        "03-01-2024",
+        "2024-01-05",
+        "05.01.2024"
+      ]
+    },
+    "datetime_timestamp": {
+      "workflow": "datetime",
+      "subtype": "datetime",
+      "clusterer": "format_parser",
+      "good_count": 46,
+      "bad_count": 18,
+      "fingerprint": {
+        "workflow": "datetime",
+        "method": "format_parser",
+        "sample_size": 45,
+        "properties": {
+          "majority_format": "%Y-%m-%dT%H:%M:%S",
+          "format_distribution": {
+            "%Y-%m-%dT%H:%M:%S": 45,
+            "%Y-%m-%d": 1
+          },
+          "unique_formats": 2
+        },
+        "correction_hints": {
+          "expected_format": "%Y-%m-%dT%H:%M:%S",
+          "enforce_format_consistency": true
+        },
+        "rules_applied": {
+          "format_consistency": true
+        }
+      },
+      "correction_hints": {
+        "expected_format": "%Y-%m-%dT%H:%M:%S",
+        "enforce_format_consistency": true
+      },
+      "sample_good_values": [
+        "2023-12-25T10:30:00",
+        "2023-12-26T14:20:15",
+        "12/25/2023 10:30:00",
+        "25-12-2023T10:30:00",
+        "2023-12-27T09:15:30",
+        "27/12/2023 09:15:30",
+        "30.12.2023 14:45:00",
+        "20231231T16:30:45",
+        "2024-01-02T08:00:00",
+        "02.01.2024 12:00:00"
+      ]
+    },
+    "pattern_id": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "clusterer": "pattern_signature",
+      "good_count": 47,
+      "bad_count": 17,
+      "fingerprint": {
+        "workflow": "identifier",
+        "method": "pattern_signature",
+        "sample_size": 47,
+        "properties": {
+          "majority_pattern": "A-N",
+          "valid_patterns": [
+            "A-N"
+          ],
+          "pattern_distribution": {
+            "A-N": 47,
+            "A-A": 10,
+            "A": 6,
+            "A-A-A": 1
+          },
+          "avg_length": 9.063829787234043
+        }
+      },
+      "correction_hints": {
+        "workflow": "identifier",
+        "subtype": "pattern_id"
+      },
+      "sample_good_values": [
+        "EMP-00123",
+        "SKU-98765",
+        "ORD-12345",
+        "PROD-54321",
+        "SRV-67890",
+        "QA-78901",
+        "DES-89012",
+        "ANL-90123",
+        "EXEC-01234",
+        "HRM-12345"
+      ]
+    },
+    "numeric_identifier": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "clusterer": "pattern_signature",
+      "good_count": 54,
+      "bad_count": 10,
+      "fingerprint": {
+        "workflow": "identifier",
+        "method": "pattern_signature",
+        "sample_size": 54,
+        "properties": {
+          "majority_pattern": "N",
+          "valid_patterns": [
+            "N"
+          ],
+          "pattern_distribution": {
+            "N": 54,
+            "A": 8,
+            "A-A-A": 1,
+            "A-A": 1
+          },
+          "avg_length": 3.259259259259259
+        }
+      },
+      "correction_hints": {
+        "workflow": "identifier",
+        "subtype": "pattern_id"
+      },
+      "sample_good_values": [
+        "98765",
+        "87654",
+        "76543",
+        "65432",
+        "54321",
+        "43210",
+        "32109",
+        "21098",
+        "10987",
+        "9876"
       ]
     }
   }

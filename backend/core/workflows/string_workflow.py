@@ -155,6 +155,9 @@ class StringWorkflow(BaseWorkflow):
         total = len(good_data) + len(bad_data)
         confidence = len(good_data) / total if total > 0 else 0.0
         
+        # Determine method
+        method = self._determine_string_method(subtype, use_strict, validator)
+        
         result = ClusterResult(
             good_data=good_data,
             bad_data=bad_data,
@@ -169,8 +172,13 @@ class StringWorkflow(BaseWorkflow):
                 "total_records": total,
                 "validator_used": validator.name if validator else "lenient",
                 "strict_mode": use_strict,
+                "method": method,  # Track method
             }
         )
+        
+        # Store method in fingerprint
+        if fingerprint_dict:
+            fingerprint_dict["method"] = method
         
         logger.debug(
             f"Clustered {column_name}: {len(good_data)} good, "
@@ -178,6 +186,19 @@ class StringWorkflow(BaseWorkflow):
         )
         
         return result
+    
+    def _determine_string_method(self, subtype: str, use_strict: bool, validator) -> str:
+        """Determine clustering method for string subtype."""
+        # Validator-based methods
+        if use_strict and validator:
+            return f"validator_{subtype}"
+        
+        # Categorical methods
+        if subtype in ["state", "country"]:
+            return "categorical_frequency_fuzzy"
+        
+        # FreeText methods
+        return "freetext_lenient"
     
     def _get_validator_for_subtype(self, subtype: str):
         """Get validator for a subtype"""

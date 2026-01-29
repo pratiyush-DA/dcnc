@@ -45,6 +45,7 @@ class OutputWriter:
         (self.output_dir / "good_n_bad").mkdir(parents=True, exist_ok=True)
         (self.output_dir / "final").mkdir(parents=True, exist_ok=True)
         (self.output_dir / "report").mkdir(parents=True, exist_ok=True)
+        (self.output_dir / "correction").mkdir(parents=True, exist_ok=True)
     
     def write_good_bad(
         self,
@@ -126,6 +127,52 @@ class OutputWriter:
         path = self.output_dir / "final" / filename
         df.to_csv(path, index=False)
         logger.info(f"Wrote final output to {path}")
+    
+    def write_correction_report_csv(
+        self,
+        results: Dict[str, Any],
+        filename: str = "correction_report.csv"
+    ):
+        """Write detailed correction report as CSV with all correction details."""
+        path = self.output_dir / "correction" / filename
+        
+        # Collect all corrections from all columns
+        all_corrections = []
+        
+        for column_name, result in results.items():
+            if not isinstance(result, dict) or "corrections" not in result:
+                continue
+            
+            corrections = result.get("corrections", [])
+            for correction in corrections:
+                all_corrections.append({
+                    "column_name": correction.get("column_name", column_name),
+                    "row_index": correction.get("row_index", ""),
+                    "original_value": correction.get("original_value", ""),
+                    "corrected_value": correction.get("corrected_value", ""),
+                    "status": correction.get("status", ""),
+                    "confidence": correction.get("confidence", 0.0),
+                    "changes_made": ", ".join(correction.get("changes_made", [])) if correction.get("changes_made") else "",
+                    "workflow": correction.get("workflow", ""),
+                    "subtype": correction.get("subtype", ""),
+                    "method": correction.get("method", ""),
+                    "error": correction.get("error", ""),
+                })
+        
+        if all_corrections:
+            correction_df = pd.DataFrame(all_corrections)
+            # Sort by column_name, then row_index for better readability
+            correction_df = correction_df.sort_values(["column_name", "row_index"])
+            correction_df.to_csv(path, index=False)
+            logger.info(f"Wrote correction report CSV to {path} ({len(all_corrections)} corrections)")
+        else:
+            # Create empty CSV with headers
+            empty_df = pd.DataFrame(columns=[
+                "column_name", "row_index", "original_value", "corrected_value",
+                "status", "confidence", "changes_made", "workflow", "subtype", "method", "error"
+            ])
+            empty_df.to_csv(path, index=False)
+            logger.info(f"Wrote empty correction report CSV to {path} (no corrections)")
     
     def write_correction_report(
         self,

@@ -51,7 +51,7 @@ class GenericCorrector(BaseCorrector):
         column_name: Optional[str],
         **kwargs
     ) -> CorrectionResult:
-        """Attempt generic correction"""
+        """Attempt generic correction with pattern validation"""
         str_val = str(value).strip()
         
         if not fingerprint and not learned_patterns:
@@ -64,24 +64,54 @@ class GenericCorrector(BaseCorrector):
         # Get properties from fingerprint
         props = learned_patterns or fingerprint.get("properties", {})
         
-        # Pattern-based correction for identifiers
+        # Pattern-based correction and validation for identifiers
         if subtype in ("identifier", "pattern_id"):
             pattern_sig = props.get("pattern_signature")
             if pattern_sig:
-                # Try to align to pattern
-                aligned = self._align_to_pattern(str_val, pattern_sig, props)
-                if aligned != str_val:
-                    corrected = aligned
-                    changes.append("pattern_aligned")
+                # Validate current value against expected pattern
+                current_pattern = self._value_to_pattern(str_val)
+                
+                if current_pattern != pattern_sig:
+                    # Try to align to pattern
+                    aligned = self._align_to_pattern(str_val, pattern_sig, props)
+                    
+                    # Validate aligned value matches pattern
+                    aligned_pattern = self._value_to_pattern(aligned)
+                    
+                    if aligned_pattern == pattern_sig:
+                        # Successfully aligned
+                        corrected = aligned
+                        changes.append("pattern_aligned")
+                    else:
+                        # Cannot align to pattern - reject
+                        return self._make_rejected_result(
+                            value, 
+                            f"pattern_mismatch: expected {pattern_sig}, got {current_pattern}"
+                        )
+                else:
+                    # Pattern matches - check other properties
+                    # Case correction if needed
+                    target_case = props.get("case_style")
+                    if target_case == "upper" and not corrected.isupper():
+                        corrected = corrected.upper()
+                        changes.append("uppercased")
+                    elif target_case == "lower" and not corrected.islower():
+                        corrected = corrected.lower()
+                        changes.append("lowercased")
+            else:
+                # No pattern signature - reject invalid pattern IDs
+                if subtype == "pattern_id":
+                    return self._make_rejected_result(value, "no_pattern_signature")
         
-        # Case correction
-        target_case = props.get("case_style")
-        if target_case == "upper" and not corrected.isupper():
-            corrected = corrected.upper()
-            changes.append("uppercased")
-        elif target_case == "lower" and not corrected.islower():
-            corrected = corrected.lower()
-            changes.append("lowercased")
+        # Case correction for non-pattern identifiers
+        if subtype not in ("identifier", "pattern_id"):
+            target_case = props.get("case_style")
+            if target_case == "upper" and not corrected.isupper():
+                corrected = corrected.upper()
+                changes.append("uppercased")
+            elif target_case == "lower" and not corrected.islower():
+                corrected = corrected.lower()
+                changes.append("lowercased")
         
         # Padding for numeric IDs
         padding = props.get("numeric_padding")
@@ -92,9 +122,40 @@ class GenericCorrector(BaseCorrector):
                 changes.append("zero_padded")
         
         if changes:
-            return self._make_corrected_result(value, corrected, changes)
+            return self._make_corrected_result(value, corrected, changes, confidence=1.0)
         
         return self._make_unchanged_result(value)
+    
+    def _value_to_pattern(self, value: str) -> str:
+        """
+        Convert value to pattern signature (e.g., "ABC-123" -> "A-9").
+        Used for pattern validation.
+        """
+        import re
+        pattern = []
+        
+        for char in value:
+            if char.isalpha():
+                pattern.append("A")
+            elif char.isdigit():
+                pattern.append("9")
+            else:
+                # Keep separator as is
+                pattern.append(char)
+        
+        # Collapse consecutive same types
+        result = []
+        prev = None
+        for p in pattern:
+            if p in ("A", "9"):
+                if prev != p:
+                    result.append(p)
+                    prev = p
+            else:
+                result.append(p)
+                prev = None
+        
+        return "".join(result)
     
     def _align_to_pattern(
         self,
@@ -119,6 +180,11 @@ class GenericCorrector(BaseCorrector):
         
         result = value
         
+        # Extract alphanumeric parts
+        import re
+        alpha_parts = re.findall(r'[A-Za-z]+', result)
+        digit_parts = re.findall(r'\d+', result)
+        
         # Add prefix if missing
         if prefix and not result.startswith(prefix):
             result = prefix + result
@@ -127,11 +193,18 @@ class GenericCorrector(BaseCorrector):
         if suffix and not result.endswith(suffix):
             result = result + suffix
         
-        # Add separator if missing
-        if separator and separator not in result:
-            # Try to insert based on pattern
-            # This is a simplified approach
-            pass
+        # Try to reconstruct based on pattern
+        # Pattern format: e.g., "A-9" means letters-separator-digits
+        if separator:
+            # Check if separator is in pattern
+            if separator in pattern:
+                # Reconstruct with separator
+                if alpha_parts and digit_parts:
+                    result = f"{alpha_parts[0]}{separator}{digit_parts[0]}"
+                elif alpha_parts:
+                    result = alpha_parts[0]
+                elif digit_parts:
+                    result = digit_parts[0]
         
         return result
     

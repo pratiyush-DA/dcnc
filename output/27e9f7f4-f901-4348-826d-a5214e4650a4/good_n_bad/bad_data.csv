@@ -1,0 +1,9 @@
+age_val,age_idx,date_of_birth_val,date_of_birth_idx,email_val,email_idx,phone_val,phone_idx,rating_val,rating_idx,salary_val,salary_idx,ssn_val,ssn_idx,url_val,url_idx,zip_code_val,zip_code_idx
+thirty,1.0,2023-13-45,5.0,jane@@yahoo.com,1.0,1234567890,1,5.1,5.0,120000.0,4.0,987654321,1.0,www.janesmith.io,1.0,2101.0,5.0
+250,2.0,,,bobgmailcom,2.0,0000000000,5,,,,,000-00-0000,6.0,charlie.blog.com,4.0,,
+-5,3.0,,,charlie@hotmailcom,4.0,12345,6,,,,,666-77-8888,8.0,not-a-url,6.0,,
+abc,5.0,,,invalid@email,6.0,1-800-FLOWERS,9,,,,,,,,,,
+,,,,GRACE.KIM@YAHOO.COM,8.0,(555) 987-6543,2,,,,,,,,,,
+,,,,,,555.111.2222,3,,,,,,,,,,
+,,,,,,+1-555-333-4444,4,,,,,,,,,,
+,,,,,,+44 20 7946 0958,8,,,,,,,,,,

@@ -1,0 +1,512 @@
+{
+  "ip_address": {
+    "workflow": "text",
+    "subtype": "ip_address",
+    "method": "validator",
+    "detection_confidence": 0.38880000000000003,
+    "clustering_confidence": 0.43,
+    "good_count": 43,
+    "bad_count": 21,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "ip_address",
+      "sample_size": 43,
+      "properties": {
+        "avg_length": 10.488372093023257,
+        "min_length": 7,
+        "max_length": 13,
+        "avg_confidence": 0.904651162790697,
+        "sample_values": [
+          "192.168.1.1",
+          "10.0.0.1",
+          "172.16.0.1",
+          "192.168.0.100",
+          "10.0.0.50"
+        ]
+      }
+    }
+  },
+  "uuid_value": {
+    "workflow": "text",
+    "subtype": "uuid",
+    "method": "validator",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.48,
+    "good_count": 48,
+    "bad_count": 16,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "uuid",
+      "sample_size": 48,
+      "properties": {
+        "avg_length": 36.0,
+        "min_length": 36,
+        "max_length": 36,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "550e8400-e29b-41d4-a716-446655440000",
+          "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+          "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+          "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+          "6ba7b813-9dad-11d1-80b4-00c04fd430c8"
+        ]
+      }
+    }
+  },
+  "ssn_id": {
+    "workflow": "text",
+    "subtype": "ssn",
+    "method": "validator",
+    "detection_confidence": 0.2,
+    "clustering_confidence": 0.43,
+    "good_count": 43,
+    "bad_count": 21,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "ssn",
+      "sample_size": 43,
+      "properties": {
+        "avg_length": 11.0,
+        "min_length": 11,
+        "max_length": 11,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "123-45-6789",
+          "234-56-7890",
+          "345-67-8901",
+          "456-78-9012",
+          "567-89-0123"
+        ]
+      }
+    }
+  },
+  "zipcode": {
+    "workflow": "text",
+    "subtype": "zipcode",
+    "method": "validator",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.5,
+    "good_count": 50,
+    "bad_count": 14,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "zipcode",
+      "sample_size": 50,
+      "properties": {
+        "avg_length": 5.0,
+        "min_length": 5,
+        "max_length": 5,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "10001",
+          "94105",
+          "73301",
+          "98101",
+          "60601"
+        ]
+      }
+    }
+  },
+  "address_street": {
+    "workflow": "text",
+    "subtype": "address",
+    "method": "freetext",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.56,
+    "good_count": 56,
+    "bad_count": 8,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "address_street",
+      "sample_size": 56,
+      "properties": {
+        "avg_length": 12.660714285714286,
+        "min_length": 8,
+        "max_length": 17,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 56,
+          "upper": 0,
+          "lower": 0,
+          "mixed": 0
+        },
+        "sample_values": [
+          "123 Main St",
+          "456 Oak Ave",
+          "789 Pine Rd",
+          "321 Elm St",
+          "654 Maple Dr"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    }
+  },
+  "job_title": {
+    "workflow": "text",
+    "subtype": "job_title",
+    "method": "freetext",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.56,
+    "good_count": 56,
+    "bad_count": 8,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "job_title",
+      "sample_size": 56,
+      "properties": {
+        "avg_length": 9.982142857142858,
+        "min_length": 4,
+        "max_length": 18,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 51,
+          "upper": 0,
+          "lower": 0,
+          "mixed": 5
+        },
+        "sample_values": [
+          "Software Engineer",
+          "Data Scientist",
+          "Product Manager",
+          "UX Designer",
+          "DevOps Engineer"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    }
+  },
+  "state_name": {
+    "workflow": "text",
+    "subtype": "state",
+    "method": "categorical_frequency_fuzzy",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.42,
+    "good_count": 42,
+    "bad_count": 22,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "categorical_frequency_fuzzy",
+      "column_name": "state_name",
+      "sample_size": 64,
+      "reference_values": [
+        "Illinois",
+        "Florida",
+        "INV",
+        "Texas",
+        "Massachusetts",
+        "BAD",
+        "District of Columbia",
+        "California",
+        "Colorado"
+      ],
+      "reference_frequencies": {
+        "Illinois": 3,
+        "Florida": 5,
+        "INV": 3,
+        "Texas": 12,
+        "Massachusetts": 5,
+        "BAD": 3,
+        "District of Columbia": 3,
+        "California": 5,
+        "Colorado": 3
+      },
+      "similarity_threshold": 85,
+      "min_frequency": 2,
+      "properties": {
+        "is_categorical": false,
+        "cardinality": 0.390625,
+        "avg_length": 7.1875,
+        "length_std": 4.227421643271463,
+        "case_style": "title",
+        "case_consistency": 0.6875
+      },
+      "correction_hints": {
+        "expected_case": "title",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "rules_applied": {
+        "case_sensitivity": true,
+        "gibberish_detection": true,
+        "frequency_analysis": true
+      }
+    }
+  },
+  "country_name": {
+    "workflow": "text",
+    "subtype": "country",
+    "method": "categorical_frequency_fuzzy",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.53,
+    "good_count": 53,
+    "bad_count": 11,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "categorical_frequency_fuzzy",
+      "column_name": "country_name",
+      "sample_size": 64,
+      "reference_values": [
+        "INVALID",
+        "BAD",
+        "United States",
+        "ERROR",
+        "USA"
+      ],
+      "reference_frequencies": {
+        "INVALID": 3,
+        "BAD": 3,
+        "United States": 43,
+        "ERROR": 3,
+        "USA": 4
+      },
+      "similarity_threshold": 85,
+      "min_frequency": 2,
+      "properties": {
+        "is_categorical": true,
+        "cardinality": 0.171875,
+        "avg_length": 10.34375,
+        "length_std": 4.00085440093738,
+        "case_style": "title",
+        "case_consistency": 0.703125
+      },
+      "correction_hints": {
+        "expected_case": "title",
+        "use_fuzzy_matching": true,
+        "similarity_threshold": 85
+      },
+      "rules_applied": {
+        "case_sensitivity": true,
+        "gibberish_detection": true,
+        "frequency_analysis": true
+      }
+    }
+  },
+  "city_name": {
+    "workflow": "text",
+    "subtype": "location",
+    "method": "freetext",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.56,
+    "good_count": 56,
+    "bad_count": 8,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "city_name",
+      "sample_size": 56,
+      "properties": {
+        "avg_length": 7.339285714285714,
+        "min_length": 3,
+        "max_length": 13,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 46,
+          "upper": 10,
+          "lower": 0,
+          "mixed": 0
+        },
+        "sample_values": [
+          "New York",
+          "San Francisco",
+          "Austin",
+          "Seattle",
+          "Chicago"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    }
+  },
+  "username": {
+    "workflow": "text",
+    "subtype": "username",
+    "method": "freetext",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.5760000000000001,
+    "good_count": 64,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "username",
+      "sample_size": 64,
+      "properties": {
+        "avg_length": 7.4375,
+        "min_length": 5,
+        "max_length": 10,
+        "dominant_case": "lower",
+        "case_distribution": {
+          "title": 0,
+          "upper": 0,
+          "lower": 64,
+          "mixed": 0
+        },
+        "sample_values": [
+          "johndoe",
+          "janesmith",
+          "bobjohnson",
+          "maryw",
+          "sarahb"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "lower",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    }
+  },
+  "file_path": {
+    "workflow": "text",
+    "subtype": "generic",
+    "method": "freetext",
+    "detection_confidence": 0.064,
+    "clustering_confidence": 0.5760000000000001,
+    "good_count": 64,
+    "bad_count": 0,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "file_path",
+      "sample_size": 64,
+      "properties": {
+        "avg_length": 17.0625,
+        "min_length": 7,
+        "max_length": 28,
+        "dominant_case": "lower",
+        "case_distribution": {
+          "title": 0,
+          "upper": 0,
+          "lower": 52,
+          "mixed": 12
+        },
+        "sample_values": [
+          "/home/user/file.txt",
+          "/var/log/app.log",
+          "C:\\Users\\Bob\\doc.pdf",
+          "/tmp/data.csv",
+          "./config.yaml"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "lower",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    }
+  },
+  "product_title": {
+    "workflow": "text",
+    "subtype": "job_title",
+    "method": "freetext",
+    "detection_confidence": 0.1728,
+    "clustering_confidence": 0.55,
+    "good_count": 55,
+    "bad_count": 9,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "freetext",
+      "column_name": "product_title",
+      "sample_size": 55,
+      "properties": {
+        "avg_length": 12.054545454545455,
+        "min_length": 8,
+        "max_length": 17,
+        "dominant_case": "title",
+        "case_distribution": {
+          "title": 54,
+          "upper": 0,
+          "lower": 0,
+          "mixed": 1
+        },
+        "sample_values": [
+          "Widget Pro",
+          "Data Analyzer",
+          "Product X",
+          "Design Tool",
+          "Cloud Platform"
+        ]
+      },
+      "correction_hints": {
+        "mode": "lenient",
+        "expected_case": "title",
+        "allow_mixed_case": true
+      },
+      "validation_rules": {
+        "min_length": 2,
+        "min_alpha_ratio": 0.3,
+        "reserved_words_checked": true
+      }
+    }
+  },
+  "zipcode_numeric": {
+    "workflow": "text",
+    "subtype": "zipcode",
+    "method": "validator",
+    "detection_confidence": 0.38880000000000003,
+    "clustering_confidence": 0.54,
+    "good_count": 54,
+    "bad_count": 10,
+    "fingerprint": {
+      "workflow": "string",
+      "method": "validator",
+      "engine": "zipcode",
+      "sample_size": 54,
+      "properties": {
+        "avg_length": 5.0,
+        "min_length": 5,
+        "max_length": 5,
+        "avg_confidence": 1.0,
+        "sample_values": [
+          "10001",
+          "94105",
+          "73301",
+          "98101",
+          "60601"
+        ]
+      }
+    }
+  }
+}

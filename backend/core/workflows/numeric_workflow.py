@@ -81,10 +81,15 @@ class NumericWorkflow(BaseWorkflow):
         if not parsed_data:
             return self.default_subtype, 0.3
         
-        # Analyze statistics
-        min_val = min(parsed_data)
-        max_val = max(parsed_data)
-        is_integer = all(v == int(v) for v in parsed_data)
+        # Analyze statistics (filter out NaN values)
+        import math
+        valid_parsed = [v for v in parsed_data if not math.isnan(v)]
+        if not valid_parsed:
+            return self.default_subtype, 0.3
+        
+        min_val = min(valid_parsed)
+        max_val = max(valid_parsed)
+        is_integer = all(v == int(v) for v in valid_parsed)
         
         # Check against semantic constraints
         for subtype, constraints in SEMANTIC_CONSTRAINTS.items():
@@ -99,6 +104,16 @@ class NumericWorkflow(BaseWorkflow):
                     return subtype, 0.6
         
         return self.default_subtype, 0.5
+    
+    def _determine_numeric_method(self, subtype: str, constraints: Dict[str, Any]) -> str:
+        """Determine clustering method for numeric subtype."""
+        # Semantic subtypes use semantic_iqr
+        semantic_subtypes = ["age", "year", "rating", "percentage", "temperature", "latitude", "longitude"]
+        if subtype in semantic_subtypes:
+            return "semantic_iqr"
+        
+        # Generic numeric uses ML-based clustering
+        return "isolation_forest_iqr_zscore"
     
     def cluster(
         self,
@@ -129,8 +144,15 @@ class NumericWorkflow(BaseWorkflow):
         parsed_good = []  # For fingerprint stats
         
         for value, idx in zip(data, indices):
-            # Skip nulls
-            if value is None or str(value).strip() == "":
+            # Skip nulls and NaN values
+            import math
+            if value is None or (isinstance(value, float) and math.isnan(value)):
+                bad_data.append(value)
+                bad_indices.append(idx)
+                continue
+            
+            str_val = str(value).strip()
+            if not str_val or str_val.lower() in ["nan", "null", "none", "na", "n/a"]:
                 bad_data.append(value)
                 bad_indices.append(idx)
                 continue
@@ -174,6 +196,9 @@ class NumericWorkflow(BaseWorkflow):
         total = len(good_data) + len(bad_data)
         confidence = len(good_data) / total if total > 0 else 0.0
         
+        # Determine method
+        method = self._determine_numeric_method(subtype, constraints)
+        
         result = ClusterResult(
             good_data=good_data,
             bad_data=bad_data,
@@ -187,8 +212,13 @@ class NumericWorkflow(BaseWorkflow):
                 "column_name": column_name,
                 "total_records": total,
                 "constraints_applied": constraints,
+                "method": method,  # Track method
             }
         )
+        
+        # Store method in fingerprint
+        if fingerprint_dict:
+            fingerprint_dict["method"] = method
         
         return result
     
@@ -254,7 +284,7 @@ class NumericWorkflow(BaseWorkflow):
                 "std": float(np.std(arr)),
                 "lower_bound": float(lower_bound),
                 "upper_bound": float(upper_bound),
-                "is_integer": all(v == int(v) for v in values),
+                "is_integer": all(not np.isnan(v) and v == int(v) for v in values if not np.isnan(v)) if values else False,
             },
             "constraints": constraints,
         }

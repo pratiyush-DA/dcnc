@@ -14,29 +14,41 @@ from ..base_clusterer import BaseClusterer, ClusteringResult
 logger = logging.getLogger(__name__)
 
 
-# Common date format patterns with regex and strptime format
+# Common date/time format patterns with regex and strptime format
+# Comprehensive list supporting all common formats users might provide
 FORMAT_PATTERNS = [
-    # ISO formats
+    # ISO datetime formats
     (r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?$", "%Y-%m-%dT%H:%M:%S"),
+    (r"^\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}(?:\.\d+)?$", "%Y-%m-%d %H:%M:%S"),
     (r"^\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}$", "%Y-%m-%d %H:%M:%S"),
+    
+    # ISO date formats
     (r"^\d{4}-\d{2}-\d{2}$", "%Y-%m-%d"),
     
-    # US formats
+    # US date formats
     (r"^\d{1,2}/\d{1,2}/\d{4}$", "%m/%d/%Y"),
     (r"^\d{1,2}/\d{1,2}/\d{2}$", "%m/%d/%y"),
+    (r"^\d{1,2}-\d{1,2}-\d{4}$", "%m-%d-%Y"),
     
-    # European formats
+    # European date formats
     (r"^\d{1,2}-\d{1,2}-\d{4}$", "%d-%m-%Y"),
     (r"^\d{1,2}\.\d{1,2}\.\d{4}$", "%d.%m.%Y"),
+    (r"^\d{1,2}/\d{1,2}/\d{4}$", "%d/%m/%Y"),
     
     # Compact formats
     (r"^\d{8}$", "%Y%m%d"),
     (r"^\d{4}/\d{2}/\d{2}$", "%Y/%m/%d"),
-    (r"^\d{14}(?:\.0)?Z?$", "%Y%m%d%H%M%S"),  # Added for sp_when_created (20120411203253.0Z)
+    (r"^\d{14}(?:\.\d+)?Z?$", "%Y%m%d%H%M%S"),
+    
+    # Time formats (time-only)
+    (r"^\d{2}:\d{2}:\d{2}(?:\.\d+)?$", "%H:%M:%S"),
+    (r"^\d{2}:\d{2}$", "%H:%M"),
+    (r"^\d{1,2}:\d{2}(?::\d{2})?(?:\s*[AaPp][Mm])?$", "%I:%M:%S %p"),  # 12-hour format
     
     # Month name formats
     (r"^\w{3}\s+\d{1,2},?\s+\d{4}$", "%b %d, %Y"),
     (r"^\d{1,2}\s+\w{3}\s+\d{4}$", "%d %b %Y"),
+    (r"^\w+\s+\d{1,2},?\s+\d{4}$", "%B %d, %Y"),
 ]
 
 
@@ -85,10 +97,16 @@ class FormatDateTimeClusterer(BaseClusterer):
             else:
                 parsed_results.append((value, idx, None, None))
         
-        # Determine majority format
+        # Determine majority format from LARGEST good data cluster
+        # This ensures we use the format with the most data points, not just any majority
         majority_format = None
         if format_counts:
-            majority_format = format_counts.most_common(1)[0][0]
+            # Get the format with the highest count (largest cluster)
+            majority_format, majority_count = format_counts.most_common(1)[0]
+            logger.debug(
+                f"Majority format for {column_name}: {majority_format} "
+                f"({majority_count} values, {len(format_counts)} unique formats)"
+            )
         
         # Phase 2: Classify based on format consistency
         good_data, bad_data = [], []
@@ -146,7 +164,20 @@ class FormatDateTimeClusterer(BaseClusterer):
         try:
             from dateutil import parser as date_parser
             parsed = date_parser.parse(value)
-            return parsed, "dateutil"
+            
+            # Detect actual format from parsed datetime
+            # Try to determine format based on parsed components
+            has_time = parsed.hour != 0 or parsed.minute != 0 or parsed.second != 0
+            
+            # Check if it matches ISO date format
+            if not has_time:
+                # Date only - use ISO date format
+                detected_format = "%Y-%m-%d"
+            else:
+                # Has time - use ISO datetime format
+                detected_format = "%Y-%m-%dT%H:%M:%S"
+            
+            return parsed, detected_format
         except Exception:
             pass
         

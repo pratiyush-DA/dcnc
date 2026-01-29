@@ -197,10 +197,12 @@ class GenericDateTimeClusterer(BaseClusterer):
             # Determine type based on parsed values
             if parsed.hour == 0 and parsed.minute == 0 and parsed.second == 0:
                 dt_type = "date"
+                detected_format = "%Y-%m-%d"  # ISO date format
             else:
                 dt_type = "datetime"
+                detected_format = "%Y-%m-%dT%H:%M:%S"  # ISO datetime format
             
-            return parsed, "dateutil_fuzzy", dt_type
+            return parsed, detected_format, dt_type
         except Exception:
             pass
         

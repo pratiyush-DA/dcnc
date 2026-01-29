@@ -1,13 +1,16 @@
 {
-  "total_columns": 17,
-  "total_good_values": 5046,
-  "total_bad_values": 717,
-  "total_corrected": 158,
+  "total_columns": 36,
+  "total_good_values": 1850,
+  "total_bad_values": 454,
+  "total_corrected": 125,
   "workflow_distribution": {
-    "identifier": 2,
-    "text": 14,
-    "datetime": 1
+    "text": 21,
+    "numeric": 10,
+    "identifier": 3,
+    "datetime": 2
   },
   "error_columns": [],
-  "success_rate": 0.8755856324830817
+  "success_rate": 0.8029513888888888,
+  "avg_detection_confidence": 0.21646666666666653,
+  "avg_clustering_confidence": 0.47783333333333367
 }
