@@ -9,6 +9,7 @@ Detection Philosophy:
 """
 
 import logging
+import re
 from typing import Any, Dict, List, Optional
 
 from ..interfaces import IDetector, DetectionResult, DetectionSource
@@ -70,6 +71,69 @@ class WorkflowDetector(IDetector):
             DetectionResult with workflow and subtype
         """
         logger.debug(f"Detecting type for column: {column_name}")
+        
+        # Step 0: Priority checks for specific column name patterns (before everything else)
+        # This ensures correct detection before pattern/heuristic matching
+        column_lower = column_name.lower()
+        
+        # 0.1: Longitude detection (must be before latitude)
+        if ("longitude" in column_lower or "lng" in column_lower or "lon" in column_lower) and "latitude" not in column_lower:
+            result = DetectionResult(
+                workflow="numeric",
+                subtype="longitude",
+                confidence=0.95,
+                source=DetectionSource.HEURISTIC,
+                matched_rule="longitude_priority",
+            )
+            logger.debug(f"Longitude priority match: {column_name} → {result.workflow}/{result.subtype}")
+            if self._cache:
+                self.cache_result(column_name, result)
+            return result
+        
+        # 0.2: Numeric columns (*_numeric pattern) - check before pattern analysis
+        if column_lower.endswith("_numeric") and sample_data:
+            # Check if values are purely numeric
+            numeric_count = sum(1 for v in sample_data[:20] if v is not None and str(v).strip().replace(".", "").replace("-", "").isdigit())
+            if len(sample_data[:20]) > 0 and numeric_count / len(sample_data[:20]) > 0.8:
+                base_subtype = column_lower.replace("_numeric", "")
+                # Map common subtypes
+                subtype_map = {
+                    "phone": "phone_numeric",
+                    "zipcode": "zipcode_numeric",
+                    "age": "age",
+                    "year": "year",
+                    "salary": "salary",
+                    "amount": "amount",
+                }
+                detected_subtype = subtype_map.get(base_subtype, "generic_numeric")
+                result = DetectionResult(
+                    workflow="numeric",
+                    subtype=detected_subtype,
+                    confidence=0.85,
+                    source=DetectionSource.HEURISTIC,
+                    matched_rule="numeric_column_pattern",
+                )
+                logger.debug(f"Numeric column pattern: {column_name} → {result.workflow}/{result.subtype}")
+                if self._cache:
+                    self.cache_result(column_name, result)
+                return result
+        
+        # 0.3: Identifier columns (*_id pattern) - check before pattern analysis
+        if (column_lower.endswith("_id") or ("id" in column_lower and column_lower not in ["ip_address", "ssn_id", "valid_id"])) and sample_data:
+            # Check for identifier patterns (alphanumeric, dashes, underscores)
+            identifier_count = sum(1 for v in sample_data[:20] if v is not None and self._looks_like_identifier(str(v)))
+            if len(sample_data[:20]) > 0 and identifier_count / len(sample_data[:20]) > 0.7:
+                result = DetectionResult(
+                    workflow="identifier",
+                    subtype="pattern_id",
+                    confidence=0.90,
+                    source=DetectionSource.HEURISTIC,
+                    matched_rule="identifier_column_pattern",
+                )
+                logger.debug(f"Identifier column pattern: {column_name} → {result.workflow}/{result.subtype}")
+                if self._cache:
+                    self.cache_result(column_name, result)
+                return result
         
         # Step 1: Check cache
         if use_cache and self._cache:
@@ -171,6 +235,14 @@ class WorkflowDetector(IDetector):
         
         # Fall back to generic
         return self._detect_generic_type(sample_data)
+    
+    def _looks_like_identifier(self, value: str) -> bool:
+        """Check if value looks like an identifier (alphanumeric with optional separators)."""
+        if not value or len(value) < 2:
+            return False
+        # Allow alphanumeric, dashes, underscores, dots
+        pattern = re.compile(r'^[a-zA-Z0-9_\-\.]+$')
+        return bool(pattern.match(value))
     
     def _detect_generic_type(self, sample_data: List[Any]) -> DetectionResult:
         """Detect generic type based on data characteristics"""

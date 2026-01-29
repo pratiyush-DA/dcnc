@@ -64,20 +64,34 @@ class NumericCorrector(BaseCorrector):
         **kwargs
     ) -> CorrectionResult:
         """Correct numeric value"""
+        # Handle NaN/null values early
+        import math
+        if value is None or (isinstance(value, float) and math.isnan(value)):
+            return self._make_rejected_result(value, "null_or_nan")
+        
         str_val = str(value).strip()
+        
+        # Check for NaN string representations
+        if str_val.lower() in ["nan", "null", "none", "na", "n/a", ""]:
+            return self._make_rejected_result(value, "null_or_nan")
+        
         changes = []
+        
+        # Step 0: Fix subtype detection using column name hints (for coordinates)
+        # This ensures longitude_coord uses longitude constraints, not latitude
+        actual_subtype = self._determine_actual_subtype(subtype, column_name)
         
         # Step 1: Parse the value (handle currency, European decimals)
         parsed_value, parse_changes = self._parse_numeric(str_val)
         
-        if parsed_value is None:
+        if parsed_value is None or math.isnan(parsed_value):
             return self._make_rejected_result(value, "not_numeric")
         
         changes.extend(parse_changes)
         corrected = parsed_value
         
-        # Step 2: Get constraints
-        constraints = self._get_semantic_constraints(subtype)
+        # Step 2: Get constraints using actual subtype
+        constraints = self._get_semantic_constraints(actual_subtype)
         if learned_patterns:
             # Override with fingerprint constraints if available
             if "min" in learned_patterns:
@@ -87,19 +101,57 @@ class NumericCorrector(BaseCorrector):
             if "is_integer" in learned_patterns:
                 constraints["type"] = "integer" if learned_patterns["is_integer"] else "float"
         
-        # Step 3: Apply semantic constraints
+        # Step 3: Apply semantic constraints with smart clamping
         min_val = constraints.get("min")
         max_val = constraints.get("max")
         is_integer = constraints.get("type") == "integer"
         
-        # Range clamping
-        if min_val is not None and corrected < min_val:
-            corrected = min_val
-            changes.append(f"clamped_min_{min_val}")
-        
-        if max_val is not None and corrected > max_val:
-            corrected = max_val
-            changes.append(f"clamped_max_{max_val}")
+        # Smart clamping: Use fingerprint statistics for better reference values
+        if fingerprint:
+            stats = fingerprint.get("statistics", {})
+            if actual_subtype in ("latitude", "longitude"):
+                # For coordinates, use median from good data instead of hard bounds
+                median = stats.get("median")
+                if median is not None:
+                    # Clamp to reasonable range around median
+                    if actual_subtype == "latitude":
+                        min_val = max(-90, min_val or -90)
+                        max_val = min(90, max_val or 90)
+                    else:  # longitude
+                        min_val = max(-180, min_val or -180)
+                        max_val = min(180, max_val or 180)
+                    
+                    # If value is way out of bounds, clamp to median instead of edge
+                    if corrected < min_val:
+                        corrected = max(min_val, median - 10)  # Clamp closer to median
+                        changes.append(f"clamped_min_{corrected:.4f}")
+                    elif corrected > max_val:
+                        corrected = min(max_val, median + 10)  # Clamp closer to median
+                        changes.append(f"clamped_max_{corrected:.4f}")
+                else:
+                    # Fallback to standard clamping
+                    if min_val is not None and corrected < min_val:
+                        corrected = min_val
+                        changes.append(f"clamped_min_{min_val}")
+                    if max_val is not None and corrected > max_val:
+                        corrected = max_val
+                        changes.append(f"clamped_max_{max_val}")
+            else:
+                # Standard clamping for other numeric types
+                if min_val is not None and corrected < min_val:
+                    corrected = min_val
+                    changes.append(f"clamped_min_{min_val}")
+                if max_val is not None and corrected > max_val:
+                    corrected = max_val
+                    changes.append(f"clamped_max_{max_val}")
+        else:
+            # No fingerprint - use standard clamping
+            if min_val is not None and corrected < min_val:
+                corrected = min_val
+                changes.append(f"clamped_min_{min_val}")
+            if max_val is not None and corrected > max_val:
+                corrected = max_val
+                changes.append(f"clamped_max_{max_val}")
         
         # Integer rounding
         if is_integer and corrected != int(corrected):
@@ -172,6 +224,28 @@ class NumericCorrector(BaseCorrector):
         except (ValueError, TypeError):
             return None, []
     
+    def _determine_actual_subtype(self, subtype: Optional[str], column_name: Optional[str]) -> str:
+        """
+        Determine actual subtype using column name hints.
+        Fixes cases where longitude is misclassified as latitude.
+        """
+        if not column_name:
+            return subtype or "generic"
+        
+        column_lower = column_name.lower()
+        
+        # Priority: Check column name patterns first
+        if "longitude" in column_lower or "lng" in column_lower or "lon" in column_lower:
+            if "latitude" not in column_lower:  # Don't override if both present
+                return "longitude"
+        
+        if "latitude" in column_lower or "lat" in column_lower:
+            if "longitude" not in column_lower:  # Don't override if both present
+                return "latitude"
+        
+        # Return detected subtype if column name doesn't provide hints
+        return subtype or "generic"
+    
     def _get_semantic_constraints(self, subtype: Optional[str]) -> Dict[str, Any]:
         """Get semantic constraints for a subtype"""
         constraints = {
@@ -181,8 +255,10 @@ class NumericCorrector(BaseCorrector):
             "latitude": {"min": -90, "max": 90, "type": "float"},
             "longitude": {"min": -180, "max": 180, "type": "float"},
             "percentage": {"min": 0, "max": 100, "type": "float"},
+            "temperature": {"min": -273.15, "max": 1000, "type": "float"},
             "salary": {"min": 0, "type": "float"},  # No max for salary
             "amount": {"min": 0, "type": "float"},  # No max for amount
+            "count": {"min": 0, "type": "integer"},
         }
         return constraints.get(subtype, {})
     

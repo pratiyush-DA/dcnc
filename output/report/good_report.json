@@ -1,127 +1,260 @@
 {
-  "generated_at": "2026-01-20T20:07:33.850330",
+  "generated_at": "2026-01-28T20:57:26.283341",
   "description": "Summary of all valid/good data by column",
   "columns": {
-    "sp_source_id": {
-      "workflow": "identifier",
-      "subtype": "pattern_id",
-      "good_count": 338,
-      "sample_values": [],
-      "confidence": 0.9
-    },
-    "sp_common_name": {
+    "full_name": {
       "workflow": "text",
-      "subtype": "generic",
-      "good_count": 339,
+      "subtype": "name",
+      "good_count": 64,
       "sample_values": [],
-      "confidence": 0.5
+      "confidence": 0.1728
     },
-    "sp_given_name": {
-      "workflow": "text",
-      "subtype": "generic",
-      "good_count": 339,
-      "sample_values": [],
-      "confidence": 0.5
-    },
-    "sp_sn": {
-      "workflow": "text",
-      "subtype": "generic",
-      "good_count": 339,
-      "sample_values": [],
-      "confidence": 0.5
-    },
-    "sp_mail": {
+    "email_address": {
       "workflow": "text",
       "subtype": "email",
-      "good_count": 223,
+      "good_count": 48,
       "sample_values": [],
-      "confidence": 0.94
+      "confidence": 0.36480000000000007
     },
-    "sp_telephone_number": {
+    "phone_number": {
       "workflow": "text",
       "subtype": "phone",
-      "good_count": 175,
+      "good_count": 13,
       "sample_values": [],
-      "confidence": 0.95
+      "confidence": 0.3688
     },
-    "sp_country": {
+    "website_url": {
       "workflow": "text",
-      "subtype": "country",
-      "good_count": 337,
+      "subtype": "url",
+      "good_count": 35,
       "sample_values": [],
-      "confidence": 0.9
+      "confidence": 0.1728
     },
-    "sp_city": {
+    "ip_address": {
       "workflow": "text",
-      "subtype": "location",
-      "good_count": 339,
+      "subtype": "ip_address",
+      "good_count": 54,
       "sample_values": [],
-      "confidence": 0.9
+      "confidence": 0.38880000000000003
     },
-    "sp_state": {
+    "uuid_value": {
       "workflow": "text",
-      "subtype": "state",
-      "good_count": 339,
+      "subtype": "uuid",
+      "good_count": 48,
       "sample_values": [],
-      "confidence": 0.9
+      "confidence": 0.1728
     },
-    "sp_postaladdress": {
+    "ssn_id": {
       "workflow": "text",
-      "subtype": "address",
-      "good_count": 337,
+      "subtype": "ssn",
+      "good_count": 50,
       "sample_values": [],
-      "confidence": 0.9
+      "confidence": 0.2
     },
-    "sp_postalcode": {
+    "zipcode": {
       "workflow": "text",
       "subtype": "zipcode",
-      "good_count": 338,
+      "good_count": 50,
       "sample_values": [],
-      "confidence": 0.9
+      "confidence": 0.1728
     },
-    "sp_when_created": {
-      "workflow": "datetime",
-      "subtype": "date",
-      "good_count": 339,
+    "boolean_flag": {
+      "workflow": "text",
+      "subtype": "boolean",
+      "good_count": 46,
       "sample_values": [],
-      "confidence": 0.9
+      "confidence": 0.1728
     },
-    "sp_fordjobrole": {
+    "company_name": {
+      "workflow": "text",
+      "subtype": "company",
+      "good_count": 64,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "address_street": {
+      "workflow": "text",
+      "subtype": "address",
+      "good_count": 56,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "job_title": {
       "workflow": "text",
       "subtype": "job_title",
-      "good_count": 323,
+      "good_count": 56,
       "sample_values": [],
-      "confidence": 0.9
+      "confidence": 0.1728
     },
-    "sp_fordsitecodetype": {
+    "notes_text": {
       "workflow": "text",
       "subtype": "generic",
-      "good_count": 339,
+      "good_count": 56,
       "sample_values": [],
-      "confidence": 0.5
+      "confidence": 0.2368
     },
-    "sp_uid": {
+    "state_name": {
+      "workflow": "text",
+      "subtype": "state",
+      "good_count": 64,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "country_name": {
+      "workflow": "text",
+      "subtype": "country",
+      "good_count": 53,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "city_name": {
+      "workflow": "text",
+      "subtype": "location",
+      "good_count": 64,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "username": {
+      "workflow": "text",
+      "subtype": "username",
+      "good_count": 64,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "file_path": {
       "workflow": "text",
       "subtype": "generic",
-      "good_count": 339,
+      "good_count": 64,
       "sample_values": [],
-      "confidence": 0.5
+      "confidence": 0.064
     },
-    "sp_fordsitecode": {
+    "product_title": {
+      "workflow": "text",
+      "subtype": "job_title",
+      "good_count": 64,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "employee_age": {
+      "workflow": "numeric",
+      "subtype": "age",
+      "good_count": 54,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "birth_year": {
+      "workflow": "numeric",
+      "subtype": "year",
+      "good_count": 46,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "salary_amount": {
+      "workflow": "numeric",
+      "subtype": "salary",
+      "good_count": 46,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "transaction_amount": {
+      "workflow": "numeric",
+      "subtype": "amount",
+      "good_count": 53,
+      "sample_values": [],
+      "confidence": 0.35680000000000006
+    },
+    "item_count": {
+      "workflow": "numeric",
+      "subtype": "count",
+      "good_count": 54,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "rating_score": {
+      "workflow": "numeric",
+      "subtype": "rating",
+      "good_count": 46,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "percentage_value": {
+      "workflow": "numeric",
+      "subtype": "percentage",
+      "good_count": 46,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "temperature_celsius": {
+      "workflow": "numeric",
+      "subtype": "temperature",
+      "good_count": 54,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "latitude_coord": {
+      "workflow": "numeric",
+      "subtype": "latitude",
+      "good_count": 54,
+      "sample_values": [],
+      "confidence": 0.35680000000000006
+    },
+    "longitude_coord": {
+      "workflow": "numeric",
+      "subtype": "longitude",
+      "good_count": 46,
+      "sample_values": [],
+      "confidence": 0.3664
+    },
+    "phone_numeric": {
+      "workflow": "text",
+      "subtype": "phone",
+      "good_count": 52,
+      "sample_values": [],
+      "confidence": 0.38079999999999997
+    },
+    "zipcode_numeric": {
+      "workflow": "text",
+      "subtype": "zipcode",
+      "good_count": 54,
+      "sample_values": [],
+      "confidence": 0.38880000000000003
+    },
+    "numeric_id": {
       "workflow": "identifier",
       "subtype": "pattern_id",
-      "good_count": 229,
+      "good_count": 54,
       "sample_values": [],
-      "confidence": 0.6
+      "confidence": 0.1728
     },
-    "Misc_01": {
-      "workflow": "text",
-      "subtype": "generic",
-      "good_count": 34,
+    "date_only": {
+      "workflow": "datetime",
+      "subtype": "date",
+      "good_count": 31,
       "sample_values": [],
-      "confidence": 0.5
+      "confidence": 0.1728
+    },
+    "datetime_timestamp": {
+      "workflow": "datetime",
+      "subtype": "datetime",
+      "good_count": 46,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "pattern_id": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "good_count": 47,
+      "sample_values": [],
+      "confidence": 0.1728
+    },
+    "numeric_identifier": {
+      "workflow": "identifier",
+      "subtype": "pattern_id",
+      "good_count": 54,
+      "sample_values": [],
+      "confidence": 0.1728
     }
   },
-  "total_good_values": 5046,
-  "columns_count": 17
+  "total_good_values": 1850,
+  "columns_count": 36
 }

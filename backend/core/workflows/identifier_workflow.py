@@ -163,9 +163,13 @@ class IdentifierWorkflow(BaseWorkflow):
             fingerprint_dict = self.generate_fingerprint(good_data, subtype)
             fingerprint_dict["majority_pattern"] = list(valid_patterns)[0] if valid_patterns else None
             fingerprint_dict["pattern_counts"] = dict(pattern_counts)
+            fingerprint_dict["method"] = "pattern_signature"  # Track method
         
         total = len(good_data) + len(bad_data)
         confidence = len(good_data) / total if total > 0 else 0.0
+        
+        # Determine method
+        method = "pattern_signature"  # Identifier always uses pattern signature
         
         result = ClusterResult(
             good_data=good_data,
@@ -177,6 +181,7 @@ class IdentifierWorkflow(BaseWorkflow):
             good_indices=good_indices,
             bad_indices=bad_indices,
             metadata={
+                "method": method,  # Track method
                 "column_name": column_name,
                 "total_records": total,
                 "valid_patterns": list(valid_patterns),

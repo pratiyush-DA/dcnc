@@ -54,7 +54,7 @@ class DateTimeWorkflow(BaseWorkflow):
     - generic (fallback)
     """
     
-    SUBTYPES = ["date", "datetime", "generic"]
+    SUBTYPES = ["date", "datetime", "time", "generic"]
     
     @property
     def workflow_type(self) -> WorkflowType:
@@ -73,7 +73,7 @@ class DateTimeWorkflow(BaseWorkflow):
         data: List[Any],
         column_name: Optional[str] = None
     ) -> Tuple[str, float]:
-        """Detect datetime subtype"""
+        """Detect datetime subtype (date, datetime, or time)"""
         if not data:
             return self.default_subtype, 0.3
         
@@ -82,13 +82,34 @@ class DateTimeWorkflow(BaseWorkflow):
         if not str_data:
             return self.default_subtype, 0.3
         
-        # Check for time component
-        has_time = any(":" in s for s in str_data)
+        # Check column name hints first
+        if column_name:
+            col_lower = column_name.lower()
+            if "time" in col_lower and "date" not in col_lower:
+                return "time", 0.9
+            elif "date" in col_lower and "time" not in col_lower:
+                return "date", 0.9
         
-        if has_time:
+        # Analyze data patterns
+        has_time = any(":" in s for s in str_data)
+        has_date = any(
+            any(char.isdigit() for char in s[:4]) and len(s) >= 8 
+            for s in str_data
+        )
+        
+        # Time-only pattern: HH:MM:SS or HH:MM (no date components)
+        time_only_pattern = r'^\d{1,2}:\d{2}(?::\d{2})?(?:\s*[AaPp][Mm])?$'
+        import re
+        time_only_count = sum(1 for s in str_data if re.match(time_only_pattern, s))
+        
+        if time_only_count > len(str_data) * 0.7:  # 70% are time-only
+            return "time", 0.85
+        elif has_time and has_date:
             return "datetime", 0.8
-        else:
+        elif has_date:
             return "date", 0.8
+        else:
+            return self.default_subtype, 0.5
     
     def cluster(
         self,
@@ -150,10 +171,14 @@ class DateTimeWorkflow(BaseWorkflow):
             fingerprint_dict = self.generate_fingerprint(good_data, subtype)
             fingerprint_dict["majority_format"] = majority_format
             fingerprint_dict["format_counts"] = dict(format_counts)
+            fingerprint_dict["method"] = "format_parsing"  # Track method
         
         # Calculate confidence
         total = len(good_data) + len(bad_data)
         confidence = len(good_data) / total if total > 0 else 0.0
+        
+        # Determine method
+        method = "format_parsing"  # DateTime always uses format parsing
         
         result = ClusterResult(
             good_data=good_data,
@@ -167,6 +192,7 @@ class DateTimeWorkflow(BaseWorkflow):
             bad_indices=bad_indices,
             metadata={
                 "column_name": column_name,
+                "method": method,  # Track method
                 "total_records": total,
                 "majority_format": majority_format,
             }

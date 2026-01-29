@@ -90,6 +90,8 @@ class HeuristicMatcher:
             {"name": "rating", "patterns": ["*rating*", "*score*"], "workflow": "numeric", "subtype": "rating", "priority": 82},
             {"name": "salary", "patterns": ["*salary*", "*wage*", "*pay*"], "workflow": "numeric", "subtype": "salary", "priority": 83},
             {"name": "amount", "patterns": ["*amount*", "*price*", "*total*"], "workflow": "numeric", "subtype": "amount", "priority": 84},
+            {"name": "latitude", "patterns": ["*latitude*", "*lat*"], "workflow": "numeric", "subtype": "latitude", "priority": 85},
+            {"name": "longitude", "patterns": ["*longitude*", "*lng*", "*lon*"], "workflow": "numeric", "subtype": "longitude", "priority": 86},
             
             # DateTime
             {"name": "datetime", "patterns": ["*datetime*", "*timestamp*", "*_at"], "workflow": "datetime", "subtype": "datetime", "priority": 101},
@@ -113,6 +115,18 @@ class HeuristicMatcher:
             Match result dict or None
         """
         column_lower = column_name.lower()
+        
+        # Priority check: longitude must be detected before latitude
+        # (since latitude patterns might match "longitude" partially)
+        if "longitude" in column_lower or "lng" in column_lower or "lon" in column_lower:
+            if "latitude" not in column_lower:  # Don't override if both present
+                return {
+                    "workflow": "numeric",
+                    "subtype": "longitude",
+                    "confidence": 0.95,
+                    "rule_name": "longitude_priority",
+                    "matched_pattern": "longitude",
+                }
         
         for rule in self._rules:
             # Check exclusions first
